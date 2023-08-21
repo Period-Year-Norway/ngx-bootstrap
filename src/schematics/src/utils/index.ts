@@ -10,7 +10,7 @@ import { SchematicTestRunner, UnitTestTree } from '@angular-devkit/schematics/te
 import { addImportToModule } from '@schematics/angular/utility/ast-utils';
 import { Change, InsertChange } from '@schematics/angular/utility/change';
 import { getAppModulePath } from '@schematics/angular/utility/ng-ast-utils';
-import { getFileContent } from '@schematics/angular/utility/test';
+//import { getFileContent } from '@schematics/angular/utility/test';
 import * as ts from 'typescript';
 import { getProjectMainFile } from './project-main-file';
 import { WorkspaceProject, WorkspaceSchema } from '@schematics/angular/utility/workspace-models';
@@ -72,9 +72,9 @@ export async function createTestApp(runner: SchematicTestRunner, appOptions = {}
 }
 
 export function removePackageJsonDependency(tree: Tree, dependencyName: string) {
-  const packageContent = JSON.parse(getFileContent(tree, '/package.json'));
-  delete packageContent.dependencies[dependencyName];
-  tree.overwrite('/package.json', JSON.stringify(packageContent, null, 2));
+  //const packageContent = JSON.parse(getFileContent(tree, '/package.json'));
+  //delete packageContent.dependencies[dependencyName];
+  //tree.overwrite('/package.json', JSON.stringify(packageContent, null, 2));
 }
 
 export function addModuleImportToRootModule(host: Tree, moduleName: string, src: string, project: workspaces.ProjectDefinition) {
@@ -107,7 +107,7 @@ export function getSourceFile(host: Tree, path: string) {
 }
 
 export function getProjectFromWorkSpace(workspace: WorkspaceSchema, projectName?: string): WorkspaceProject {
-  const finalProjectName = projectName || workspace.defaultProject;
+  const finalProjectName = projectName;
   if (!finalProjectName) {
     throw new Error(`Could not find project in workspace: ${projectName}`);
   }

@@ -97,7 +97,8 @@ export abstract class BaseComponent {
   }
 
   clearInputAndSendKeys(baseSelector: string, dataToSend: string, inputIndex = 0) {
-    cy.get(`${baseSelector} input`).eq(inputIndex).clear().type(dataToSend);
+    cy.get(`${baseSelector} input`).eq(inputIndex).clear();
+    cy.get(`${baseSelector} input`).eq(inputIndex).type(dataToSend);
   }
 
   clearInput(baseSelector: string, inputIndex = 0) {

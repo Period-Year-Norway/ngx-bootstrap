@@ -1,0 +1,46 @@
+{
+  "name": "utils",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "src/utils",
+  "prefix": "ngx-bootstrap-base",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": [
+        "{workspaceRoot}/dist/ngx-bootstrap/utils"
+      ],
+      "options": {
+        "tsConfig": "src/utils/tsconfig.lib.json",
+        "project": "src/utils/ng-package.json",
+        "updateBuildableProjectDepsInPackageJson": true
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "src/utils/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "src/utils/**/*.ts",
+          "src/utils/**/*.html",
+          "src/utils/package.json",
+          "src/utils/project.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/src/utils"
+      ],
+      "options": {
+        "jestConfig": "src/utils/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

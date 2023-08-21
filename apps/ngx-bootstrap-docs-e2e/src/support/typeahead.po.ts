@@ -49,8 +49,8 @@ export class TypeaheadPo extends BaseComponent {
   }
 
   isDropdownScrollable(stateMatch: string) {
-    cy.get(this.activeDropdown).contains(stateMatch).scrollIntoView()
-      .should('be.visible');
+    cy.get(this.activeDropdown).contains(stateMatch).scrollIntoView();
+    cy.get(this.activeDropdown).contains(stateMatch).should('be.visible');
   }
 
   isDropdownNotExist(baseSelector: string) {

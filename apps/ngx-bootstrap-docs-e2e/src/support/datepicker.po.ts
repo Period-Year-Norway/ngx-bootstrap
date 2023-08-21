@@ -272,7 +272,8 @@ export class DatepickerPo extends BaseComponent {
 
     cy.get(`${baseSelector}>${this.datepickerContainer} ${bodyView} td`)
       .each(date => {
-        cy.wrap(date).trigger('mouseenter').should('to.have.class', 'is-highlighted');
+        cy.wrap(date).trigger('mouseenter');
+        cy.wrap(date).should('to.have.class', 'is-highlighted');
       });
   }
 
@@ -282,7 +283,8 @@ export class DatepickerPo extends BaseComponent {
     cy.get(`${baseSelector}>${this.daterangepickerContainer} ${bodyView}`).each(bodyContainer => {
       cy.wrap(bodyContainer).find('td')
         .each(date => {
-          cy.wrap(date).trigger('mouseenter').should('to.have.class', 'is-highlighted');
+          cy.wrap(date).trigger('mouseenter');
+          cy.wrap(date).should('to.have.class', 'is-highlighted');
         });
     });
   }
