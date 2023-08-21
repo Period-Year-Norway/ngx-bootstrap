@@ -1,5 +1,5 @@
 {
-  "name": "ngx-bootstrap",
+  "name": "@Period-Year-Norway/ngx-bootstrap",
   "version": "9.0.1",
   "description": "Angular Bootstrap",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
@@ -214,13 +214,9 @@
   },
   "sideEffects": false,
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "tag": "next"
+    "registry": "https://npm.pkg.github.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/valor-software/ngx-bootstrap.git"
-  },
+  "repository": "https://github.com/Period-Year-Norway/ngx-bootstrap.git",
   "bugs": {
     "url": "https://github.com/valor-software/ngx-bootstrap/issues"
   },

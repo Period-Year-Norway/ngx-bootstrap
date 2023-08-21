@@ -1,17 +1,17 @@
 {
-  "name": "ngx-bootstrap-base",
+  "name": "@Period-Year-Norway/ngx-bootstrap-base",
   "version": "9.0.1",
   "license": "MIT",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
   "schematics": "./schematics/src/collection.json",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/valor-software/ngx-bootstrap.git"
-  },
+  "repository": "https://github.com/Period-Year-Norway/ngx-bootstrap.git",
   "bugs": {
     "url": "https://github.com/valor-software/ngx-bootstrap/issues"
   },
   "homepage": "https://github.com/valor-software/ngx-bootstrap#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "ng": "nx",
     "nx": "nx",

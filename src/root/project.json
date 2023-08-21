@@ -31,8 +31,7 @@
       "executor": "@nx/angular:package",
       "options": {
         "tsConfig": "src/root/tsconfig.lib.json",
-        "project": "src/root/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/root/ng-package.json"
       },
       "configurations": {
         "production": {
