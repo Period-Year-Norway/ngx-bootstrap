@@ -1,5 +1,5 @@
 {
-  "name": "@Period-Year-Norway/ngx-bootstrap-base",
+  "name": "@period-year-norway/ngx-bootstrap-base",
   "version": "9.0.1",
   "license": "MIT",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
@@ -9,9 +9,6 @@
     "url": "https://github.com/valor-software/ngx-bootstrap/issues"
   },
   "homepage": "https://github.com/valor-software/ngx-bootstrap#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "ng": "nx",
     "nx": "nx",
