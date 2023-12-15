@@ -40,14 +40,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/root/**/*.ts",
-          "src/root/**/*.html",
-          "src/root/{package,project}.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "build-sass": {
       "executor": "nx:run-commands",

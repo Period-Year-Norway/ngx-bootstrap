@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/progressbar/tsconfig.lib.json",
-        "project": "src/progressbar/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/progressbar/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -28,15 +27,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/progressbar/**/*.ts",
-          "src/progressbar/**/*.html",
-          "src/progressbar/package.json",
-          "src/progressbar/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -44,8 +35,7 @@
         "{workspaceRoot}/coverage/src/progressbar"
       ],
       "options": {
-        "jestConfig": "src/progressbar/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/progressbar/jest.config.ts"
       }
     }
   }

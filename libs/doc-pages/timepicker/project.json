@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "options": {
         "tsConfig": "libs/doc-pages/timepicker/tsconfig.lib.json",
-        "project": "libs/doc-pages/timepicker/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/doc-pages/timepicker/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -25,13 +24,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/doc-pages/timepicker/src/**/*.ts",
-          "libs/doc-pages/timepicker/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   }
 }

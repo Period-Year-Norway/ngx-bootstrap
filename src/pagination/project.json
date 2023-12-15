@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/pagination/tsconfig.lib.json",
-        "project": "src/pagination/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/pagination/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -22,15 +21,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/pagination/**/*.ts",
-          "src/pagination/**/*.html",
-          "src/pagination/package.json",
-          "src/pagination/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -38,8 +29,7 @@
         "{workspaceRoot}/coverage/src/pagination"
       ],
       "options": {
-        "jestConfig": "src/pagination/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/pagination/jest.config.ts"
       }
     }
   }

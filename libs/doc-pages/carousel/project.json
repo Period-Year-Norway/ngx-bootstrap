@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "options": {
         "tsConfig": "libs/doc-pages/carousel/tsconfig.lib.json",
-        "project": "libs/doc-pages/carousel/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/doc-pages/carousel/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -25,13 +24,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/doc-pages/carousel/src/**/*.ts",
-          "libs/doc-pages/carousel/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   }
 }

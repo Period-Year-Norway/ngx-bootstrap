@@ -9,8 +9,7 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "options": {
         "tsConfig": "libs/doc-pages/collapse/tsconfig.lib.json",
-        "project": "libs/doc-pages/collapse/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/doc-pages/collapse/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -25,13 +24,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/doc-pages/collapse/src/**/*.ts",
-          "libs/doc-pages/collapse/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   }
 }

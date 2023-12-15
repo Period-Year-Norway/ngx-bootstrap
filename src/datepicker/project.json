@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/datepicker/tsconfig.lib.json",
-        "project": "src/datepicker/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/datepicker/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -28,15 +27,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/datepicker/**/*.ts",
-          "src/datepicker/**/*.html",
-          "src/datepicker/package.json",
-          "src/datepicker/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -44,8 +35,7 @@
         "{workspaceRoot}/coverage/src/datepicker"
       ],
       "options": {
-        "jestConfig": "src/datepicker/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/datepicker/jest.config.ts"
       }
     }
   }

@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/modal/tsconfig.lib.json",
-        "project": "src/modal/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/modal/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -28,15 +27,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/modal/**/*.ts",
-          "src/modal/**/*.html",
-          "src/modal/package.json",
-          "src/modal/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -44,8 +35,7 @@
         "{workspaceRoot}/coverage/src/modal"
       ],
       "options": {
-        "jestConfig": "src/modal/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/modal/jest.config.ts"
       }
     }
   }

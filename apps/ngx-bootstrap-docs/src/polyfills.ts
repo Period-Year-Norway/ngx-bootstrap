@@ -27,4 +27,4 @@ import 'zone.js';
 /***************************************************************************************************
 * SCULLY IMPORTS
 */
-import 'zone.js/dist/task-tracking';
+import 'zone.js/plugins/task-tracking';

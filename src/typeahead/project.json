@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/typeahead/tsconfig.lib.json",
-        "project": "src/typeahead/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/typeahead/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -28,15 +27,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/typeahead/**/*.ts",
-          "src/typeahead/**/*.html",
-          "src/typeahead/package.json",
-          "src/typeahead/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -44,8 +35,7 @@
         "{workspaceRoot}/coverage/src/typeahead"
       ],
       "options": {
-        "jestConfig": "src/typeahead/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/typeahead/jest.config.ts"
       }
     }
   }

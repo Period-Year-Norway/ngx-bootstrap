@@ -1,5 +1,4 @@
 {
-  "npmScope": "ngx-bootstrap-base",
   "affected": {
     "defaultBase": "development"
   },
@@ -58,9 +57,6 @@
   },
   "defaultProject": "ngx-bootstrap-docs",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "cli": {
-    "defaultCollection": "@nx/angular"
-  },
   "namedInputs": {
     "default": [
       "{projectRoot}/**/*",
@@ -100,12 +96,22 @@
         "^production"
       ]
     },
-    "test": {
+    "@nx/jest:jest": {
       "inputs": [
         "default",
         "^production",
         "{workspaceRoot}/jest.preset.js"
-      ]
+      ],
+      "cache": true,
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
     }
   }
 }

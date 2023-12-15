@@ -5,9 +5,10 @@
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": [
+          "src/schematics/src",
           "src/schematics/**/*.ts"
         ]
       }
@@ -30,8 +31,7 @@
             "input": "src/schematics/src/ng-add",
             "output": "ng-add"
           }
-        ],
-        "updateBuildableProjectDepsInPackageJson": true
+        ]
       }
     }
   }

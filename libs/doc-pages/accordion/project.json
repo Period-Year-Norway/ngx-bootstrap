@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "libs/doc-pages/accordion/tsconfig.lib.json",
-        "project": "libs/doc-pages/accordion/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "libs/doc-pages/accordion/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -28,13 +27,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/doc-pages/accordion/src/**/*.ts",
-          "libs/doc-pages/accordion/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   }
 }

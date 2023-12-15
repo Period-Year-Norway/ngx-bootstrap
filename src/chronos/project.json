@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/chronos/tsconfig.lib.json",
-        "project": "src/chronos/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/chronos/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -22,15 +21,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/chronos/**/*.ts",
-          "src/chronos/**/*.html",
-          "src/chronos/package.json",
-          "src/chronos/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -38,8 +29,7 @@
         "{workspaceRoot}/coverage/src/chronos"
       ],
       "options": {
-        "jestConfig": "src/chronos/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/chronos/jest.config.ts"
       }
     }
   }

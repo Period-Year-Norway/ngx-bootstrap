@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/mini-ngrx/tsconfig.lib.json",
-        "project": "src/mini-ngrx/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/mini-ngrx/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -22,15 +21,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/mini-ngrx/**/*.ts",
-          "src/mini-ngrx/**/*.html",
-          "src/mini-ngrx/package.json",
-          "src/mini-ngrx/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -38,8 +29,7 @@
         "{workspaceRoot}/coverage/src/mini-ngrx"
       ],
       "options": {
-        "jestConfig": "src/mini-ngrx/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/mini-ngrx/jest.config.ts"
       }
     }
   }

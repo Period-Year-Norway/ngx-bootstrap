@@ -21,12 +21,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "apps/ngx-bootstrap-docs-e2e/**/*.{js,ts}"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "implicitDependencies": [

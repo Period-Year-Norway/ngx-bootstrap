@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/timepicker/tsconfig.lib.json",
-        "project": "src/timepicker/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/timepicker/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -28,15 +27,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/timepicker/**/*.ts",
-          "src/timepicker/**/*.html",
-          "src/timepicker/package.json",
-          "src/timepicker/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -44,8 +35,7 @@
         "{workspaceRoot}/coverage/src/timepicker"
       ],
       "options": {
-        "jestConfig": "src/timepicker/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/timepicker/jest.config.ts"
       }
     }
   }

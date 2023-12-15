@@ -12,8 +12,7 @@
       ],
       "options": {
         "tsConfig": "src/focus-trap/tsconfig.lib.json",
-        "project": "src/focus-trap/ng-package.json",
-        "updateBuildableProjectDepsInPackageJson": true
+        "project": "src/focus-trap/ng-package.json"
       },
       "configurations": {
         "production": {
@@ -22,15 +21,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "src/focus-trap/**/*.ts",
-          "src/focus-trap/**/*.html",
-          "src/focus-trap/package.json",
-          "src/focus-trap/project.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -38,8 +29,7 @@
         "{workspaceRoot}/coverage/src/focus-trap"
       ],
       "options": {
-        "jestConfig": "src/focus-trap/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "src/focus-trap/jest.config.ts"
       }
     }
   }
