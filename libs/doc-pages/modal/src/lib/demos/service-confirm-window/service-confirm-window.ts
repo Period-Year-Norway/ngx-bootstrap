@@ -11,7 +11,7 @@ export class DemoModalServiceConfirmWindowComponent {
   message?: string;
   constructor(private modalService: BsModalService) {}
 
-  openModal(template: TemplateRef<any>) {
+  openModal(template: TemplateRef<void>) {
     this.modalRef = this.modalService.show(template, {class: 'modal-sm'});
   }
 

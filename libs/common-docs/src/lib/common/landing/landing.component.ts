@@ -29,7 +29,8 @@ export class LandingComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     if (typeof window !== 'undefined') {
-      this.http.get<any>('assets/json/current-version.json').subscribe(data => {
+      // @eslint-disable-next-line @typescript-eslint/no-explicit-any
+      this.http.get<{ version: string }>('assets/json/current-version.json').subscribe(data => {
         this.currentVersion = data.version;
       });
     }

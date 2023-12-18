@@ -15,11 +15,10 @@ import { ConstructionPageComponent } from './common/construction-page/constructi
 import { ThemesComponent } from './common/themes/themes.component';
 /* docs */
 import { DemoSectionComponent } from './demo-section/demo-section.component';
-import { ContentSection } from './models/content-section.model';
-import { ExamplesComponent, ExamplesComponentModule } from './demo-section-components/demo-examples-section/index';
-import { ApiSectionsComponent, ApiSectionsComponentModule } from './demo-section-components/demo-api-section/index';
+import { ExamplesComponentModule } from './demo-section-components/demo-examples-section/index';
+import { ApiSectionsComponentModule } from './demo-section-components/demo-api-section/index';
 import { DocsSectionComponent } from './docs-section/docs-section.component';
-import { NgApiDocClassComponent, NgApiDocComponent, NgApiDocConfigComponent, NgApiDocModule } from './api-docs/index';
+import { NgApiDocModule } from './api-docs/index';
 import { LandingComponent } from './common/landing/landing.component';
 import { DocumentationComponent } from './common/documentation/documentation.component';
 import { DiscoverComponent } from './common/discover/discover.component';

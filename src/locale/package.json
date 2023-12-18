@@ -2,5 +2,9 @@
   "name": "ngx-bootstrap/locale",
   "version": "12.0.0",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jest-preset-angular": "13.1.4",
+    "ngx-bootstrap/chronos": "*"
+  }
 }

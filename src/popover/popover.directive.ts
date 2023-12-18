@@ -162,7 +162,7 @@ export class PopoverDirective implements OnInit, OnDestroy {
         },
         preventOverflow: {
           enabled: this.adaptivePosition,
-          boundariesElement: this.boundariesElement || 'scrollParent' 
+          boundariesElement: this.boundariesElement || 'scrollParent'
         }
       }
     });

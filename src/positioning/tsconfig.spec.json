@@ -9,7 +9,7 @@
     ]
   },
   "files": [
-    "test-setup.ts"
+    "testing/test-setup.ts"
   ],
   "include": [
     "**/*.spec.ts",

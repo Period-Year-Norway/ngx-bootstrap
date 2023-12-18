@@ -1755,7 +1755,7 @@ export const ngdoc: any = {
       },
       {
         "name": "popover",
-        "type": "string | TemplateRef<any>",
+        "type": "string | TemplateRef<void>",
         "description": "<p>Content to be displayed as popover.</p>\n"
       },
       {

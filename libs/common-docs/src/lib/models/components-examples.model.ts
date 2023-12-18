@@ -8,5 +8,6 @@ export interface ComponentExample {
   html?: SourceCodeModel;
   style?: string;
   css?: string;
-  outlet?: any; // ToDo: Component<T>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  outlet?: any; // @Todo fix type
 }

@@ -1,6 +1,5 @@
 import { ActivatedRoute, NavigationEnd, Router, Routes, UrlSegment } from "@angular/router";
-import { Component, Inject, HostBinding, Renderer2 } from "@angular/core";
-import { DOCUMENT } from '@angular/common';
+import { Component, Inject, HostBinding, Renderer2, inject } from "@angular/core";
 
 import { setTheme, getBsVer, currentBsVersion, IBsVersion, AvailableBsVersions } from 'ngx-bootstrap/utils';
 import { StyleManager } from '../../theme/style-manager';
@@ -44,24 +43,24 @@ export class SidebarComponent {
   }
   search = { text: '' };
   currentTheme?: AvailableBsVersions;
+  bodyElement: HTMLBodyElement;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private themeStorage: ThemeStorage,
     public styleManager: StyleManager,
-    private _renderer: Renderer2,
-    @Inject(DOCUMENT) private document: any,
     @Inject(DOCS_TOKENS) _routes: Routes,
     @Inject(SIDEBAR_ROUTES) sidebarRoutesStructure: SidebarRoutesType
   ) {
     if (innerWidth <= 991) {
       this.menuIsOpened = false;
     }
+    this.bodyElement = inject(Renderer2).selectRootElement('body', true);
     this.routesStructure = initNestedRoutes(_routes, sidebarRoutesStructure);
     this.initBodyClass();
     this.firstMenuIniting(_routes);
-    this.routeSubscription = this.router.events.subscribe((event: any) => {
+    this.routeSubscription = this.router.events.pipe(takeUntilDestroyed()).subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.firstMenuIniting(_routes);
       }
@@ -109,9 +108,9 @@ export class SidebarComponent {
 
   initBodyClass() {
     if (this.menuIsOpened) {
-      this._renderer.addClass(this.document.body, 'menuIsOpened');
+      this.bodyElement.classList.add('menuIsOpened');
     } else {
-      this._renderer.removeClass(this.document.body, 'menuIsOpened');
+      this.bodyElement.classList.remove('menuIsOpened');
     }
   }
 
@@ -215,4 +214,8 @@ export class SidebarComponent {
   }
 }
 
+
+function takeUntilDestroyed(): import("rxjs").OperatorFunction<import("@angular/router").Event, unknown> {
+  throw new Error("Function not implemented.");
+}
 

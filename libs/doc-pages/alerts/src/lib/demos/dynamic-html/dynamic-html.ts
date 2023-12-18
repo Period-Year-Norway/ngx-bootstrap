@@ -1,5 +1,7 @@
 import { Component, SecurityContext } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
+type ExampleAlertType = { type: string; msg: SafeHtml };
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -7,7 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './dynamic-html.html'
 })
 export class DemoAlertDynamicHtmlComponent {
-  alerts: any = [
+  alerts: ExampleAlertType[] = [
     {
       type: 'success',
       msg: `<strong>Well done!</strong> You successfully read this important alert message.`
@@ -23,9 +25,9 @@ export class DemoAlertDynamicHtmlComponent {
   ];
 
   constructor(sanitizer: DomSanitizer) {
-    this.alerts = this.alerts.map((alert: any) => ({
+    this.alerts = this.alerts.map((alert) => ({
       type: alert.type,
-      msg: sanitizer.sanitize(SecurityContext.HTML, alert.msg)
+      msg: sanitizer.sanitize(SecurityContext.HTML, alert.msg)!
     }));
   }
 }

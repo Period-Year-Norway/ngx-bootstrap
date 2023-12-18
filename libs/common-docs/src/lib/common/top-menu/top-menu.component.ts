@@ -1,15 +1,15 @@
-import { AfterViewInit, Component, Inject, OnDestroy, PLATFORM_ID } from "@angular/core";
+import { AfterViewInit, Component, DestroyRef, Inject, PLATFORM_ID, inject } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
-import { Subscription } from "rxjs";
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'top-menu',
   templateUrl: './top-menu.component.html',
 })
-export class TopMenuComponent implements AfterViewInit, OnDestroy {
+export class TopMenuComponent implements AfterViewInit {
   shadowRoutes = ['/documentation', '/discover', '/schematics', '/'];
   appUrl?: string;
   appHash?: string;
@@ -18,7 +18,7 @@ export class TopMenuComponent implements AfterViewInit, OnDestroy {
   initBoxShadow = false;
   isLocalhost = false;
   needPrefix = false;
-  routeSubscription?: Subscription;
+  destroyRef = inject(DestroyRef);
   previousDocs: {
     url: string;
     version: string;
@@ -46,7 +46,7 @@ export class TopMenuComponent implements AfterViewInit, OnDestroy {
 
       this.appUrl = location.protocol + '//' + location.hostname + (this.isLocalhost ? ':' + location.port + '/' : '/');
 
-      this.http.get<any>('assets/json/versions.json')
+      this.http.get<{ url: string; version: string; unprefixedUrl: string }[]>('assets/json/versions.json')
         .subscribe((data: { url: string; version: string; unprefixedUrl: string }[]) => {
           this.previousDocs.push(data[0]);
           this.previousDocs = this.previousDocs
@@ -66,7 +66,7 @@ export class TopMenuComponent implements AfterViewInit, OnDestroy {
     };
 
     let _prev = getUrl(this.router);
-    this.routeSubscription = this.router.events.subscribe((event: any) => {
+    this.router.events.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((event) => {
       const _cur = getUrl(this.router);
       this.initBoxShadow = this.shadowRoutes.includes(_cur);
       if (typeof window !== 'undefined') {
@@ -78,8 +78,5 @@ export class TopMenuComponent implements AfterViewInit, OnDestroy {
       }
     });
   }
-
-  ngOnDestroy() {
-    this.routeSubscription?.unsubscribe();
-  }
 }
+

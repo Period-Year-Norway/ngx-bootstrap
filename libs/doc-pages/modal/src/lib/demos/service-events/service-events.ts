@@ -21,7 +21,7 @@ export class DemoModalServiceEventsComponent {
   constructor(private modalService: BsModalService, private changeDetection: ChangeDetectorRef) {
   }
 
-  openModal(template: TemplateRef<any>) {
+  openModal(template: TemplateRef<void>) {
     this.messages = [];
 
     const _combine = combineLatest(

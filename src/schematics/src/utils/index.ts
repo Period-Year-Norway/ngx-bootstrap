@@ -53,14 +53,14 @@ export function addPackageToPackageJson(host: Tree, pkg: string, version: string
 
 export async function createTestApp(runner: SchematicTestRunner, appOptions = {}): Promise<UnitTestTree>  {
   const workspaceTree = await runner
-    .runExternalSchematicAsync('@schematics/angular', 'workspace', {
+    .runExternalSchematic('@schematics/angular', 'workspace', {
       name: 'workspace',
       version: '8.2.0',
       newProjectRoot: 'projects',
-    }).toPromise();
+    });
 
   return runner
-    .runExternalSchematicAsync(
+    .runExternalSchematic(
       '@schematics/angular',
       'application',
       {
@@ -68,10 +68,10 @@ export async function createTestApp(runner: SchematicTestRunner, appOptions = {}
         name: 'ngx-bootstrap',
       },
       workspaceTree,
-    ).toPromise();
+    );
 }
 
-export function removePackageJsonDependency(tree: Tree, dependencyName: string) {
+export function removePackageJsonDependency() {
   //const packageContent = JSON.parse(getFileContent(tree, '/package.json'));
   //delete packageContent.dependencies[dependencyName];
   //tree.overwrite('/package.json', JSON.stringify(packageContent, null, 2));

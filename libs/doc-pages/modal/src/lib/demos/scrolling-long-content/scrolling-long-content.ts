@@ -14,7 +14,7 @@ export class DemoModalScrollingLongContentComponent {
     this.items = Array(15).fill(0);
   }
 
-  openModal(template: TemplateRef<any>) {
+  openModal(template: TemplateRef<void>) {
     this.modalRef = this.modalService.show(template);
   }
 }

@@ -20,7 +20,7 @@
           "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": [],
+            "allow": ["(../)*scripts/.*"],
             "depConstraints": [
               {
                 "sourceTag": "*",
@@ -48,7 +48,8 @@
         "semi": "off",
         "@typescript-eslint/semi": [
           "error"
-        ]
+        ],
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
@@ -72,7 +73,7 @@
             "checkMissingDependencies": true,
             "checkObsoleteDependencies": true,
             "checkVersionMismatches": true,
-            "ignoredDependencies": []
+            "ignoredDependencies": ["eslint"]
           }
         ]
       }

@@ -21,7 +21,7 @@ export class DemoModalRefEventsComponent {
   constructor(private modalService: BsModalService, private changeDetection: ChangeDetectorRef) {
   }
 
-  openModal(template: TemplateRef<any>) {
+  openModal(template: TemplateRef<void>) {
     this.messages = [];
 
     this.modalRef = this.modalService.show(template);
