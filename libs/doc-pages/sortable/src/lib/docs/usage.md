@@ -1,4 +1,4 @@
-import { SortableModule } from 'ngx-bootstrap/sortable';
+import { SortableModule } from '@period-year-norway/ngx-bootstrap/sortable';
 
 @NgModule({
   imports: [SortableModule.forRoot(),...]

@@ -4,12 +4,12 @@
   "peerDependencies": {
     "@angular/common": "17.0.7",
     "@angular/core": "17.0.7",
-    "ngx-bootstrap/modal": "*",
+    "@period-year-norway/ngx-bootstrap/modal": "*",
     "rxjs": "7.8.1",
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/forms": "17.0.7",
     "@angular/router": "17.0.7",
-    "ngx-bootstrap/popover": "*",
-    "ngx-bootstrap/tooltip": "*"
+    "@period-year-norway/ngx-bootstrap/popover": "*",
+    "@period-year-norway/ngx-bootstrap/tooltip": "*"
   }
 }

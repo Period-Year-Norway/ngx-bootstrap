@@ -1,4 +1,4 @@
-import { TimeUnit } from 'ngx-bootstrap/chronos';
+import { TimeUnit } from '@period-year-norway/ngx-bootstrap/chronos';
 
 export type BsDatepickerViewMode = 'day' | 'month' | 'year';
 

@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
-import { PositioningService } from 'ngx-bootstrap/positioning';
+import { ComponentLoaderFactory } from '@period-year-norway/ngx-bootstrap/component-loader';
+import { PositioningService } from '@period-year-norway/ngx-bootstrap/positioning';
 
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { TimepickerModule, TimepickerActions } from 'ngx-bootstrap/timepicker';
+import { TooltipModule } from '@period-year-norway/ngx-bootstrap/tooltip';
+import { TimepickerModule, TimepickerActions } from '@period-year-norway/ngx-bootstrap/timepicker';
 
 import { BsDatepickerInputDirective } from './bs-datepicker-input.directive';
 import { BsDatepickerDirective } from './bs-datepicker.component';

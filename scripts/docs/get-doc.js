@@ -17,7 +17,6 @@ function getApiDocs() {
 module.exports = getApiDocs;
 const json = JSON.stringify(getApiDocs(), null, 2);
 fs.writeFileSync('apps/ngx-bootstrap-docs/src/ng-api-doc.ts',
-`/* tslint:disable */
-export const ngdoc: any = ${json};
+`export const ngdoc: any = ${json};
 `);
 

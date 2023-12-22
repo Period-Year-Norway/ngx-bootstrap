@@ -1,4 +1,4 @@
-import { AlertModule } from 'ngx-bootstrap/alert';
+import { AlertModule } from '@period-year-norway/ngx-bootstrap/alert';
 
 @NgModule({
   imports: [AlertModule.forRoot(),...]

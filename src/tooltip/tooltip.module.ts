@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { TooltipContainerComponent } from './tooltip-container.component';
 import { TooltipDirective } from './tooltip.directive';
-import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
-import { PositioningService } from 'ngx-bootstrap/positioning';
+import { ComponentLoaderFactory } from '@period-year-norway/ngx-bootstrap/component-loader';
+import { PositioningService } from '@period-year-norway/ngx-bootstrap/positioning';
 
 @NgModule({
     imports: [CommonModule],

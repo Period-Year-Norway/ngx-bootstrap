@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, TemplateRef } from '@angular/core';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from '@period-year-norway/ngx-bootstrap/modal';
 import { combineLatest, Subscription } from 'rxjs';
 
 @Component({

@@ -5,8 +5,8 @@
     "@angular/common": "17.0.7",
     "@angular/core": "17.0.7",
     "rxjs": "7.8.1",
-    "ngx-bootstrap/typeahead": "*",
-    "ngx-bootstrap/utils": "*",
+    "@period-year-norway/ngx-bootstrap/typeahead": "*",
+    "@period-year-norway/ngx-bootstrap/utils": "*",
     "@angular/forms": "17.0.7",
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/router": "17.0.7"

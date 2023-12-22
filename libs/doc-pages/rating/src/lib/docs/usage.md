@@ -1,4 +1,4 @@
-import { RatingModule } from 'ngx-bootstrap/rating';
+import { RatingModule } from '@period-year-norway/ngx-bootstrap/rating';
 
 @NgModule({
   imports: [RatingModule.forRoot(),...]

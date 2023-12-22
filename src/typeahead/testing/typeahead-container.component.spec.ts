@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { By } from '@angular/platform-browser';
 import { Subject } from 'rxjs';
 
-import { PositioningService } from 'ngx-bootstrap/positioning';
+import { PositioningService } from '@period-year-norway/ngx-bootstrap/positioning';
 
 import {
   TypeaheadConfig,

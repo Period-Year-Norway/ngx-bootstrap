@@ -1,4 +1,4 @@
-import { ModalModule } from 'ngx-bootstrap/modal';
+import { ModalModule } from '@period-year-norway/ngx-bootstrap/modal';
 
 @NgModule({
   imports: [ModalModule.forRoot(),...]

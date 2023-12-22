@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { ExamplesComponent } from './examples.component';
 import { NgApiDocModule } from '../../api-docs/index';
 import { RouterModule } from '@angular/router';
-import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TabsModule } from '@period-year-norway/ngx-bootstrap/tabs';
 
 export { ExamplesComponent } from './examples.component';
 

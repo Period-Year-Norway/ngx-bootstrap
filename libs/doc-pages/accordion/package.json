@@ -7,7 +7,7 @@
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/forms": "17.0.7",
     "@angular/router": "17.0.7",
-    "ngx-bootstrap/accordion": "*",
-    "ngx-bootstrap/utils": "*"
+    "@period-year-norway/ngx-bootstrap/accordion": "*",
+    "@period-year-norway/ngx-bootstrap/utils": "*"
   }
 }

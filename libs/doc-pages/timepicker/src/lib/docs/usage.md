@@ -1,4 +1,4 @@
-import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { TimepickerModule } from '@period-year-norway/ngx-bootstrap/timepicker';
 
 @NgModule({
   imports: [TimepickerModule.forRoot(),...]

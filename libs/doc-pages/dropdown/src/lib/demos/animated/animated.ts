@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+import { BsDropdownConfig } from '@period-year-norway/ngx-bootstrap/dropdown';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector

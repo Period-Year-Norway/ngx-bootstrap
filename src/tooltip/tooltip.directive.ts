@@ -14,12 +14,12 @@ import {
 import { TooltipContainerComponent } from './tooltip-container.component';
 import { TooltipConfig } from './tooltip.config';
 
-import { ComponentLoader, ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
-import { OnChange, warnOnce, parseTriggers, Trigger } from 'ngx-bootstrap/utils';
-import { PositioningService } from 'ngx-bootstrap/positioning';
+import { ComponentLoader, ComponentLoaderFactory } from '@period-year-norway/ngx-bootstrap/component-loader';
+import { OnChange, warnOnce, parseTriggers, Trigger } from '@period-year-norway/ngx-bootstrap/utils';
+import { PositioningService } from '@period-year-norway/ngx-bootstrap/positioning';
 
 import { timer, Subscription } from 'rxjs';
-import { AvailbleBSPositions } from 'ngx-bootstrap/positioning';
+import { AvailbleBSPositions } from '@period-year-norway/ngx-bootstrap/positioning';
 
 let id = 0;
 

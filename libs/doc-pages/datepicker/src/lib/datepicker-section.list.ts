@@ -166,8 +166,8 @@ export const demoComponentContent: ContentSection[] = [
           <p>To use a different locale, you have to import it from <code>ngx-bootstrap/chronos</code> first, then
           define it in your <code>@NgModule</code> using function <code>defineLocale</code></p>
           <p>Example: </p>
-          <code>import { defineLocale } from 'ngx-bootstrap/chronos';</code><br>
-          <code>import { deLocale } from 'ngx-bootstrap/locale';</code><br>
+          <code>import { defineLocale } from '@period-year-norway/ngx-bootstrap/chronos';</code><br>
+          <code>import { deLocale } from '@period-year-norway/ngx-bootstrap/locale';</code><br>
           <code>defineLocale('de', deLocale);</code>
           <br>
           <br>

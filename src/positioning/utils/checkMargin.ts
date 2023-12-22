@@ -1,4 +1,4 @@
-import { getBsVer } from 'ngx-bootstrap/utils';
+import { getBsVer } from '@period-year-norway/ngx-bootstrap/utils';
 import { AvailbleBSPositions } from '../models';
 
 const availablePositions = {

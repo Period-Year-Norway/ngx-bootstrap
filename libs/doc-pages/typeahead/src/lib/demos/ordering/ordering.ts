@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TypeaheadOrder } from 'ngx-bootstrap/typeahead';
+import { TypeaheadOrder } from '@period-year-norway/ngx-bootstrap/typeahead';
 import { Observable, of, Subscriber } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 

@@ -1,6 +1,6 @@
 import { StaticProvider } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
+import { ComponentLoaderFactory } from '@period-year-norway/ngx-bootstrap/component-loader';
 import { EMPTY } from 'rxjs';
 import { createSpyObj } from 'jest-createspyobj';
 

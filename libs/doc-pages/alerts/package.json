@@ -6,7 +6,7 @@
     "@angular/core": "17.0.7",
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/router": "17.0.7",
-    "ngx-bootstrap/alert": "*",
+    "@period-year-norway/ngx-bootstrap/alert": "*",
     "@angular/platform-browser": "17.0.7"
   }
 }

@@ -1,7 +1,7 @@
 import { ActivatedRoute, NavigationEnd, Router, Routes, UrlSegment } from "@angular/router";
 import { Component, Inject, HostBinding, Renderer2, inject } from "@angular/core";
 
-import { setTheme, getBsVer, currentBsVersion, IBsVersion, AvailableBsVersions } from 'ngx-bootstrap/utils';
+import { setTheme, getBsVer, currentBsVersion, IBsVersion, AvailableBsVersions } from '@period-year-norway/ngx-bootstrap/utils';
 import { StyleManager } from '../../theme/style-manager';
 import { ThemeStorage } from '../../theme/theme-storage';
 import { DOCS_TOKENS } from '../../tokens/docs-routes-token';

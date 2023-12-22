@@ -1,4 +1,4 @@
-import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { PaginationModule } from '@period-year-norway/ngx-bootstrap/pagination';
 
 @NgModule({
   imports: [PaginationModule.forRoot(),...]

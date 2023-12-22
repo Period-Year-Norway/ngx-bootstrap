@@ -7,9 +7,9 @@
     "@angular/router": "17.0.7",
     "rxjs": "7.8.1",
     "@angular/platform-browser": "17.0.7",
-    "ngx-bootstrap/tabs": "*",
-    "ngx-bootstrap/utils": "*",
+    "@period-year-norway/ngx-bootstrap/tabs": "*",
+    "@period-year-norway/ngx-bootstrap/utils": "*",
     "@stackblitz/sdk": "1.8.0",
-    "ngx-bootstrap/dropdown": "*"
+    "@period-year-norway/ngx-bootstrap/dropdown": "*"
   }
 }

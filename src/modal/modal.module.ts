@@ -1,8 +1,8 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { PositioningService } from 'ngx-bootstrap/positioning';
-import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
-import { FocusTrapModule } from 'ngx-bootstrap/focus-trap';
+import { PositioningService } from '@period-year-norway/ngx-bootstrap/positioning';
+import { ComponentLoaderFactory } from '@period-year-norway/ngx-bootstrap/component-loader';
+import { FocusTrapModule } from '@period-year-norway/ngx-bootstrap/focus-trap';
 
 import { ModalBackdropComponent } from './modal-backdrop.component';
 import { ModalDirective } from './modal.directive';

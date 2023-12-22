@@ -18,9 +18,9 @@ import {
   ViewContainerRef
 } from '@angular/core';
 
-import { PositioningOptions, PositioningService } from 'ngx-bootstrap/positioning';
+import { PositioningOptions, PositioningService } from '@period-year-norway/ngx-bootstrap/positioning';
 
-import { listenToTriggersV2, registerEscClick, registerOutsideClick } from 'ngx-bootstrap/utils';
+import { listenToTriggersV2, registerEscClick, registerOutsideClick } from '@period-year-norway/ngx-bootstrap/utils';
 import { Subscription } from 'rxjs';
 
 import { ContentRef } from './content-ref.class';

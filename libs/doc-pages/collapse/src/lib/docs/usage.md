@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { CollapseModule } from '@period-year-norway/ngx-bootstrap/collapse';
 
 @NgModule({
   imports: [

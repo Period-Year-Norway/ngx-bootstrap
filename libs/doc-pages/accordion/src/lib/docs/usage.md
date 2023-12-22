@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { AccordionModule } from '@period-year-norway/ngx-bootstrap/accordion';
 
 @NgModule({
   imports: [

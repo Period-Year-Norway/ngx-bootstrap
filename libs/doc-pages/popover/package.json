@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "17.0.7",
     "@angular/core": "17.0.7",
-    "ngx-bootstrap/popover": "*",
+    "@period-year-norway/ngx-bootstrap/popover": "*",
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/forms": "17.0.7",
     "@angular/router": "17.0.7"

@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "17.0.7",
     "@angular/core": "17.0.7",
-    "ngx-bootstrap/progressbar": "*",
+    "@period-year-norway/ngx-bootstrap/progressbar": "*",
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/forms": "17.0.7",
     "@angular/router": "17.0.7"

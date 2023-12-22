@@ -7,9 +7,9 @@
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/forms": "17.0.7",
     "@angular/router": "17.0.7",
-    "ngx-bootstrap/chronos": "*",
-    "ngx-bootstrap/datepicker": "*",
-    "ngx-bootstrap/locale": "*",
-    "ngx-bootstrap/tabs": "*"
+    "@period-year-norway/ngx-bootstrap/chronos": "*",
+    "@period-year-norway/ngx-bootstrap/datepicker": "*",
+    "@period-year-norway/ngx-bootstrap/locale": "*",
+    "@period-year-norway/ngx-bootstrap/tabs": "*"
   }
 }

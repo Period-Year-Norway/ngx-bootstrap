@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RatingConfig } from 'ngx-bootstrap/rating';
+import { RatingConfig } from '@period-year-norway/ngx-bootstrap/rating';
 
 // such override allows to keep some initial values
 export function getRatingConfig(): RatingConfig {

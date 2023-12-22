@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { isBs3 } from 'ngx-bootstrap/utils';
+import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector

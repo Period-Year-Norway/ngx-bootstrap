@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-import { TabsModule } from 'ngx-bootstrap/tabs';
+import { BsDropdownModule } from '@period-year-norway/ngx-bootstrap/dropdown';
+import { TabsModule } from '@period-year-norway/ngx-bootstrap/tabs';
 
 /* common */
 import { AppFooterComponent } from './common/app-footer/app-footer.component';

@@ -4,7 +4,7 @@
  */
 import { getBoundaries } from './getBoundaries';
 import { Offsets, PlacementForBs5 } from '../models';
-import { getBsVer } from 'ngx-bootstrap/utils';
+import { getBsVer } from '@period-year-norway/ngx-bootstrap/utils';
 
 function getArea({ width, height }: { width: number; height: number }) {
   return width * height;

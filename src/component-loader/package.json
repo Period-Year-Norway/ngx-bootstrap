@@ -1,14 +1,14 @@
 {
-  "name": "ngx-bootstrap/component-loader",
-  "version": "12.0.1",
+  "name": "@period-year-norway/ngx-bootstrap/component-loader",
+  "version": "12.0.2",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "17.0.7",
     "@angular/core": "17.0.7",
     "jest-preset-angular": "13.1.4",
-    "ngx-bootstrap/positioning": "*",
-    "ngx-bootstrap/utils": "*",
+    "@period-year-norway/ngx-bootstrap/positioning": "*",
+    "@period-year-norway/ngx-bootstrap/utils": "*",
     "rxjs": "7.8.1"
   }
 }

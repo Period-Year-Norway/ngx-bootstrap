@@ -1,4 +1,4 @@
-import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { ButtonsModule } from '@period-year-norway/ngx-bootstrap/buttons';
 
 @NgModule({
   imports: [ButtonsModule.forRoot(),...]

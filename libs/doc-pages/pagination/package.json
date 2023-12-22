@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "17.0.7",
     "@angular/core": "17.0.7",
-    "ngx-bootstrap/pagination": "*",
+    "@period-year-norway/ngx-bootstrap/pagination": "*",
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/forms": "17.0.7",
     "@angular/router": "17.0.7"

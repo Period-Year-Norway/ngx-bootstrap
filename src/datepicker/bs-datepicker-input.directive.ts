@@ -28,7 +28,7 @@ import {
   isDateValid,
   parseDate,
   utcAsLocal
-} from 'ngx-bootstrap/chronos';
+} from '@period-year-norway/ngx-bootstrap/chronos';
 
 import { BsDatepickerDirective } from './bs-datepicker.component';
 import { BsLocaleService } from './bs-locale.service';
