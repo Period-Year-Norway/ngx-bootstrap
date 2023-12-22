@@ -8,6 +8,5 @@
     "@angular/router": "17.0.7",
     "ngx-bootstrap/alert": "*",
     "@angular/platform-browser": "17.0.7"
-  },
-  "dependencies": {}
+  }
 }

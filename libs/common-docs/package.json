@@ -11,6 +11,5 @@
     "ngx-bootstrap/utils": "*",
     "@stackblitz/sdk": "1.8.0",
     "ngx-bootstrap/dropdown": "*"
-  },
-  "dependencies": {}
+  }
 }

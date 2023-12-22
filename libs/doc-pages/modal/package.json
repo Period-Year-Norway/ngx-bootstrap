@@ -11,6 +11,5 @@
     "@angular/router": "17.0.7",
     "ngx-bootstrap/popover": "*",
     "ngx-bootstrap/tooltip": "*"
-  },
-  "dependencies": {}
+  }
 }

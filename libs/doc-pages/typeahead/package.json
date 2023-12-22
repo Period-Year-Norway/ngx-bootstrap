@@ -10,6 +10,5 @@
     "@angular/forms": "17.0.7",
     "@ngx-bootstrap-doc/docs": "*",
     "@angular/router": "17.0.7"
-  },
-  "dependencies": {}
+  }
 }

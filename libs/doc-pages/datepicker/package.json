@@ -11,6 +11,5 @@
     "ngx-bootstrap/datepicker": "*",
     "ngx-bootstrap/locale": "*",
     "ngx-bootstrap/tabs": "*"
-  },
-  "dependencies": {}
+  }
 }

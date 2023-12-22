@@ -98,7 +98,7 @@ function addModuleOfComponent(project: workspaces.ProjectDefinition, host: Tree,
 }
 
 function addPackageJsonDependencies(host: Tree, context: SchematicContext): Tree {
-  const dependencies = getDependencies(host);
+  const dependencies = getDependencies();
   dependencies.forEach(dependency => {
     addPackageToPackageJson(host, dependency.name, `${dependency.version}`);
     context.logger.log('info', `✅️ Added "${dependency.name}`);

@@ -8,6 +8,5 @@
     "@angular/forms": "17.0.7",
     "@angular/router": "17.0.7",
     "ngx-bootstrap/buttons": "*"
-  },
-  "dependencies": {}
+  }
 }

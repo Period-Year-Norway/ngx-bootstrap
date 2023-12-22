@@ -8,7 +8,6 @@
   "peerDependencies": {
     "jest-preset-angular": "13.1.4"
   },
-  "dependencies": {},
   "exports": {
     "./accordion": {
       "types": "./accordion/ngx-bootstrap-accordion.d.ts",
