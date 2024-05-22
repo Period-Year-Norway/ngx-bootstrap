@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/ngx-bootstrap-docs-e2e/src",
   "projectType": "application",
+  "implicitDependencies": ["ngx-bootstrap-docs"],
   "targets": {
     "e2e": {
       "executor": "@nx/cypress:cypress",
@@ -23,8 +24,5 @@
     "lint": {
       "executor": "@nx/eslint:lint"
     }
-  },
-  "implicitDependencies": [
-    "ngx-bootstrap-docs"
-  ]
+  }
 }

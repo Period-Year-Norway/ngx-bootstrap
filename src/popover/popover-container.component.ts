@@ -47,7 +47,7 @@ export class PopoverContainerComponent {
     } else {
       this._placement =  PlacementForBs5[value as keyof typeof PlacementForBs5];
     }
-  };
+  }
 
   @Input() title?: string;
 

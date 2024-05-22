@@ -1,9 +1,9 @@
 {
   "name": "@period-year-norway/ngx-bootstrap/chronos",
-  "version": "12.0.3",
+  "version": "12.0.5",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "jest-preset-angular": "13.1.4"
+    "jest-preset-angular": "14.0.4"
   }
 }

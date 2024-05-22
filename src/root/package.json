@@ -1,12 +1,12 @@
 {
   "name": "@period-year-norway/ngx-bootstrap",
-  "version": "12.0.3",
+  "version": "12.0.5",
   "description": "Angular Bootstrap",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
   "license": "MIT",
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "jest-preset-angular": "13.1.4"
+    "jest-preset-angular": "14.0.4"
   },
   "exports": {
     "./accordion": {

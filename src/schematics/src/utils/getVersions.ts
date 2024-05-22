@@ -20,10 +20,10 @@ export function getProjectStyleFile(existingStyles: string[], extension?: string
   const defaultExtension = existingStyles.find((file) => extension ? file === `styles.${extension}` : defaultStyleFileRegex.test(file));
   if (defaultExtension) {
     return defaultExtension;
-  };
+  }
 
   const fallbackStylePath = existingStyles.find((file) => extension ? file?.endsWith(`.${extension}`) : validStyleFileRegex.test(file));
   if (fallbackStylePath) {
     return normalize(fallbackStylePath);
-  };
+  }
 }

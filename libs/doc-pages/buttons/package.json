@@ -2,11 +2,11 @@
   "name": "@ngx-bootstrap-doc/buttons",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "17.0.7",
-    "@angular/core": "17.0.7",
+    "@angular/common": "17.3.9",
+    "@angular/core": "17.3.9",
     "@ngx-bootstrap-doc/docs": "*",
-    "@angular/forms": "17.0.7",
-    "@angular/router": "17.0.7",
+    "@angular/forms": "17.3.9",
+    "@angular/router": "17.3.9",
     "@period-year-norway/ngx-bootstrap/buttons": "*"
   }
 }
