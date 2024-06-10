@@ -52,3 +52,4 @@ scully.log
 /schematics/**/*.d.ts
 
 .nx/cache
+.nx/workspace-data
