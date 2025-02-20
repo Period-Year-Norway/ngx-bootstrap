@@ -1,41 +1,26 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  OnDestroy,
-  OnInit,
-  Renderer2
-} from '@angular/core';
-import {
-  CLASS_NAME,
-  DISMISS_REASONS,
-  ModalOptions,
-  TRANSITION_DURATIONS
-} from './modal-options.class';
+import { Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { CLASS_NAME, DISMISS_REASONS, ModalOptions, TRANSITION_DURATIONS } from './modal-options.class';
 import { BsModalService } from './bs-modal.service';
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 
 @Component({
-    selector: 'modal-container',
-    template: `
-    <div [class]="'modal-dialog' + (config.class ? ' ' + config.class : '')"
-         role="document"
-         focusTrap>
+  selector: 'modal-container',
+  template: `
+    <div [class]="'modal-dialog' + (config.class ? ' ' + config.class : '')" role="document" focusTrap>
       <div class="modal-content">
         <ng-content></ng-content>
       </div>
     </div>
   `,
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        class: 'modal',
-        role: 'dialog',
-        tabindex: '-1',
-        '[attr.aria-modal]': 'true',
-        '[attr.aria-labelledby]': 'config.ariaLabelledBy',
-        '[attr.aria-describedby]': 'config.ariaDescribedby'
-    },
-    standalone: false
+  host: {
+    class: 'modal',
+    role: 'dialog',
+    tabindex: '-1',
+    '[attr.aria-modal]': 'true',
+    '[attr.aria-labelledby]': 'config.ariaLabelledBy',
+    '[attr.aria-describedby]': 'config.ariaDescribedby'
+  },
+  standalone: false
 })
 export class ModalContainerComponent implements OnInit, OnDestroy {
   config: ModalOptions;
@@ -46,31 +31,26 @@ export class ModalContainerComponent implements OnInit, OnDestroy {
   private isModalHiding = false;
   private clickStartedInContent = false;
 
-  constructor(options: ModalOptions,
-              protected _element: ElementRef,
-              private _renderer: Renderer2) {
+  constructor(
+    options: ModalOptions,
+    protected _element: ElementRef,
+    private _renderer: Renderer2
+  ) {
     this.config = Object.assign({}, options);
   }
 
   ngOnInit(): void {
     if (this.isAnimated) {
-      this._renderer.addClass(
-        this._element.nativeElement,
-        CLASS_NAME.FADE
-      );
+      this._renderer.addClass(this._element.nativeElement, CLASS_NAME.FADE);
     }
-    this._renderer.setStyle(
-      this._element.nativeElement,
-      'display',
-      'block'
+    this._renderer.setStyle(this._element.nativeElement, 'display', 'block');
+    setTimeout(
+      () => {
+        this.isShown = true;
+        this._renderer.addClass(this._element.nativeElement, isBs3() ? CLASS_NAME.IN : CLASS_NAME.SHOW);
+      },
+      this.isAnimated ? TRANSITION_DURATIONS.BACKDROP : 0
     );
-    setTimeout(() => {
-      this.isShown = true;
-      this._renderer.addClass(
-        this._element.nativeElement,
-        isBs3() ? CLASS_NAME.IN : CLASS_NAME.SHOW
-      );
-    }, this.isAnimated ? TRANSITION_DURATIONS.BACKDROP : 0);
     if (document && document.body) {
       if (this.bsModalService && this.bsModalService.getModalsCount() === 1) {
         this.bsModalService.checkScrollbar();
@@ -92,11 +72,7 @@ export class ModalContainerComponent implements OnInit, OnDestroy {
   @HostListener('click', ['$event'])
   onClickStop(event: MouseEvent): void {
     const clickedInBackdrop = event.target === this._element.nativeElement && !this.clickStartedInContent;
-    if (
-      this.config.ignoreBackdropClick ||
-      this.config.backdrop === 'static' ||
-      !clickedInBackdrop
-    ) {
+    if (this.config.ignoreBackdropClick || this.config.backdrop === 'static' || !clickedInBackdrop) {
       this.clickStartedInContent = false;
 
       return;
@@ -121,10 +97,7 @@ export class ModalContainerComponent implements OnInit, OnDestroy {
       event.preventDefault();
     }
 
-    if (
-      this.config.keyboard &&
-      this.level === this.bsModalService?.getModalsCount()
-    ) {
+    if (this.config.keyboard && this.level === this.bsModalService?.getModalsCount()) {
       this.bsModalService?.setDismissReason(DISMISS_REASONS.ESC);
       this.hide();
     }
@@ -144,7 +117,8 @@ export class ModalContainerComponent implements OnInit, OnDestroy {
     if (this.config.closeInterceptor) {
       this.config.closeInterceptor().then(
         () => this._hide(),
-        () => undefined);
+        () => undefined
+      );
 
       return;
     }
@@ -154,22 +128,18 @@ export class ModalContainerComponent implements OnInit, OnDestroy {
 
   private _hide(): void {
     this.isModalHiding = true;
-    this._renderer.removeClass(
-      this._element.nativeElement,
-      isBs3() ? CLASS_NAME.IN : CLASS_NAME.SHOW
+    this._renderer.removeClass(this._element.nativeElement, isBs3() ? CLASS_NAME.IN : CLASS_NAME.SHOW);
+    setTimeout(
+      () => {
+        this.isShown = false;
+        if (document && document.body && this.bsModalService?.getModalsCount() === 1) {
+          this._renderer.removeClass(document.body, CLASS_NAME.OPEN);
+          this._renderer.setStyle(document.body, 'overflow-y', '');
+        }
+        this.bsModalService?.hide(this.config.id);
+        this.isModalHiding = false;
+      },
+      this.isAnimated ? TRANSITION_DURATIONS.MODAL : 0
     );
-    setTimeout(() => {
-      this.isShown = false;
-      if (
-        document &&
-        document.body &&
-        this.bsModalService?.getModalsCount() === 1
-      ) {
-        this._renderer.removeClass(document.body, CLASS_NAME.OPEN);
-        this._renderer.setStyle(document.body, 'overflow-y', '');
-      }
-      this.bsModalService?.hide(this.config.id);
-      this.isModalHiding = false;
-    }, this.isAnimated ? TRANSITION_DURATIONS.MODAL : 0);
   }
 }

@@ -1,48 +1,45 @@
-import {
-  Component,
-  HostBinding,
-  OnDestroy,
-  Input,
-  OnInit
-} from '@angular/core';
+import { Component, HostBinding, OnDestroy, Input, OnInit } from '@angular/core';
 
 import { CarouselComponent } from './carousel.component';
 
 @Component({
-    selector: 'slide',
-    template: `
+  selector: 'slide',
+  template: `
     <div [class.active]="active" class="item">
       <ng-content></ng-content>
     </div>
   `,
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        '[attr.aria-hidden]': '!active',
-        '[class.multilist-margin]': 'multilist'
-    },
-    styles: [`
-    :host.carousel-animation {
-       transition: opacity 0.6s ease, visibility 0.6s ease;
-       float: left;
-    }
-    :host.carousel-animation.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    :host.carousel-animation:not(.active) {
-      display: block;
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-    }
-    :host.multilist-margin {
-      margin-right: auto;
-    }
-    :host.carousel-item {
-      perspective: 1000px;
-    }
-  `],
-    standalone: false
+  host: {
+    '[attr.aria-hidden]': '!active',
+    '[class.multilist-margin]': 'multilist'
+  },
+  styles: [
+    `
+      :host.carousel-animation {
+        transition:
+          opacity 0.6s ease,
+          visibility 0.6s ease;
+        float: left;
+      }
+      :host.carousel-animation.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      :host.carousel-animation:not(.active) {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+      }
+      :host.multilist-margin {
+        margin-right: auto;
+      }
+      :host.carousel-item {
+        perspective: 1000px;
+      }
+    `
+  ],
+  standalone: false
 })
 export class SlideComponent implements OnInit, OnDestroy {
   /** Is current slide active */

@@ -3,14 +3,12 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { CLASS_NAME } from './modal-options.class';
 import { isBs3, Utils } from '@period-year-norway/ngx-bootstrap/utils';
 
-
 /** This component will be added as background layout for modals if enabled */
 @Component({
-    selector: 'bs-modal-backdrop',
-    template: ' ',
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: { class: CLASS_NAME.BACKDROP },
-    standalone: false
+  selector: 'bs-modal-backdrop',
+  template: ' ',
+  host: { class: CLASS_NAME.BACKDROP },
+  standalone: false
 })
 export class ModalBackdropComponent implements OnInit {
   get isAnimated(): boolean {
@@ -28,27 +26,15 @@ export class ModalBackdropComponent implements OnInit {
   set isShown(value: boolean) {
     this._isShown = value;
     if (value) {
-      this.renderer.addClass(
-        this.element.nativeElement,
-        `${CLASS_NAME.IN}`
-      );
+      this.renderer.addClass(this.element.nativeElement, `${CLASS_NAME.IN}`);
     } else {
-      this.renderer.removeClass(
-        this.element.nativeElement,
-        `${CLASS_NAME.IN}`
-      );
+      this.renderer.removeClass(this.element.nativeElement, `${CLASS_NAME.IN}`);
     }
     if (!isBs3()) {
       if (value) {
-        this.renderer.addClass(
-          this.element.nativeElement,
-          `${CLASS_NAME.SHOW}`
-        );
+        this.renderer.addClass(this.element.nativeElement, `${CLASS_NAME.SHOW}`);
       } else {
-        this.renderer.removeClass(
-          this.element.nativeElement,
-          `${CLASS_NAME.SHOW}`
-        );
+        this.renderer.removeClass(this.element.nativeElement, `${CLASS_NAME.SHOW}`);
       }
     }
   }
@@ -66,10 +52,7 @@ export class ModalBackdropComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.isAnimated) {
-      this.renderer.addClass(
-        this.element.nativeElement,
-        `${CLASS_NAME.FADE}`
-      );
+      this.renderer.addClass(this.element.nativeElement, `${CLASS_NAME.FADE}`);
       Utils.reflow(this.element.nativeElement);
     }
     this.isShown = true;

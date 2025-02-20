@@ -12,24 +12,23 @@ import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 import { ProgressbarType } from './progressbar-type.interface';
 
 @Component({
-    selector: 'bar',
-    templateUrl: './bar.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        role: 'progressbar',
-        'aria-valuemin': '0',
-        '[class.progress-bar]': 'true',
-        '[class.progress-bar-animated]': '!isBs3 && animate',
-        '[class.progress-bar-striped]': 'striped',
-        '[class.active]': 'isBs3 && animate',
-        '[attr.aria-valuenow]': 'value',
-        '[attr.aria-valuetext]': 'percent ? percent.toFixed(0) + "%" : ""',
-        '[attr.aria-valuemax]': 'max',
-        '[style.height.%]': '"100"',
-        '[style.width.%]': 'percent'
-    },
-    standalone: false
+  selector: 'bar',
+  templateUrl: './bar.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    role: 'progressbar',
+    'aria-valuemin': '0',
+    '[class.progress-bar]': 'true',
+    '[class.progress-bar-animated]': '!isBs3 && animate',
+    '[class.progress-bar-striped]': 'striped',
+    '[class.active]': 'isBs3 && animate',
+    '[attr.aria-valuenow]': 'value',
+    '[attr.aria-valuetext]': 'percent ? percent.toFixed(0) + "%" : ""',
+    '[attr.aria-valuemax]': 'max',
+    '[style.height.%]': '"100"',
+    '[style.width.%]': 'percent'
+  },
+  standalone: false
 })
 export class BarComponent implements OnChanges {
   /** maximum total value of progress element */
@@ -61,12 +60,14 @@ export class BarComponent implements OnChanges {
   ) {}
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes["value"] || changes["max"]) {
-      this.percent = 100 * (Number(changes["value"]?.currentValue || this.value)
-        / Number((changes["max"]?.currentValue || this.max) || 100));
+    if (changes['value'] || changes['max']) {
+      this.percent =
+        100 *
+        (Number(changes['value']?.currentValue || this.value) /
+          Number(changes['max']?.currentValue || this.max || 100));
     }
 
-    if (changes["type"]) {
+    if (changes['type']) {
       this.applyTypeClasses();
     }
   }

@@ -1,6 +1,4 @@
-import {
-  Component, HostBinding, Inject, Input, OnDestroy, OnInit, Output, EventEmitter
-} from '@angular/core';
+import { Component, HostBinding, Inject, Input, OnDestroy, OnInit, Output, EventEmitter } from '@angular/core';
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 import { AccordionComponent } from './accordion.component';
 
@@ -11,15 +9,14 @@ import { AccordionComponent } from './accordion.component';
  * will be used as group's header template.
  */
 @Component({
-    selector: 'accordion-group, accordion-panel',
-    templateUrl: './accordion-group.component.html',
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        class: 'panel',
-        style: 'display: block'
-    },
-    styleUrls: ['./accordion.scss'],
-    standalone: false
+  selector: 'accordion-group, accordion-panel',
+  templateUrl: './accordion-group.component.html',
+  host: {
+    class: 'panel',
+    style: 'display: block'
+  },
+  styleUrls: ['./accordion.scss'],
+  standalone: false
 })
 export class AccordionPanelComponent implements OnInit, OnDestroy {
   /** turn on/off animation */
@@ -51,8 +48,7 @@ export class AccordionPanelComponent implements OnInit, OnDestroy {
         this.accordion.closeOtherPanels(this);
       }
       this._isOpen = value;
-      Promise.resolve(null)
-      .then(() => {
+      Promise.resolve(null).then(() => {
         this.isOpenChange.emit(value);
       });
     }

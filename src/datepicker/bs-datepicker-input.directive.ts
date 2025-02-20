@@ -37,41 +37,41 @@ import { distinctUntilChanged } from 'rxjs/operators';
 
 const BS_DATEPICKER_VALUE_ACCESSOR: Provider = {
   provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => BsDatepickerInputDirective),
+  useExisting: forwardRef(() => BsDatepickerInputDirective),
   multi: true
 };
 
 const BS_DATEPICKER_VALIDATOR: Provider = {
   provide: NG_VALIDATORS,
-    useExisting: forwardRef(() => BsDatepickerInputDirective),
+  useExisting: forwardRef(() => BsDatepickerInputDirective),
   multi: true
 };
 
 @Directive({
-    selector: `input[bsDatepicker]`,
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        '(change)': 'onChange($event)',
-        '(keyup.esc)': 'hide()',
-        '(keydown)': 'onKeydownEvent($event)',
-        '(blur)': 'onBlur()'
-    },
-    providers: [BS_DATEPICKER_VALUE_ACCESSOR, BS_DATEPICKER_VALIDATOR],
-    standalone: false
+  selector: `input[bsDatepicker]`,
+  host: {
+    '(change)': 'onChange($event)',
+    '(keyup.esc)': 'hide()',
+    '(keydown)': 'onKeydownEvent($event)',
+    '(blur)': 'onBlur()'
+  },
+  providers: [BS_DATEPICKER_VALUE_ACCESSOR, BS_DATEPICKER_VALIDATOR],
+  standalone: false
 })
-export class BsDatepickerInputDirective
-  implements ControlValueAccessor, Validator, OnInit, OnDestroy {
+export class BsDatepickerInputDirective implements ControlValueAccessor, Validator, OnInit, OnDestroy {
   private _onChange = Function.prototype;
   private _onTouched = Function.prototype;
-    private _validatorChange = Function.prototype;
+  private _validatorChange = Function.prototype;
   private _value?: Date;
   private _subs = new Subscription();
 
-  constructor(@Host() private _picker: BsDatepickerDirective,
-              private _localeService: BsLocaleService,
-              private _renderer: Renderer2,
-              private _elRef: ElementRef,
-              private changeDetection: ChangeDetectorRef) {}
+  constructor(
+    @Host() private _picker: BsDatepickerDirective,
+    private _localeService: BsLocaleService,
+    private _renderer: Renderer2,
+    private _elRef: ElementRef,
+    private changeDetection: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     const setBsValue = (value: Date) => {
@@ -90,9 +90,7 @@ export class BsDatepickerInputDirective
     }
 
     // update input value on datepicker value update
-    this._subs.add(
-      this._picker.bsValueChange.subscribe(setBsValue)
-    );
+    this._subs.add(this._picker.bsValueChange.subscribe(setBsValue));
 
     // update input value on locale change
     this._subs.add(
@@ -102,11 +100,11 @@ export class BsDatepickerInputDirective
     );
 
     this._subs.add(
-    this._picker.dateInputFormat$.pipe(distinctUntilChanged()).subscribe(() => {
-      this._setInputValue(this._value);
-    })
-  );
-}
+      this._picker.dateInputFormat$.pipe(distinctUntilChanged()).subscribe(() => {
+        this._setInputValue(this._value);
+      })
+    );
+  }
 
   ngOnDestroy() {
     this._subs.unsubscribe();
@@ -119,7 +117,8 @@ export class BsDatepickerInputDirective
   }
 
   _setInputValue(value?: Date): void {
-    const initialDate = !value ? ''
+    const initialDate = !value
+      ? ''
       : formatDate(value, this._picker._config.dateInputFormat, this._localeService.currentLocale);
 
     this._renderer.setProperty(this._elRef.nativeElement, 'value', initialDate);
@@ -138,7 +137,7 @@ export class BsDatepickerInputDirective
   validate(c: AbstractControl): ValidationErrors | null {
     const _value: Date | string = c.value;
 
-        if (_value === null || _value === undefined || _value === '') {
+    if (_value === null || _value === undefined || _value === '') {
       return null;
     }
 
@@ -175,9 +174,7 @@ export class BsDatepickerInputDirective
       const _localeKey = this._localeService.currentLocale;
       const _locale = getLocale(_localeKey);
       if (!_locale) {
-        throw new Error(
-          `Locale "${_localeKey}" is not defined, please add it with "defineLocale(...)"`
-        );
+        throw new Error(`Locale "${_localeKey}" is not defined, please add it with "defineLocale(...)"`);
       }
 
       this._value = parseDate(value, this._picker._config.dateInputFormat, this._localeService.currentLocale);

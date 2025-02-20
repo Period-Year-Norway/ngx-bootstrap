@@ -26,34 +26,33 @@ import { TypeaheadOptionItemContext, TypeaheadOptionListContext, TypeaheadTempla
 let nextWindowId = 0;
 
 @Component({
-    selector: 'typeahead-container',
-    templateUrl: './typeahead-container.component.html',
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        class: 'dropdown open bottom',
-        '[class.dropdown-menu]': 'isBs4',
-        '[style.height]': `isBs4 && needScrollbar ? guiHeight: 'auto'`,
-        '[style.visibility]': `'inherit'`,
-        '[class.dropup]': 'dropup',
-        style: 'position: absolute;display: block;',
-        '[attr.role]': `isBs4 ? 'listbox' : null `
-    },
-    styles: [
-        `
-    :host.dropdown {
-      z-index: 1000;
-    }
+  selector: 'typeahead-container',
+  templateUrl: './typeahead-container.component.html',
+  host: {
+    class: 'dropdown open bottom',
+    '[class.dropdown-menu]': 'isBs4',
+    '[style.height]': `isBs4 && needScrollbar ? guiHeight: 'auto'`,
+    '[style.visibility]': `'inherit'`,
+    '[class.dropup]': 'dropup',
+    style: 'position: absolute;display: block;',
+    '[attr.role]': `isBs4 ? 'listbox' : null `
+  },
+  styles: [
+    `
+      :host.dropdown {
+        z-index: 1000;
+      }
 
-    :host.dropdown-menu, .dropdown-menu {
-      overflow-y: auto;
-      height: 100px;
-    }
-  `
-    ],
-    animations: [typeaheadAnimation],
-    standalone: false
+      :host.dropdown-menu,
+      .dropdown-menu {
+        overflow-y: auto;
+        height: 100px;
+      }
+    `
+  ],
+  animations: [typeaheadAnimation],
+  standalone: false
 })
-
 export class TypeaheadContainerComponent implements OnDestroy {
   // eslint-disable-next-line @angular-eslint/no-output-rename
   @Output('activeChange') activeChangeEvent = new EventEmitter();
@@ -101,8 +100,8 @@ export class TypeaheadContainerComponent implements OnDestroy {
     private changeDetectorRef: ChangeDetectorRef
   ) {
     this.renderer.setAttribute(this.element.nativeElement, 'id', this.popupId);
-    this.positionServiceSubscription.add(this.positionService.event$?.subscribe(
-      () => {
+    this.positionServiceSubscription.add(
+      this.positionService.event$?.subscribe(() => {
         if (this.isAnimated) {
           this.animationState = this.isTopPosition ? 'animated-up' : 'animated-down';
           this.changeDetectorRef.detectChanges();
@@ -112,8 +111,8 @@ export class TypeaheadContainerComponent implements OnDestroy {
 
         this.animationState = 'unanimated';
         this.changeDetectorRef.detectChanges();
-      }
-    ));
+      })
+    );
   }
 
   get active(): TypeaheadMatch | undefined {
@@ -154,7 +153,7 @@ export class TypeaheadContainerComponent implements OnDestroy {
     }
 
     if (this._active && !this.typeaheadIsFirstItemActive) {
-      const concurrency = this._matches.find(match => match.value === this._active?.value);
+      const concurrency = this._matches.find((match) => match.value === this._active?.value);
 
       if (concurrency) {
         this.selectActive(concurrency);
@@ -226,9 +225,7 @@ export class TypeaheadContainerComponent implements OnDestroy {
     }
 
     const index = this.matches.indexOf(this._active);
-    this.setActive(this.matches[
-      index - 1 < 0 ? this.matches.length - 1 : index - 1
-      ]);
+    this.setActive(this.matches[index - 1 < 0 ? this.matches.length - 1 : index - 1]);
 
     if (this._active.isHeader()) {
       this.prevActiveMatch();
@@ -241,9 +238,7 @@ export class TypeaheadContainerComponent implements OnDestroy {
 
   nextActiveMatch(): void {
     const index = this._active ? this.matches.indexOf(this._active) : -1;
-    this.setActive(this.matches[
-      index + 1 > this.matches.length - 1 ? 0 : index + 1
-      ]);
+    this.setActive(this.matches[index + 1 > this.matches.length - 1 ? 0 : index + 1]);
 
     if (this._active?.isHeader()) {
       this.nextActiveMatch();
@@ -261,9 +256,9 @@ export class TypeaheadContainerComponent implements OnDestroy {
 
   highlight(match: TypeaheadMatch, query: string[] | string): string {
     let itemStr: string = match.value;
-    let itemStrHelper: string = (this.parent && this.parent.typeaheadLatinize
-      ? latinize(itemStr)
-      : itemStr).toLowerCase();
+    let itemStrHelper: string = (
+      this.parent && this.parent.typeaheadLatinize ? latinize(itemStr) : itemStr
+    ).toLowerCase();
     let startIdx: number;
     let tokenLen: number;
     // Replaces the capture string with the same string inside of a "strong" tag
@@ -328,12 +323,11 @@ export class TypeaheadContainerComponent implements OnDestroy {
     if (this.liElements?.first) {
       const ulStyles = Utils.getStyles(this.ulElement.nativeElement);
       const liStyles = Utils.getStyles(this.liElements.first.nativeElement);
-      const ulPaddingBottom = parseFloat((ulStyles['padding-bottom'] ? ulStyles['padding-bottom'] : '')
-        .replace('px', ''));
-      const ulPaddingTop = parseFloat((ulStyles['padding-top'] ? ulStyles['padding-top'] : '0')
-        .replace('px', ''));
-      const optionHeight = parseFloat((liStyles.height ? liStyles.height : '0')
-        .replace('px', ''));
+      const ulPaddingBottom = parseFloat(
+        (ulStyles['padding-bottom'] ? ulStyles['padding-bottom'] : '').replace('px', '')
+      );
+      const ulPaddingTop = parseFloat((ulStyles['padding-top'] ? ulStyles['padding-top'] : '0').replace('px', ''));
+      const optionHeight = parseFloat((liStyles.height ? liStyles.height : '0').replace('px', ''));
       const height = this.typeaheadOptionsInScrollableView * optionHeight;
       this.guiHeight = `${height + ulPaddingTop + ulPaddingBottom}px`;
     }
@@ -394,7 +388,7 @@ export class TypeaheadContainerComponent implements OnDestroy {
     const elemTop = elem.offsetTop;
     const elemBottom = elemTop + elem.offsetHeight;
 
-    return ((elemBottom <= containerViewBottom) && (elemTop >= containerViewTop));
+    return elemBottom <= containerViewBottom && elemTop >= containerViewTop;
   }
 
   private scrollToBottom(): void {

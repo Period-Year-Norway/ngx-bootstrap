@@ -6,7 +6,7 @@
   "license": "MIT",
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "jest-preset-angular": "14.1.0"
+    "jest-preset-angular": "14.4.2"
   },
   "exports": {
     "./accordion": {

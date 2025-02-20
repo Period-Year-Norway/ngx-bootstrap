@@ -10,10 +10,14 @@ import {
   Output,
   Renderer2,
   ViewContainerRef
- } from '@angular/core';
+} from '@angular/core';
 import { filter } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
-import { ComponentLoader, ComponentLoaderFactory, BsComponentRef } from '@period-year-norway/ngx-bootstrap/component-loader';
+import {
+  ComponentLoader,
+  ComponentLoaderFactory,
+  BsComponentRef
+} from '@period-year-norway/ngx-bootstrap/component-loader';
 
 import { BsDropdownConfig } from './bs-dropdown.config';
 import { BsDropdownContainerComponent } from './bs-dropdown-container.component';
@@ -24,16 +28,15 @@ import { AnimationBuilder, AnimationFactory } from '@angular/animations';
 import { dropdownAnimation } from './dropdown-animations';
 
 @Directive({
-    selector: '[bsDropdown], [dropdown]',
-    exportAs: 'bs-dropdown',
-    providers: [BsDropdownState],
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        '[class.dropup]': 'dropup',
-        '[class.open]': 'isOpen',
-        '[class.show]': 'isOpen && isBs4'
-    },
-    standalone: false
+  selector: '[bsDropdown], [dropdown]',
+  exportAs: 'bs-dropdown',
+  providers: [BsDropdownState],
+  host: {
+    '[class.dropup]': 'dropup',
+    '[class.open]': 'isOpen',
+    '[class.show]': 'isOpen && isBs4'
+  },
+  standalone: false
 })
 export class BsDropdownDirective implements OnInit, OnDestroy {
   /**
@@ -181,17 +184,12 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
 
     // create dropdown component loader
     this._dropdown = this._cis
-      .createLoader<BsDropdownContainerComponent>(
-        this._elementRef,
-        this._viewContainerRef,
-        this._renderer
-      )
-      .provide({provide: BsDropdownState, useValue: this._state});
+      .createLoader<BsDropdownContainerComponent>(this._elementRef, this._viewContainerRef, this._renderer)
+      .provide({ provide: BsDropdownState, useValue: this._state });
 
     this.onShown = this._dropdown.onShown;
     this.onHidden = this._dropdown.onHidden;
     this.isOpenChange = this._state.isOpenChange;
-
   }
 
   ngOnInit(): void {
@@ -212,16 +210,12 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
     });
 
     // toggle visibility on toggle element click
-    this._subscriptions.push(
-      this._state.toggleClick.subscribe((value: boolean) => this.toggle(value))
-    );
+    this._subscriptions.push(this._state.toggleClick.subscribe((value: boolean) => this.toggle(value)));
 
     // hide dropdown if set disabled while opened
     this._subscriptions.push(
       this._state.isDisabledChange
-        .pipe(
-          filter((value: boolean) => value)
-        )
+        .pipe(filter((value: boolean) => value))
         .subscribe((/*value: boolean*/) => this.hide())
     );
   }
@@ -237,12 +231,9 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
 
     if (this._showInline) {
       if (!this._inlinedMenu) {
-        this._state.dropdownMenu.then(
-          (dropdownMenu: BsComponentRef<BsDropdownMenuDirective>) => {
-            this._dropdown.attachInline(
-              dropdownMenu.viewContainer,
-              dropdownMenu.templateRef
-            );
+        this._state.dropdownMenu
+          .then((dropdownMenu: BsComponentRef<BsDropdownMenuDirective>) => {
+            this._dropdown.attachInline(dropdownMenu.viewContainer, dropdownMenu.templateRef);
             this._inlinedMenu = this._dropdown._inlineViewRef;
 
             this.addBs4Polyfills();
@@ -251,9 +242,8 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
             }
 
             this.playAnimation();
-          }
-        )
-        // swallow errors
+          })
+          // swallow errors
           .catch();
       }
       this.addBs4Polyfills();
@@ -266,27 +256,26 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
 
       return;
     }
-    this._state.dropdownMenu.then(dropdownMenu => {
-      // check direction in which dropdown should be opened
-      const _dropup =
-        this.dropup ||
-        (typeof this.dropup !== 'undefined' && this.dropup);
-      this._state.direction = _dropup ? 'up' : 'down';
-      const _placement = this.placement || (_dropup ? 'top start' : 'bottom start');
+    this._state.dropdownMenu
+      .then((dropdownMenu) => {
+        // check direction in which dropdown should be opened
+        const _dropup = this.dropup || (typeof this.dropup !== 'undefined' && this.dropup);
+        this._state.direction = _dropup ? 'up' : 'down';
+        const _placement = this.placement || (_dropup ? 'top start' : 'bottom start');
 
-      // show dropdown
-      this._dropdown
-        .attach(BsDropdownContainerComponent)
-        .to(this.container)
-        .position({attachment: _placement})
-        .show({
-          content: dropdownMenu.templateRef,
-          placement: _placement
-        });
+        // show dropdown
+        this._dropdown
+          .attach(BsDropdownContainerComponent)
+          .to(this.container)
+          .position({ attachment: _placement })
+          .show({
+            content: dropdownMenu.templateRef,
+            placement: _placement
+          });
 
-      this._state.isOpenChange.emit(true);
-    })
-    // swallow error
+        this._state.isOpenChange.emit(true);
+      })
+      // swallow error
       .catch();
   }
 
@@ -327,8 +316,10 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
   /** @internal */
   _contains(event: MouseEvent): boolean {
     // todo: valorkin fix typings
-    return this._elementRef.nativeElement.contains(event.target) ||
-      (this._dropdown.instance && this._dropdown.instance._contains(event.target as unknown as HTMLElement));
+    return (
+      this._elementRef.nativeElement.contains(event.target) ||
+      (this._dropdown.instance && this._dropdown.instance._contains(event.target as unknown as HTMLElement))
+    );
   }
 
   @HostListener('keydown.arrowDown', ['$event'])
@@ -402,43 +393,25 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
 
   private checkRightAlignment(): void {
     if (this._inlinedMenu && this._inlinedMenu.rootNodes[0]) {
-      const isRightAligned = this._inlinedMenu.rootNodes[0].classList.contains(
-        'dropdown-menu-right'
-      ) || this._inlinedMenu.rootNodes[0].classList.contains(
-        'dropdown-menu-end'
-      );
+      const isRightAligned =
+        this._inlinedMenu.rootNodes[0].classList.contains('dropdown-menu-right') ||
+        this._inlinedMenu.rootNodes[0].classList.contains('dropdown-menu-end');
 
-      this._renderer.setStyle(
-        this._inlinedMenu.rootNodes[0],
-        'left',
-        isRightAligned ? 'auto' : '0'
-      );
-      this._renderer.setStyle(
-        this._inlinedMenu.rootNodes[0],
-        'right',
-        isRightAligned ? '0' : 'auto'
-      );
+      this._renderer.setStyle(this._inlinedMenu.rootNodes[0], 'left', isRightAligned ? 'auto' : '0');
+      this._renderer.setStyle(this._inlinedMenu.rootNodes[0], 'right', isRightAligned ? '0' : 'auto');
     }
   }
 
   private addDropupStyles(): void {
     if (this._inlinedMenu && this._inlinedMenu.rootNodes[0]) {
       // a little hack to not break support of bootstrap 4 beta
-      this._renderer.setStyle(
-        this._inlinedMenu.rootNodes[0],
-        'top',
-        this.dropup ? 'auto' : '100%'
-      );
+      this._renderer.setStyle(this._inlinedMenu.rootNodes[0], 'top', this.dropup ? 'auto' : '100%');
       this._renderer.setStyle(
         this._inlinedMenu.rootNodes[0],
         'transform',
         this.dropup ? 'translateY(-101%)' : 'translateY(0)'
       );
-      this._renderer.setStyle(
-        this._inlinedMenu.rootNodes[0],
-        'bottom',
-        'auto'
-      );
+      this._renderer.setStyle(this._inlinedMenu.rootNodes[0], 'bottom', 'auto');
     }
   }
 

@@ -1,8 +1,4 @@
-import {
-  AnimationBuilder,
-  AnimationFactory,
-  AnimationPlayer
-} from '@angular/animations';
+import { AnimationBuilder, AnimationFactory, AnimationPlayer } from '@angular/animations';
 
 import {
   AfterViewChecked,
@@ -15,19 +11,15 @@ import {
   Renderer2
 } from '@angular/core';
 
-import {
-  collapseAnimation,
-  expandAnimation
-} from './collapse-animations';
+import { collapseAnimation, expandAnimation } from './collapse-animations';
 
 @Directive({
-    selector: '[collapse]',
-    exportAs: 'bs-collapse',
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        '[class.collapse]': 'true'
-    },
-    standalone: false
+  selector: '[collapse]',
+  exportAs: 'bs-collapse',
+  host: {
+    '[class.collapse]': 'true'
+  },
+  standalone: false
 })
 export class CollapseDirective implements AfterViewChecked {
   /** This event fires as soon as content collapses */
@@ -41,7 +33,6 @@ export class CollapseDirective implements AfterViewChecked {
   // shown
   @HostBinding('class.in')
   @HostBinding('class.show')
-
   isExpanded = true;
   collapseNewValue = true;
   // hidden
@@ -129,7 +120,10 @@ export class CollapseDirective implements AfterViewChecked {
 
     this._isAnimationDone = false;
 
-    this.animationRun(this.isAnimated, this._COLLAPSE_ACTION_NAME)(() => {
+    this.animationRun(
+      this.isAnimated,
+      this._COLLAPSE_ACTION_NAME
+    )(() => {
       this._isAnimationDone = true;
       if (this.collapseNewValue !== this.isCollapsed && this.isAnimated) {
         this.show();
@@ -152,7 +146,10 @@ export class CollapseDirective implements AfterViewChecked {
     this.expands.emit(this);
 
     this._isAnimationDone = false;
-    this.animationRun(this.isAnimated, this._EXPAND_ACTION_NAME)(() => {
+    this.animationRun(
+      this.isAnimated,
+      this._EXPAND_ACTION_NAME
+    )(() => {
       this._isAnimationDone = true;
       if (this.collapseNewValue !== this.isCollapsed && this.isAnimated) {
         this.hide();
@@ -172,9 +169,8 @@ export class CollapseDirective implements AfterViewChecked {
     this._renderer.setStyle(this._el.nativeElement, 'overflow', 'hidden');
     this._renderer.addClass(this._el.nativeElement, 'collapse');
 
-    const factoryAnimation = (action === this._EXPAND_ACTION_NAME)
-      ? this._factoryExpandAnimation
-      : this._factoryCollapseAnimation;
+    const factoryAnimation =
+      action === this._EXPAND_ACTION_NAME ? this._factoryExpandAnimation : this._factoryCollapseAnimation;
 
     if (this._player) {
       this._player.reset();

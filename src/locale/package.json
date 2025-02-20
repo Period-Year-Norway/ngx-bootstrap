@@ -4,7 +4,7 @@
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "jest-preset-angular": "14.1.0",
+    "jest-preset-angular": "14.4.2",
     "@period-year-norway/ngx-bootstrap/chronos": "*"
   }
 }

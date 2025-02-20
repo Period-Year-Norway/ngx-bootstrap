@@ -1,11 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  OnDestroy,
-  Renderer2
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnDestroy, Renderer2 } from '@angular/core';
 
 import { BsDropdownState } from './bs-dropdown.state';
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
@@ -17,20 +10,22 @@ import { Subscription } from 'rxjs';
 // todo: revert ngClass to [class] when false positive angular-cli issue is fixed
 //          [class.dropdown]="direction === 'down'"-->
 @Component({
-    selector: 'bs-dropdown-container',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-    host: {
-        style: 'display:block;position: absolute;z-index: 1040'
-    },
-    template: `
-    <div [class.dropup]="direction === 'up'"
-         [ngClass]="{dropdown: direction === 'down'}"
-         [class.show]="isOpen"
-         [class.open]="isOpen"><ng-content></ng-content>
+  selector: 'bs-dropdown-container',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    style: 'display:block;position: absolute;z-index: 1040'
+  },
+  template: `
+    <div
+      [class.dropup]="direction === 'up'"
+      [ngClass]="{ dropdown: direction === 'down' }"
+      [class.show]="isOpen"
+      [class.open]="isOpen"
+    >
+      <ng-content></ng-content>
     </div>
   `,
-    standalone: false
+  standalone: false
 })
 export class BsDropdownContainerComponent implements OnDestroy {
   isOpen = false;
@@ -67,17 +62,12 @@ export class BsDropdownContainerComponent implements OnDestroy {
         }
         if (this.direction === 'up') {
           this._renderer.setStyle(dropdown, 'top', 'auto');
-          this._renderer.setStyle(
-            dropdown,
-            'transform',
-            'translateY(-101%)'
-          );
+          this._renderer.setStyle(dropdown, 'transform', 'translateY(-101%)');
         }
       }
 
       if (dropdown && this._state.isAnimated) {
-        this._factoryDropDownAnimation.create(dropdown)
-          .play();
+        this._factoryDropDownAnimation.create(dropdown).play();
       }
 
       this.cd.markForCheck();
