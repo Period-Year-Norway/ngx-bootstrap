@@ -22,10 +22,11 @@ export const RATING_CONTROL_VALUE_ACCESSOR: Provider = {
 };
 
 @Component({
-  selector: 'rating',
-  templateUrl: './rating.component.html',
-  providers: [RATING_CONTROL_VALUE_ACCESSOR],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'rating',
+    templateUrl: './rating.component.html',
+    providers: [RATING_CONTROL_VALUE_ACCESSOR],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class RatingComponent implements ControlValueAccessor, OnInit {
   /** number of icons */

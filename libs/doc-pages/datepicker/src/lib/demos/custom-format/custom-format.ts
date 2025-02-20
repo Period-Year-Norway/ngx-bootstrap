@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-date-picker-custom-format',
-  templateUrl: './custom-format.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-date-picker-custom-format',
+    templateUrl: './custom-format.html',
+    standalone: false
 })
 export class DemoDatePickerCustomFormatComponent {
   currentDate = new Date();

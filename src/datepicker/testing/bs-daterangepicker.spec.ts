@@ -12,7 +12,8 @@ import { BsCustomDates } from '../themes/bs/bs-custom-dates-view.component';
     selector: 'test-cmp',
     template: `<input type="text"
     bsDaterangepicker
-    [bsConfig]="bsConfig">`
+    [bsConfig]="bsConfig">`,
+    standalone: false
 })
 class TestComponent {
     @ViewChild(BsDaterangepickerDirective, { static: false }) daterangepicker: BsDaterangepickerDirective;

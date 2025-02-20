@@ -20,9 +20,9 @@ import {
 import { BsDatepickerConfig } from '../../bs-datepicker.config';
 
 @Component({
-  selector: 'bs-days-calendar-view',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'bs-days-calendar-view',
+    // changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <bs-calendar-layout>
       <bs-datepicker-navigation-view
         [calendar]="calendar"
@@ -75,7 +75,8 @@ import { BsDatepickerConfig } from '../../bs-datepicker.config';
       </table>
 
     </bs-calendar-layout>
-  `
+  `,
+    standalone: false
 })
 export class BsDaysCalendarViewComponent  {
   @Input() calendar!: DaysCalendarViewModel;

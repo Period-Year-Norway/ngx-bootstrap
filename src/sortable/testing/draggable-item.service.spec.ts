@@ -3,7 +3,8 @@ import { fakeAsync, inject, TestBed } from '@angular/core/testing';
 import { DraggableItem, DraggableItemService, SortableItem } from '../index';
 
 @Component({
-  template: `<h1>Test</h1>`
+    template: `<h1>Test</h1>`,
+    standalone: false
 })
 class TestComponent {}
 

@@ -2,9 +2,10 @@ import { Component, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-service-disable-backdrop',
-  templateUrl: './disable-backdrop.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-service-disable-backdrop',
+    templateUrl: './disable-backdrop.html',
+    standalone: false
 })
 export class DemoModalServiceDisableBackdropComponent {
   modalRef?: BsModalRef;

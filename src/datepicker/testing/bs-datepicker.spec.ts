@@ -11,10 +11,11 @@ import { BsDatepickerViewMode, CalendarCellViewModel, WeekViewModel } from '../m
 import { BsDatepickerContainerComponent } from '../themes/bs/bs-datepicker-container.component';
 
 @Component({
-  selector: 'test-cmp',
-  template: `<input type='text'
+    selector: 'test-cmp',
+    template: `<input type='text'
                     bsDatepicker
-                    [bsConfig]='bsConfig'>`
+                    [bsConfig]='bsConfig'>`,
+    standalone: false
 })
 class TestComponent {
   @ViewChild(BsDatepickerDirective, { static: false }) datepicker: BsDatepickerDirective;

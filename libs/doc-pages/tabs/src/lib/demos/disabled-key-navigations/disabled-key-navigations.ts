@@ -6,10 +6,11 @@ export function getTabsetConfig(): TabsetConfig {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-disabled-key-navigations',
-  templateUrl: './disabled-key-navigations.html',
-  providers: [{ provide: TabsetConfig, useFactory: getTabsetConfig }]
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-disabled-key-navigations',
+    templateUrl: './disabled-key-navigations.html',
+    providers: [{ provide: TabsetConfig, useFactory: getTabsetConfig }],
+    standalone: false
 })
 export class DemoDisabledKeyNavigationsComponent {
 }

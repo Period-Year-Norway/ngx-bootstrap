@@ -11,14 +11,15 @@ import { AccordionComponent } from './accordion.component';
  * will be used as group's header template.
  */
 @Component({
-  selector: 'accordion-group, accordion-panel',
-  templateUrl: './accordion-group.component.html',
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: {
-    class: 'panel',
-    style: 'display: block'
-  },
-  styleUrls: ['./accordion.scss']
+    selector: 'accordion-group, accordion-panel',
+    templateUrl: './accordion-group.component.html',
+    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+    host: {
+        class: 'panel',
+        style: 'display: block'
+    },
+    styleUrls: ['./accordion.scss'],
+    standalone: false
 })
 export class AccordionPanelComponent implements OnInit, OnDestroy {
   /** turn on/off animation */

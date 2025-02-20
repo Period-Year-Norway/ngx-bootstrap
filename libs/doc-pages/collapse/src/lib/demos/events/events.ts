@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'collapse-demo-events',
-  templateUrl: './events.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'collapse-demo-events',
+    templateUrl: './events.html',
+    standalone: false
 })
 export class CollapseDemoEventsComponent {
   isCollapsed = false;

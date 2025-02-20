@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-typeahead-templates',
-  templateUrl: './list-template.html',
-  styles: [`
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-typeahead-templates',
+    templateUrl: './list-template.html',
+    styles: [`
     .custom-list-group {
       display: flex;
       flex-direction: column;
@@ -29,7 +29,8 @@ import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
       background-color: #FF4461;
       border-color: #FF4461;
     }
-  `]
+  `],
+    standalone: false
 })
 export class DemoTypeaheadListTemplateComponent {
   isBs3 = isBs3();

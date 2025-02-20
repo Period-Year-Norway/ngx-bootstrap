@@ -8,10 +8,11 @@ export function getTimepickerConfig(): TimepickerConfig {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-timepicker-empty-date',
-  templateUrl: './empty-date.html',
-  providers: [{ provide: TimepickerConfig, useFactory: getTimepickerConfig }]
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-timepicker-empty-date',
+    templateUrl: './empty-date.html',
+    providers: [{ provide: TimepickerConfig, useFactory: getTimepickerConfig }],
+    standalone: false
 })
 export class DemoTimepickerEmptyDateComponent {
   allowEmptyTime = true;

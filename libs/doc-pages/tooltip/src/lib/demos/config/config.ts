@@ -12,9 +12,10 @@ export function getAlertConfig(): TooltipConfig {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-tooltip-config',
-  templateUrl: './config.html',
-  providers: [{ provide: TooltipConfig, useFactory: getAlertConfig }]
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-tooltip-config',
+    templateUrl: './config.html',
+    providers: [{ provide: TooltipConfig, useFactory: getAlertConfig }],
+    standalone: false
 })
 export class DemoTooltipConfigComponent {}

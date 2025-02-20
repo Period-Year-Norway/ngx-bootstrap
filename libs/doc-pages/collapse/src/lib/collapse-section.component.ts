@@ -4,10 +4,11 @@ import { demoComponentContent } from './collapse-section.list';
 import { ContentSection } from '@ngx-bootstrap-doc/docs';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'collapse-section',
-  templateUrl: './collapse-section.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'collapse-section',
+    templateUrl: './collapse-section.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class CollapseSectionComponent {
   name = 'Collapse';

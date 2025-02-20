@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 @Component({
-  selector: 'test-cmp',
-  template: `<span>Popover demo</span>`
+    selector: 'test-cmp',
+    template: `<span>Popover demo</span>`,
+    standalone: false
 })
 class TestComponent {
 }

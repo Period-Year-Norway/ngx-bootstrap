@@ -24,8 +24,9 @@ import { AvailbleBSPositions } from '@period-year-norway/ngx-bootstrap/positioni
 let id = 0;
 
 @Directive({
-  selector: '[tooltip], [tooltipHtml]',
-  exportAs: 'bs-tooltip'
+    selector: '[tooltip], [tooltipHtml]',
+    exportAs: 'bs-tooltip',
+    standalone: false
 })
 export class TooltipDirective implements OnInit, OnDestroy {
   tooltipId = id++;

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef, ModalOptions } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-service-component',
-  templateUrl: './service-component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-service-component',
+    templateUrl: './service-component.html',
+    standalone: false
 })
 export class DemoModalServiceFromComponent {
   bsModalRef?: BsModalRef;
@@ -30,9 +31,9 @@ export class DemoModalServiceFromComponent {
 /* This is a component which we pass in modal*/
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'modal-content',
-  template: `
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'modal-content',
+    template: `
     <div class="modal-header">
       <h4 class="modal-title pull-left">{{title}}</h4>
       <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
@@ -47,7 +48,8 @@ export class DemoModalServiceFromComponent {
     <div class="modal-footer">
       <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class ModalContentComponent implements OnInit {

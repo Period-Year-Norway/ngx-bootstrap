@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { TabDirective } from '@period-year-norway/ngx-bootstrap/tabs';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-tabs-select-event',
-  templateUrl: './select-event.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-tabs-select-event',
+    templateUrl: './select-event.html',
+    standalone: false
 })
 export class DemoTabsSelectEventComponent {
   value?: string;

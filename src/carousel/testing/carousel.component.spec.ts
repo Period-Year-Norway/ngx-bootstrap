@@ -5,7 +5,10 @@ import '../../../scripts/jest/toHaveCssClass';
 import { CarouselModule } from '../index';
 import { getBsVer, IBsVersion } from '@period-year-norway/ngx-bootstrap/utils';
 
-@Component({ selector: 'carousel-test', template: '' })
+@Component({
+    selector: 'carousel-test', template: '',
+    standalone: false
+})
 class TestCarouselComponent {
   myInterval = 5000;
   noWrapSlides = false;

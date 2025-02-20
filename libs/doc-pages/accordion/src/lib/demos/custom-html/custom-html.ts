@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { getBsVer, IBsVersion } from '@period-year-norway/ngx-bootstrap/utils';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-accordion-custom-html',
-  templateUrl: './custom-html.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-accordion-custom-html',
+    templateUrl: './custom-html.html',
+    standalone: false
 })
 export class DemoAccordionCustomHTMLComponent {
   get _getBsVer(): IBsVersion {

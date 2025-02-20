@@ -13,12 +13,13 @@ import { BsDropdownState } from './bs-dropdown.state';
 import { BsDropdownDirective } from './bs-dropdown.directive';
 
 @Directive({
-  selector: '[bsDropdownToggle],[dropdownToggle]',
-  exportAs: 'bs-dropdown-toggle',
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: {
-    '[attr.aria-haspopup]': 'true'
-  }
+    selector: '[bsDropdownToggle],[dropdownToggle]',
+    exportAs: 'bs-dropdown-toggle',
+    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+    host: {
+        '[attr.aria-haspopup]': 'true'
+    },
+    standalone: false
 })
 export class BsDropdownToggleDirective implements OnDestroy {
   @HostBinding('attr.disabled') isDisabled: undefined | true;

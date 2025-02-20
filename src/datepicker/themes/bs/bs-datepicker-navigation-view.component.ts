@@ -2,9 +2,9 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 import { BsDatepickerViewMode, BsNavigationDirection, NavigationViewModel } from '../../models';
 
 @Component({
-  selector: 'bs-datepicker-navigation-view',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'bs-datepicker-navigation-view',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <button class="previous"
             [disabled]="calendar.disableLeftArrow"
             [style.visibility]="calendar.hideLeftArrow ? 'hidden' : 'visible'"
@@ -40,7 +40,8 @@ import { BsDatepickerViewMode, BsNavigationDirection, NavigationViewModel } from
             type="button"
             (click)="navTo(false)"><span>&rsaquo;</span>
     </button>
-  `
+  `,
+    standalone: false
 })
 export class BsDatepickerNavigationViewComponent {
   @Input() calendar!: NavigationViewModel;

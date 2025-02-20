@@ -10,13 +10,14 @@ import { PositioningService } from '@period-year-norway/ngx-bootstrap/positionin
 import { datepickerAnimation } from '../../datepicker-animations';
 
 @Component({
-  selector: 'bs-daterangepicker-inline-container',
-  providers: [BsDatepickerStore, BsDatepickerEffects],
-  templateUrl: './bs-datepicker-view.html',
-  host: {
-    '(click)': '_stopPropagation($event)'
-  },
-  animations: [datepickerAnimation]
+    selector: 'bs-daterangepicker-inline-container',
+    providers: [BsDatepickerStore, BsDatepickerEffects],
+    templateUrl: './bs-datepicker-view.html',
+    host: {
+        '(click)': '_stopPropagation($event)'
+    },
+    animations: [datepickerAnimation],
+    standalone: false
 })
 export class BsDaterangepickerInlineContainerComponent extends BsDaterangepickerContainerComponent
   implements OnInit, OnDestroy {

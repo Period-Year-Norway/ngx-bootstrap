@@ -6,8 +6,8 @@ export interface BsCustomDates {
 }
 
 @Component({
-  selector: 'bs-custom-date-view',
-  template: `
+    selector: 'bs-custom-date-view',
+    template: `
     <div class="bs-datepicker-predefined-btns">
       <button *ngFor="let range of ranges"
         type="button"
@@ -18,7 +18,8 @@ export interface BsCustomDates {
       </button>
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class BsCustomDatesViewComponent {
   @Input() ranges?: BsCustomDates[];

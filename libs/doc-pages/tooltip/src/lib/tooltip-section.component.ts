@@ -4,10 +4,11 @@ import { demoComponentContent } from './tooltip-section.list';
 import { ContentSection } from '@ngx-bootstrap-doc/docs';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'tooltip-section',
-  templateUrl: './tooltip-section.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'tooltip-section',
+    templateUrl: './tooltip-section.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class TooltipSectionComponent {
   name = 'Tooltip';

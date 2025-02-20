@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'bs-calendar-layout',
-  template: `
+    selector: 'bs-calendar-layout',
+    template: `
     <!-- current date, will be added in nearest releases -->
     <bs-current-date title="hey there" *ngIf="false"></bs-current-date>
 
@@ -17,6 +17,7 @@ import { Component } from '@angular/core';
 
     <!--timepicker-->
     <bs-timepicker *ngIf="false"></bs-timepicker>
-  `
+  `,
+    standalone: false
 })
 export class BsCalendarLayoutComponent {}

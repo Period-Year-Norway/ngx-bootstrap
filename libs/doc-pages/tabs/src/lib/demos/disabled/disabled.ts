@@ -2,9 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { TabsetComponent } from '@period-year-norway/ngx-bootstrap/tabs';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-tabs-disabled',
-  templateUrl: './disabled.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-tabs-disabled',
+    templateUrl: './disabled.html',
+    standalone: false
 })
 export class DemoTabsDisabledComponent {
   @ViewChild('staticTabs', { static: false }) staticTabs?: TabsetComponent;

@@ -2,9 +2,10 @@ import { Component, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-service-confirm-window',
-  templateUrl: './service-confirm-window.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-service-confirm-window',
+    templateUrl: './service-confirm-window.html',
+    standalone: false
 })
 export class DemoModalServiceConfirmWindowComponent {
   modalRef?: BsModalRef;

@@ -3,7 +3,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AlertComponent, AlertConfig, AlertModule  } from '../index';
 
-@Component({selector: 'alert-test', template: ''})
+@Component({
+    selector: 'alert-test', template: '',
+    standalone: false
+})
 class TestAlertComponent extends AlertComponent {
   constructor(config: AlertConfig, changeDetection: ChangeDetectorRef) {
     super(config, changeDetection);

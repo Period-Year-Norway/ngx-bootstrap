@@ -3,10 +3,11 @@ import { demoComponentContent } from './progressbar-section.list';
 import { ContentSection } from '@ngx-bootstrap-doc/docs';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'progressbar-section',
-  templateUrl: './progressbar-section.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'progressbar-section',
+    templateUrl: './progressbar-section.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ProgressbarSectionComponent {
   name = 'Progressbar';

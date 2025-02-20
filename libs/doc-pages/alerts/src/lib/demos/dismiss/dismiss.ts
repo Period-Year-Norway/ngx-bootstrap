@@ -3,9 +3,10 @@ import { Component } from '@angular/core';
 type ExampleAlertType = { type: string; msg: string };
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-alert-dismiss',
-  templateUrl: './dismiss.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-alert-dismiss',
+    templateUrl: './dismiss.html',
+    standalone: false
 })
 export class DemoAlertDismissComponent {
   dismissible = true;

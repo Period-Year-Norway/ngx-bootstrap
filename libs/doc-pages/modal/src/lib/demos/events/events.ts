@@ -2,15 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 import { ModalDirective } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-events',
-  templateUrl: './events.html',
-  styles: [`
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-events',
+    templateUrl: './events.html',
+    styles: [`
     .card {
       margin-bottom: 0.75rem;
       padding: 8px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class DemoModalEventsComponent {
   @ViewChild(ModalDirective, { static: false }) modal?: ModalDirective;

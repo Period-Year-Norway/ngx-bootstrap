@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-carousel-interval',
-  templateUrl: './interval.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-carousel-interval',
+    templateUrl: './interval.html',
+    standalone: false
 })
 export class DemoCarouselIntervalComponent {
   myInterval = 1500;

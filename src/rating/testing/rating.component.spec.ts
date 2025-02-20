@@ -5,8 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { RatingComponent, RatingConfig, RatingModule } from '../index';
 
 @Component({
-  selector: 'rating-test',
-  template: ''
+    selector: 'rating-test',
+    template: '',
+    standalone: false
 })
 class TestRatingComponent {
   max = 5;

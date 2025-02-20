@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { DatepickerDateTooltipText } from '@period-year-norway/ngx-bootstrap/datepicker';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-datepicker-tooltip-to-selected-dates',
-  templateUrl: './tooltip-to-selected-dates.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-datepicker-tooltip-to-selected-dates',
+    templateUrl: './tooltip-to-selected-dates.html',
+    standalone: false
 })
 // eslint-disable-next-line @angular-eslint/component-class-suffix
 export class DemoDatePickerTooltipToSelectedDates {

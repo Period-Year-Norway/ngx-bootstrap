@@ -3,9 +3,10 @@ import { DOCS_TOKENS } from "../../tokens/docs-routes-token";
 import { Routes } from "@angular/router";
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'components',
-  templateUrl: './components-page.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'components',
+    templateUrl: './components-page.component.html',
+    standalone: false
 })
 export class ComponentsPageComponent {
   componentsArray?:Routes;

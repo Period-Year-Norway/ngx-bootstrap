@@ -9,8 +9,8 @@ import {
 } from '../../models';
 
 @Component({
-  selector: 'bs-month-calendar-view',
-  template: `
+    selector: 'bs-month-calendar-view',
+    template: `
     <bs-calendar-layout>
       <bs-datepicker-navigation-view
         [calendar]="calendar"
@@ -33,7 +33,8 @@ import {
         </tbody>
       </table>
     </bs-calendar-layout>
-  `
+  `,
+    standalone: false
 })
 export class BsMonthCalendarViewComponent {
   @Input() calendar!: MonthsCalendarViewModel;

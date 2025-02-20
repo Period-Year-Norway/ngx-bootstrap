@@ -38,8 +38,9 @@ let _currentId = 1;
  * Base element to create carousel
  */
 @Component({
-  selector: 'carousel',
-  templateUrl: './carousel.component.html'
+    selector: 'carousel',
+    templateUrl: './carousel.component.html',
+    standalone: false
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {
   /* If `true` — carousel will not cycle continuously and will have hard stops (prevent looping) */

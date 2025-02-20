@@ -20,7 +20,8 @@ import {
 
 @Directive({
     selector: 'bs-daterangepicker-inline',
-    exportAs: 'bsDaterangepickerInline'
+    exportAs: 'bsDaterangepickerInline',
+    standalone: false
 })
 export class BsDaterangepickerInlineDirective implements OnInit, OnDestroy, OnChanges {
     _bsValue?: (Date|undefined)[] | undefined;

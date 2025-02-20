@@ -13,9 +13,10 @@ export function getPopoverConfig(): PopoverConfig {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-popover-config',
-  templateUrl: './config.html',
-  providers: [{ provide: PopoverConfig, useFactory: getPopoverConfig }]
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-popover-config',
+    templateUrl: './config.html',
+    providers: [{ provide: PopoverConfig, useFactory: getPopoverConfig }],
+    standalone: false
 })
 export class DemoPopoverConfigComponent {}

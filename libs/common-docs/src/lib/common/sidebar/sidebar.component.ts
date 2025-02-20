@@ -18,9 +18,10 @@ const _bs4Css = 'assets/css/bootstrap-4.5.3/css/bootstrap.min.css';
 const _bs5Css = 'assets/css/bootstrap-5.1.0/css/bootstrap.min.css';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'sidebar',
-  templateUrl: './sidebar.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'sidebar',
+    templateUrl: './sidebar.component.html',
+    standalone: false
 })
 export class SidebarComponent {
   isShown = false;

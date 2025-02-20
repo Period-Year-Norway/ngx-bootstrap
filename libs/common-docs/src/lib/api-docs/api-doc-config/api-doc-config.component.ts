@@ -18,10 +18,11 @@ const CONFIG_SUFFIX_LENGTH = 'Config'.length;
  * default value is documented in the directive itself.
  */
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'ng-api-doc-config',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './api-doc-config.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'ng-api-doc-config',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: './api-doc-config.component.html',
+    standalone: false
 })
 export class NgApiDocConfigComponent {
   apiDocs?: ClassDesc;

@@ -3,8 +3,9 @@ import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
 import { ProgressbarComponent, ProgressbarModule } from '../index';
 
 @Component({
-  selector: 'progressbar-test',
-  template: ''
+    selector: 'progressbar-test',
+    template: '',
+    standalone: false
 })
 class TestProgressbarComponent extends ProgressbarComponent {}
 

@@ -5,8 +5,9 @@ import { fireEvent } from '../../../scripts/helpers';
 import { TooltipModule } from '../index';
 
 @Component({
-  selector: 'test-tooltip',
-  template: ''
+    selector: 'test-tooltip',
+    template: '',
+    standalone: false
 })
 class TestTooltipComponent {
   delay = 0;

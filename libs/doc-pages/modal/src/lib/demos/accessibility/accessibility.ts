@@ -2,9 +2,10 @@ import { Component, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-accessibility',
-  templateUrl: './accessibility.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-accessibility',
+    templateUrl: './accessibility.html',
+    standalone: false
 })
 export class DemoAccessibilityComponent {
   modalRef?: BsModalRef;

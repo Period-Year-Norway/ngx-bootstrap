@@ -2,8 +2,9 @@ import { Directive, TemplateRef, ViewContainerRef } from '@angular/core';
 import { BsDropdownState } from './bs-dropdown.state';
 
 @Directive({
-  selector: '[bsDropdownMenu],[dropdownMenu]',
-  exportAs: 'bs-dropdown-menu'
+    selector: '[bsDropdownMenu],[dropdownMenu]',
+    exportAs: 'bs-dropdown-menu',
+    standalone: false
 })
 export class BsDropdownMenuDirective {
   constructor(

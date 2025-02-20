@@ -4,10 +4,11 @@ import { demoComponentContent } from './pagination-section.list';
 import { ContentSection } from '@ngx-bootstrap-doc/docs';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'pagination-section',
-  templateUrl: './pagination-section.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'pagination-section',
+    templateUrl: './pagination-section.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class PaginationSectionComponent {
   name = 'Pagination';

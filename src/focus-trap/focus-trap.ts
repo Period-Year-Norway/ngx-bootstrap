@@ -386,8 +386,9 @@ export class FocusTrapFactory {
 
 /** Directive for trapping focus within a region. */
 @Directive({
-  selector: '[focusTrap]',
-  exportAs: 'focusTrap'
+    selector: '[focusTrap]',
+    exportAs: 'focusTrap',
+    standalone: false
 })
 export class FocusTrapDirective implements OnDestroy, AfterContentInit, OnChanges, DoCheck {
   private _document: Document;

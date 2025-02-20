@@ -30,15 +30,16 @@ type TypeaheadOption = string | Record<string | number, any>;
 type TypeaheadOptionArr = TypeaheadOption[] | Observable<TypeaheadOption>;
 
 @Directive({
-  selector: '[typeahead]',
-  exportAs: 'bs-typeahead',
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: {
-    '[attr.aria-activedescendant]': 'activeDescendant',
-    '[attr.aria-owns]': 'isOpen ? this._container.popupId : null',
-    '[attr.aria-expanded]': 'isOpen',
-    '[attr.aria-autocomplete]': 'list'
-  }
+    selector: '[typeahead]',
+    exportAs: 'bs-typeahead',
+    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+    host: {
+        '[attr.aria-activedescendant]': 'activeDescendant',
+        '[attr.aria-owns]': 'isOpen ? this._container.popupId : null',
+        '[attr.aria-expanded]': 'isOpen',
+        '[attr.aria-autocomplete]': 'list'
+    },
+    standalone: false
 })
 export class TypeaheadDirective implements OnInit, OnDestroy {
   /** options source, can be Array of strings, objects or

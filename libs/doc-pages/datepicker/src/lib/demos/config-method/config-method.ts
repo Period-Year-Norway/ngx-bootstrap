@@ -2,9 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { BsDaterangepickerDirective, BsDatepickerConfig } from '@period-year-norway/ngx-bootstrap/datepicker';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-datepicker-config-method',
-  templateUrl: './config-method.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-datepicker-config-method',
+    templateUrl: './config-method.html',
+    standalone: false
 })
 export class DemoDatepickerConfigMethodComponent {
   @ViewChild('dp', { static: false }) datepicker?: BsDaterangepickerDirective;

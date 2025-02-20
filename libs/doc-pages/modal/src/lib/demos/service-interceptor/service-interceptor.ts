@@ -2,9 +2,10 @@ import { Component, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-service-interceptor',
-  templateUrl: './service-interceptor.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-service-interceptor',
+    templateUrl: './service-interceptor.html',
+    standalone: false
 })
 export class DemoModalServiceWithInterceptorComponent {
   bsModalRef?: BsModalRef;
@@ -46,9 +47,9 @@ export class DemoModalServiceWithInterceptorComponent {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'modal-content-with-interceptor',
-  template: `
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'modal-content-with-interceptor',
+    template: `
     <div class="modal-header">
       <h4 class="modal-title pull-left">Modal with interceptor</h4>
       <button type="button" class="close btn-close pull-right" aria-label="Close" (click)="bsModalRef?.hide()">
@@ -59,7 +60,8 @@ export class DemoModalServiceWithInterceptorComponent {
     <div class="modal-footer">
       <button type="button" class="btn btn-default" (click)="bsModalRef?.hide()">Close</button>
     </div>
-  `
+  `,
+    standalone: false
 })
 
 export class ModalContentWithInterceptorComponent {

@@ -4,20 +4,19 @@ import { getBsVer, IBsVersion } from '@period-year-norway/ngx-bootstrap/utils';
 import { PlacementForBs5, checkMargins, AvailbleBSPositions } from '@period-year-norway/ngx-bootstrap/positioning';
 
 @Component({
-  selector: 'popover-container',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: {
-    '[attr.id]': 'popoverId',
-    '[class]':
-      '"popover in popover-" + _placement + " " + "bs-popover-" + _placement + " " + _placement + " " + containerClass + " " + checkMarginNecessity()',
-    '[class.show]': '!_bsVersions.isBs3',
-    '[class.bs3]': '_bsVersions.isBs3',
-    role: 'tooltip',
-    style: 'display:block;'
-  },
-  styles: [
-    `
+    selector: 'popover-container',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+    host: {
+        '[attr.id]': 'popoverId',
+        '[class]': '"popover in popover-" + _placement + " " + "bs-popover-" + _placement + " " + _placement + " " + containerClass + " " + checkMarginNecessity()',
+        '[class.show]': '!_bsVersions.isBs3',
+        '[class.bs3]': '_bsVersions.isBs3',
+        role: 'tooltip',
+        style: 'display:block;'
+    },
+    styles: [
+        `
     :host.bs3.popover-top {
       margin-bottom: 10px;
     }
@@ -37,8 +36,9 @@ import { PlacementForBs5, checkMargins, AvailbleBSPositions } from '@period-year
       margin: .3rem 0;
     }
     `
-  ],
-  templateUrl: './popover-container.component.html'
+    ],
+    templateUrl: './popover-container.component.html',
+    standalone: false
 })
 export class PopoverContainerComponent {
   @Input() set placement(value: AvailbleBSPositions) {

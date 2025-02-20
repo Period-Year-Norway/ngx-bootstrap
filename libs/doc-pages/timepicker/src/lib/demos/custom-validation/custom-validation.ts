@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { AbstractControl, UntypedFormControl } from '@angular/forms';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-timepicker-custom-validation',
-  templateUrl: './custom-validation.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-timepicker-custom-validation',
+    templateUrl: './custom-validation.html',
+    standalone: false
 })
 export class DemoTimepickerCustomValidationComponent {
   myTime?: Date;

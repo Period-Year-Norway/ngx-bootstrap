@@ -3,15 +3,16 @@ import { BsModalRef, BsModalService } from '@period-year-norway/ngx-bootstrap/mo
 import { combineLatest, Subscription } from 'rxjs';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-ref-events',
-  templateUrl: './modal-ref-events.html',
-  styles: [`
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-ref-events',
+    templateUrl: './modal-ref-events.html',
+    styles: [`
     .card {
       margin-bottom: 0.75rem;
       padding: 8px;
     }
-  `]
+  `],
+    standalone: false
 })
 export class DemoModalRefEventsComponent {
   modalRef?: BsModalRef;

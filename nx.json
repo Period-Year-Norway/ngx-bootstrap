@@ -82,5 +82,6 @@
     }
   },
   "useInferencePlugins": false,
-  "defaultBase": "development"
+  "defaultBase": "development",
+  "useLegacyCache": true
 }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-progressbar-dynamic',
-  templateUrl: './dynamic.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-progressbar-dynamic',
+    templateUrl: './dynamic.html',
+    standalone: false
 })
 export class DemoProgressbarDynamicComponent {
   max = 200;

@@ -6,8 +6,9 @@ import { filter } from 'rxjs/operators';
 
 
 @Component({
-  selector: 'bs-demo',
-  templateUrl: './app.component.html'
+    selector: 'bs-demo',
+    templateUrl: './app.component.html',
+    standalone: false
 })
 export class AppComponent implements AfterContentInit {
   showSidebar = false;

@@ -4,8 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionConfig, AccordionModule } from '../index';
 
 @Component({
-  selector: 'accordion-test',
-  template: ''
+    selector: 'accordion-test',
+    template: '',
+    standalone: false
 })
 class TestAccordionComponent {
   oneAtATime = true;

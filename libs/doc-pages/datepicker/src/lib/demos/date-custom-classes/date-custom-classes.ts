@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { DatepickerDateCustomClasses } from '@period-year-norway/ngx-bootstrap/datepicker';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-datepicker-date-custom-classes',
-  templateUrl: './date-custom-classes.html',
-  styleUrls: ['./date-custom-classes.scss']
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-datepicker-date-custom-classes',
+    templateUrl: './date-custom-classes.html',
+    styleUrls: ['./date-custom-classes.scss'],
+    standalone: false
 })
 export class DemoDatepickerDateCustomClassesComponent {
   dateCustomClasses: DatepickerDateCustomClasses[];

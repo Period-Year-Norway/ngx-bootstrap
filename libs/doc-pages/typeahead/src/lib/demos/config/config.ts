@@ -7,10 +7,11 @@ export function getTypeaheadConfig(): TypeaheadConfig {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-typeahead-config',
-  templateUrl: './config.html',
-  providers: [{ provide: TypeaheadConfig, useFactory: getTypeaheadConfig }]
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-typeahead-config',
+    templateUrl: './config.html',
+    providers: [{ provide: TypeaheadConfig, useFactory: getTypeaheadConfig }],
+    standalone: false
 })
 export class DemoTypeaheadConfigComponent {
   selected?: string;

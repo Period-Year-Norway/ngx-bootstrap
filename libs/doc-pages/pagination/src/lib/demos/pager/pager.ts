@@ -2,11 +2,12 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { PageChangedEvent } from '@period-year-norway/ngx-bootstrap/pagination';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-pagination-pager',
-  templateUrl: './pager.html',
-  styles: ['.pager li.btn:active { box-shadow: none; }'],
-  encapsulation: ViewEncapsulation.None
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-pagination-pager',
+    templateUrl: './pager.html',
+    styles: ['.pager li.btn:active { box-shadow: none; }'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class DemoPaginationPagerComponent {
   totalItems = 64;

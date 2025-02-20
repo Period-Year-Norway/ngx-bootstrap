@@ -27,16 +27,17 @@ import { BsCustomDates } from './bs-custom-dates-view.component';
 import { dayInMilliseconds } from '../../reducer/_defaults';
 
 @Component({
-  selector: 'bs-daterangepicker-container',
-  providers: [BsDatepickerStore, BsDatepickerEffects],
-  templateUrl: './bs-datepicker-view.html',
-  host: {
-    class: 'bottom',
-    '(click)': '_stopPropagation($event)',
-    role: 'dialog',
-    'aria-label': 'calendar'
-  },
-  animations: [datepickerAnimation]
+    selector: 'bs-daterangepicker-container',
+    providers: [BsDatepickerStore, BsDatepickerEffects],
+    templateUrl: './bs-datepicker-view.html',
+    host: {
+        class: 'bottom',
+        '(click)': '_stopPropagation($event)',
+        role: 'dialog',
+        'aria-label': 'calendar'
+    },
+    animations: [datepickerAnimation],
+    standalone: false
 })
 export class BsDaterangepickerContainerComponent extends BsDatepickerAbstractComponent
   implements OnInit, OnDestroy, AfterViewInit {

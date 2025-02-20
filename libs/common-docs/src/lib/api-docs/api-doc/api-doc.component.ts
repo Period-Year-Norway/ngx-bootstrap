@@ -18,10 +18,11 @@ import { DomSanitizer } from '@angular/platform-browser';
  * The config service of a directive NgbFoo is, by convention, named NgbFooConfig.
  */
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'ng-api-doc',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './api-doc.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'ng-api-doc',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: './api-doc.component.html',
+    standalone: false
 })
 export class NgApiDocComponent {
   apiDocs?: DirectiveDesc;

@@ -5,8 +5,9 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Offsets } from '../models';
 
 @Component({
-  selector: 'test-cmp',
-  template: `<span>Popover demo</span>`
+    selector: 'test-cmp',
+    template: `<span>Popover demo</span>`,
+    standalone: false
 })
 class TestComponent {}
 

@@ -20,12 +20,13 @@ const HEROES_OBJ: any[] = [
 ];
 
 @Component({
-  template: `
+    template: `
     <bs-sortable id="sort1" [(ngModel)]="heroes" [placeholderItem]="'empty'"
                  [itemStyle]="{ 'background-color': 'white', margin: '10px' }"
                  [itemActiveStyle]="{ 'background-color': 'lightgray' }"></bs-sortable>
     <bs-sortable id="sort2" [(ngModel)]="heroesObj" [fieldName]="'name'" [placeholderItem]="'empty'"></bs-sortable>
-  `
+  `,
+    standalone: false
 })
 class TestSortableComponent {
   selectedState?: string;

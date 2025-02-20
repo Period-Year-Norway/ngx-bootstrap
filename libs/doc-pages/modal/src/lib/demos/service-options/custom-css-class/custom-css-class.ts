@@ -2,9 +2,10 @@ import { Component, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-service-custom-css-class',
-  templateUrl: './custom-css-class.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-service-custom-css-class',
+    templateUrl: './custom-css-class.html',
+    standalone: false
 })
 export class DemoModalServiceCustomCSSClassComponent {
   modalRef?: BsModalRef;

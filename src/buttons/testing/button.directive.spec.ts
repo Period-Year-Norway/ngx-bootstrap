@@ -3,7 +3,10 @@ import { ComponentFixture, ComponentFixtureAutoDetect, fakeAsync, TestBed, tick 
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from '../index';
 
-@Component({ selector: 'buttons-test', template: '' })
+@Component({
+    selector: 'buttons-test', template: '',
+    standalone: false
+})
 class TestButtonsComponent implements OnInit {
   singleModel = '0';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

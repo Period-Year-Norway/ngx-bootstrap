@@ -10,10 +10,11 @@ interface ITab {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-tabs-dynamic',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './dynamic.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-tabs-dynamic',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: './dynamic.html',
+    standalone: false
 })
 export class DemoTabsDynamicComponent {
   tabs: ITab[] = [

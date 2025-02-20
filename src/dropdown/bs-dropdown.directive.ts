@@ -24,15 +24,16 @@ import { AnimationBuilder, AnimationFactory } from '@angular/animations';
 import { dropdownAnimation } from './dropdown-animations';
 
 @Directive({
-  selector: '[bsDropdown], [dropdown]',
-  exportAs: 'bs-dropdown',
-  providers: [BsDropdownState],
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: {
-    '[class.dropup]': 'dropup',
-    '[class.open]': 'isOpen',
-    '[class.show]': 'isOpen && isBs4'
-  }
+    selector: '[bsDropdown], [dropdown]',
+    exportAs: 'bs-dropdown',
+    providers: [BsDropdownState],
+    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+    host: {
+        '[class.dropup]': 'dropup',
+        '[class.open]': 'isOpen',
+        '[class.show]': 'isOpen && isBs4'
+    },
+    standalone: false
 })
 export class BsDropdownDirective implements OnInit, OnDestroy {
   /**

@@ -3,9 +3,10 @@ import { NavigationEnd, Router, UrlSegment } from "@angular/router";
 import { Subscription } from "rxjs";
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'bread-crumbs',
-  templateUrl: 'breadCrumbs.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'bread-crumbs',
+    templateUrl: 'breadCrumbs.component.html',
+    standalone: false
 })
 
 export class BreadCrumbsComponent implements OnDestroy{

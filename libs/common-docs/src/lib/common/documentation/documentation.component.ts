@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'documentation',
-  templateUrl: './documentation.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'documentation',
+    templateUrl: './documentation.component.html',
+    standalone: false
 })
 export class DocumentationComponent {
   name = `Native Angular widgets for Bootstrap 3 and Bootstrap 4`;

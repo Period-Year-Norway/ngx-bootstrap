@@ -23,8 +23,9 @@ import { copyTime } from './utils/copy-time-utils';
 import { checkBsValue, setCurrentTimeOnDateSelect } from './utils/bs-calendar-utils';
 
 @Directive({
-  selector: '[bsDatepicker]',
-  exportAs: 'bsDatepicker'
+    selector: '[bsDatepicker]',
+    exportAs: 'bsDatepicker',
+    standalone: false
 })
 export class BsDatepickerDirective implements OnInit, OnDestroy, OnChanges, AfterViewInit {
   /**

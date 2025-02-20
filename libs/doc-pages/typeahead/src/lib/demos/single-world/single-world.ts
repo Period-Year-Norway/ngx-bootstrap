@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-typeahead-single-world',
-  templateUrl: './single-world.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-typeahead-single-world',
+    templateUrl: './single-world.html',
+    standalone: false
 })
 export class DemoTypeaheadSingleWorldComponent {
   typeaheadSingleWords = true;

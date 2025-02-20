@@ -5,9 +5,10 @@ import { NavigationEnd, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'top-menu',
-  templateUrl: './top-menu.component.html',
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'top-menu',
+    templateUrl: './top-menu.component.html',
+    standalone: false
 })
 export class TopMenuComponent implements AfterViewInit {
   shadowRoutes = ['/documentation', '/discover', '/schematics', '/'];

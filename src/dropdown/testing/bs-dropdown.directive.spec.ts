@@ -6,8 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownConfig, BsDropdownDirective, BsDropdownModule } from '../index';
 
 @Component({
-  selector: 'dropdown-test',
-  template: ''
+    selector: 'dropdown-test',
+    template: '',
+    standalone: false
 })
 class TestDropdownComponent {
   isOpen = false;

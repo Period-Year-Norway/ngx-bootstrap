@@ -16,12 +16,13 @@ interface State {
 }
 
 @Component({
-  template: `
+    template: `
     <input [(ngModel)]='selectedState'
            [typeahead]='states'
            [typeaheadOptionField]="'name'"
            [adaptivePosition]='false'
-           (typeaheadOnBlur)='onBlurEvent($event)'>`
+           (typeaheadOnBlur)='onBlurEvent($event)'>`,
+    standalone: false
 })
 class TestTypeaheadComponent {
   selectedState?: string;

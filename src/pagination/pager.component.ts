@@ -23,9 +23,10 @@ export const PAGER_CONTROL_VALUE_ACCESSOR: Provider = {
 };
 
 @Component({
-  selector: 'pager',
-  templateUrl: './pager.component.html',
-  providers: [PAGER_CONTROL_VALUE_ACCESSOR]
+    selector: 'pager',
+    templateUrl: './pager.component.html',
+    providers: [PAGER_CONTROL_VALUE_ACCESSOR],
+    standalone: false
 })
 export class PagerComponent implements ControlValueAccessor, OnInit {
   config?: Partial<ConfigModel>;

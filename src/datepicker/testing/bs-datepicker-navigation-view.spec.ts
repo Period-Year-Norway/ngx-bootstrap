@@ -5,12 +5,13 @@ import { BsDatepickerNavigationViewComponent } from '../themes/bs/bs-datepicker-
 
 
 @Component({
-  selector: 'test-cmp',
-  template: `
+    selector: 'test-cmp',
+    template: `
     <bs-datepicker-navigation-view
       [calendar]="month"
       (onNavigate)="navTo($event)"
-    ></bs-datepicker-navigation-view>`
+    ></bs-datepicker-navigation-view>`,
+    standalone: false
 })
 class TestComponent {
   month!: DaysCalendarViewModel;

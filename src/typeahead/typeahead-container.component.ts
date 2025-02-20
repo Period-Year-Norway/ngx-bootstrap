@@ -26,20 +26,20 @@ import { TypeaheadOptionItemContext, TypeaheadOptionListContext, TypeaheadTempla
 let nextWindowId = 0;
 
 @Component({
-  selector: 'typeahead-container',
-  templateUrl: './typeahead-container.component.html',
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: {
-    class: 'dropdown open bottom',
-    '[class.dropdown-menu]': 'isBs4',
-    '[style.height]': `isBs4 && needScrollbar ? guiHeight: 'auto'`,
-    '[style.visibility]': `'inherit'`,
-    '[class.dropup]': 'dropup',
-    style: 'position: absolute;display: block;',
-    '[attr.role]': `isBs4 ? 'listbox' : null `
-  },
-  styles: [
-    `
+    selector: 'typeahead-container',
+    templateUrl: './typeahead-container.component.html',
+    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+    host: {
+        class: 'dropdown open bottom',
+        '[class.dropdown-menu]': 'isBs4',
+        '[style.height]': `isBs4 && needScrollbar ? guiHeight: 'auto'`,
+        '[style.visibility]': `'inherit'`,
+        '[class.dropup]': 'dropup',
+        style: 'position: absolute;display: block;',
+        '[attr.role]': `isBs4 ? 'listbox' : null `
+    },
+    styles: [
+        `
     :host.dropdown {
       z-index: 1000;
     }
@@ -49,8 +49,9 @@ let nextWindowId = 0;
       height: 100px;
     }
   `
-  ],
-  animations: [typeaheadAnimation]
+    ],
+    animations: [typeaheadAnimation],
+    standalone: false
 })
 
 export class TypeaheadContainerComponent implements OnDestroy {

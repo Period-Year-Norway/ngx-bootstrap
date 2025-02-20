@@ -18,8 +18,9 @@ import {
 } from './utils/bs-calendar-utils';
 
 @Directive({
-  selector: '[bsDaterangepicker]',
-  exportAs: 'bsDaterangepicker'
+    selector: '[bsDaterangepicker]',
+    exportAs: 'bsDaterangepicker',
+    standalone: false
 })
 export class BsDaterangepickerDirective
   implements OnInit, OnDestroy, OnChanges, AfterViewInit {

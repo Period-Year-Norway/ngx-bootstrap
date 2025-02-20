@@ -7,10 +7,11 @@ import { ContentSection } from '@ngx-bootstrap-doc/docs';
 
 // webpack html imports
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'accordion-section',
-  templateUrl: './accordion-section.components.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'accordion-section',
+    templateUrl: './accordion-section.components.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AccordionSectionComponent {
   name = 'Accordion';

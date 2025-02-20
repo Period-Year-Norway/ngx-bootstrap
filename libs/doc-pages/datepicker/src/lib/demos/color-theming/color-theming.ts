@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { BsDatepickerConfig } from '@period-year-norway/ngx-bootstrap/datepicker';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-datepicker-color-theming',
-  templateUrl: './color-theming.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-datepicker-color-theming',
+    templateUrl: './color-theming.html',
+    standalone: false
 })
 export class DemoDatepickerColorThemingComponent {
   colorTheme = 'theme-green';

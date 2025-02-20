@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'discover',
-  templateUrl: './discover.component.html',
-  styleUrls: ['discover.component.scss']
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'discover',
+    templateUrl: './discover.component.html',
+    styleUrls: ['discover.component.scss'],
+    standalone: false
 })
 
 export class DiscoverComponent {

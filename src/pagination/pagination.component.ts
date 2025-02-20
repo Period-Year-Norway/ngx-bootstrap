@@ -27,9 +27,10 @@ export const PAGINATION_CONTROL_VALUE_ACCESSOR: Provider = {
 };
 
 @Component({
-  selector: 'pagination',
-  templateUrl: './pagination.component.html',
-  providers: [PAGINATION_CONTROL_VALUE_ACCESSOR]
+    selector: 'pagination',
+    templateUrl: './pagination.component.html',
+    providers: [PAGINATION_CONTROL_VALUE_ACCESSOR],
+    standalone: false
 })
 export class PaginationComponent implements ControlValueAccessor, OnInit {
   config?: Partial<ConfigModel>;

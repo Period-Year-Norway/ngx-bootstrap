@@ -25,16 +25,17 @@ import { BsDatepickerEffects } from '../../reducer/bs-datepicker.effects';
 import { BsDatepickerStore } from '../../reducer/bs-datepicker.store';
 
 @Component({
-  selector: 'bs-datepicker-container',
-  providers: [BsDatepickerStore, BsDatepickerEffects],
-  templateUrl: './bs-datepicker-view.html',
-  host: {
-    class: 'bottom',
-    '(click)': '_stopPropagation($event)',
-    role: 'dialog',
-    'aria-label': 'calendar'
-  },
-  animations: [datepickerAnimation]
+    selector: 'bs-datepicker-container',
+    providers: [BsDatepickerStore, BsDatepickerEffects],
+    templateUrl: './bs-datepicker-view.html',
+    host: {
+        class: 'bottom',
+        '(click)': '_stopPropagation($event)',
+        role: 'dialog',
+        'aria-label': 'calendar'
+    },
+    animations: [datepickerAnimation],
+    standalone: false
 })
 export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponent
   implements OnInit, AfterViewInit, OnDestroy {

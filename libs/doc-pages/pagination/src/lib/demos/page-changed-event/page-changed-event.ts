@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { PageChangedEvent } from '@period-year-norway/ngx-bootstrap/pagination';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-pagination-page-changed-event',
-  templateUrl: './page-changed-event.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-pagination-page-changed-event',
+    templateUrl: './page-changed-event.html',
+    standalone: false
 })
 export class DemoPaginationPageChangedComponent {
   currentPage = 4;

@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'sub-component',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './sub-component.html',
-  styleUrls: ['./sub-component.css']
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'sub-component',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: './sub-component.html',
+    styleUrls: ['./sub-component.css'],
+    standalone: false
 })
 export class SubComponent implements OnInit, OnDestroy {
   @Input()

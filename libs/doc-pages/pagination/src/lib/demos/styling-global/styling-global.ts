@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { PageChangedEvent } from '@period-year-norway/ngx-bootstrap/pagination';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-pagination-styling',
-  templateUrl: './styling-global.html',
-  styles: [
-    `
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-pagination-styling',
+    templateUrl: './styling-global.html',
+    styles: [
+        `
     .btn-custom a {
        background: #31b0d5;
     }
   `
-  ]
+    ],
+    standalone: false
 })
 export class DemoPaginationStylingComponent {
   totalItems = 64;

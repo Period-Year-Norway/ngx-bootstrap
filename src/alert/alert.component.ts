@@ -11,9 +11,10 @@ import { AlertConfig } from './alert.config';
 import { OnChange } from '@period-year-norway/ngx-bootstrap/utils';
 
 @Component({
-  selector: 'alert,bs-alert',
-  templateUrl: './alert.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'alert,bs-alert',
+    templateUrl: './alert.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class AlertComponent implements OnInit {
   /** Alert type.

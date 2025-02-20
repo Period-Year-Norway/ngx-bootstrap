@@ -3,8 +3,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TabsetConfig, TabsModule, TabsetComponent } from '../index';
 
 @Component({
-  selector: 'tabs-test',
-  template: ''
+    selector: 'tabs-test',
+    template: '',
+    standalone: false
 })
 class TestTabsetComponent {
   isVertical = false;

@@ -6,9 +6,10 @@ interface IRange {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-datepicker-quick-select-ranges',
-  templateUrl: './quick-select-ranges.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-datepicker-quick-select-ranges',
+    templateUrl: './quick-select-ranges.html',
+    standalone: false
 })
 export class DemoDatePickerQuickSelectRangesComponent {
   ranges: IRange[] = [{

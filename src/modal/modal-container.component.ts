@@ -16,8 +16,8 @@ import { BsModalService } from './bs-modal.service';
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 
 @Component({
-  selector: 'modal-container',
-  template: `
+    selector: 'modal-container',
+    template: `
     <div [class]="'modal-dialog' + (config.class ? ' ' + config.class : '')"
          role="document"
          focusTrap>
@@ -26,15 +26,16 @@ import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
       </div>
     </div>
   `,
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: {
-    class: 'modal',
-    role: 'dialog',
-    tabindex: '-1',
-    '[attr.aria-modal]': 'true',
-    '[attr.aria-labelledby]': 'config.ariaLabelledBy',
-    '[attr.aria-describedby]': 'config.ariaDescribedby'
-  }
+    // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+    host: {
+        class: 'modal',
+        role: 'dialog',
+        tabindex: '-1',
+        '[attr.aria-modal]': 'true',
+        '[attr.aria-labelledby]': 'config.ariaLabelledBy',
+        '[attr.aria-describedby]': 'config.ariaDescribedby'
+    },
+    standalone: false
 })
 export class ModalContainerComponent implements OnInit, OnDestroy {
   config: ModalOptions;

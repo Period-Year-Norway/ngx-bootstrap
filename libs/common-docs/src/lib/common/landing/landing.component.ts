@@ -9,9 +9,10 @@ import { Router } from '@angular/router';
 const _bs4Css = 'assets/css/bootstrap-4.5.3/css/bootstrap.min.css';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'landing',
-  templateUrl: './landing.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'landing',
+    templateUrl: './landing.component.html',
+    standalone: false
 })
 export class LandingComponent implements AfterViewInit {
   currentVersion?: string;

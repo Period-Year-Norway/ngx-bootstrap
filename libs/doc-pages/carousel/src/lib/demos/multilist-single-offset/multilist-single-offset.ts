@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-carousel-multilist-single-offset',
-  templateUrl: './multilist-single-offset.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-carousel-multilist-single-offset',
+    templateUrl: './multilist-single-offset.html',
+    standalone: false
 })
 export class DemoCarouselMultilistSingleOffsetComponent {
   itemsPerSlide = 5;

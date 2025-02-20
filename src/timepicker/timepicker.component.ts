@@ -43,11 +43,11 @@ export const TIMEPICKER_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
 };
 
 @Component({
-  selector: 'timepicker',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [TIMEPICKER_CONTROL_VALUE_ACCESSOR, TimepickerStore],
-  templateUrl: './timepicker.component.html',
-  styles: [`
+    selector: 'timepicker',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    providers: [TIMEPICKER_CONTROL_VALUE_ACCESSOR, TimepickerStore],
+    templateUrl: './timepicker.component.html',
+    styles: [`
     .bs-chevron {
       border-style: solid;
       display: block;
@@ -74,7 +74,8 @@ export const TIMEPICKER_CONTROL_VALUE_ACCESSOR: ControlValueAccessorModel = {
       padding: .375rem .55rem;
     }
   `],
-  encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class TimepickerComponent
   implements ControlValueAccessor,

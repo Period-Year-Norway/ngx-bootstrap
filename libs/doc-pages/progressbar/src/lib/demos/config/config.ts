@@ -8,9 +8,10 @@ export function getProgressbarConfig(): ProgressbarConfig {
 }
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-progressbar-config',
-  templateUrl: './config.html',
-  providers: [{ provide: ProgressbarConfig, useFactory: getProgressbarConfig }]
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-progressbar-config',
+    templateUrl: './config.html',
+    providers: [{ provide: ProgressbarConfig, useFactory: getProgressbarConfig }],
+    standalone: false
 })
 export class DemoProgressbarConfigComponent {}

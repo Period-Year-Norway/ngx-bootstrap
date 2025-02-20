@@ -3,9 +3,10 @@ import { Component, Input, inject } from "@angular/core";
 import { DOCS_TOKENS } from '../../tokens/docs-routes-token';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'search-input',
-  templateUrl: './search-input.component.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'search-input',
+    templateUrl: './search-input.component.html',
+    standalone: false
 })
 export class SearchInputComponent {
   @Input() showInput = true;

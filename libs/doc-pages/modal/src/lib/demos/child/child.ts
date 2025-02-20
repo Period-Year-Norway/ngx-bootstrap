@@ -2,9 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { ModalDirective } from '@period-year-norway/ngx-bootstrap/modal';
 
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'demo-modal-child',
-  templateUrl: './child.html'
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'demo-modal-child',
+    templateUrl: './child.html',
+    standalone: false
 })
 export class DemoModalChildComponent {
   @ViewChild('childModal', { static: false }) childModal?: ModalDirective;
