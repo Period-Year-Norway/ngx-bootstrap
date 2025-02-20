@@ -15,140 +15,53 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngx-bootstrap-doc/accordion": [
-        "libs/doc-pages/accordion/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/alerts": [
-        "libs/doc-pages/alerts/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/buttons": [
-        "libs/doc-pages/buttons/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/carousel": [
-        "libs/doc-pages/carousel/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/collapse": [
-        "libs/doc-pages/collapse/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/datepicker": [
-        "libs/doc-pages/datepicker/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/docs": [
-        "libs/common-docs/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/dropdown": [
-        "libs/doc-pages/dropdown/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/modal": [
-        "libs/doc-pages/modal/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/pagination": [
-        "libs/doc-pages/pagination/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/popover": [
-        "libs/doc-pages/popover/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/progressbar": [
-        "libs/doc-pages/progressbar/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/rating": [
-        "libs/doc-pages/rating/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/sortable": [
-        "libs/doc-pages/sortable/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/tabs": [
-        "libs/doc-pages/tabs/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/timepicker": [
-        "libs/doc-pages/timepicker/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/tooltip": [
-        "libs/doc-pages/tooltip/src/index.ts"
-      ],
-      "@ngx-bootstrap-doc/typeahead": [
-        "libs/doc-pages/typeahead/src/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/accordion": [
-        "src/accordion/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/alert": [
-        "src/alert/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/buttons": [
-        "src/buttons/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/carousel": [
-        "src/carousel/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/chronos": [
-        "src/chronos/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/collapse": [
-        "src/collapse/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/component-loader": [
-        "src/component-loader/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/datepicker": [
-        "src/datepicker/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/dropdown": [
-        "src/dropdown/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/focus-trap": [
-        "src/focus-trap/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/locale": [
-        "src/locale/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/mini-ngrx": [
-        "src/mini-ngrx/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/modal": [
-        "src/modal/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/pagination": [
-        "src/pagination/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/popover": [
-        "src/popover/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/positioning": [
-        "src/positioning/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/progressbar": [
-        "src/progressbar/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/rating": [
-        "src/rating/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/sortable": [
-        "src/sortable/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/tabs": [
-        "src/tabs/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/timepicker": [
-        "src/timepicker/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/tooltip": [
-        "src/tooltip/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/typeahead": [
-        "src/typeahead/index.ts"
-      ],
-      "@period-year-norway/ngx-bootstrap/utils": [
-        "src/utils/index.ts"
-      ]
+      "@ngx-bootstrap-doc/accordion": ["libs/doc-pages/accordion/src/index.ts"],
+      "@ngx-bootstrap-doc/alerts": ["libs/doc-pages/alerts/src/index.ts"],
+      "@ngx-bootstrap-doc/buttons": ["libs/doc-pages/buttons/src/index.ts"],
+      "@ngx-bootstrap-doc/carousel": ["libs/doc-pages/carousel/src/index.ts"],
+      "@ngx-bootstrap-doc/collapse": ["libs/doc-pages/collapse/src/index.ts"],
+      "@ngx-bootstrap-doc/datepicker": ["libs/doc-pages/datepicker/src/index.ts"],
+      "@ngx-bootstrap-doc/docs": ["libs/common-docs/src/index.ts"],
+      "@ngx-bootstrap-doc/dropdown": ["libs/doc-pages/dropdown/src/index.ts"],
+      "@ngx-bootstrap-doc/modal": ["libs/doc-pages/modal/src/index.ts"],
+      "@ngx-bootstrap-doc/pagination": ["libs/doc-pages/pagination/src/index.ts"],
+      "@ngx-bootstrap-doc/popover": ["libs/doc-pages/popover/src/index.ts"],
+      "@ngx-bootstrap-doc/progressbar": ["libs/doc-pages/progressbar/src/index.ts"],
+      "@ngx-bootstrap-doc/rating": ["libs/doc-pages/rating/src/index.ts"],
+      "@ngx-bootstrap-doc/sortable": ["libs/doc-pages/sortable/src/index.ts"],
+      "@ngx-bootstrap-doc/tabs": ["libs/doc-pages/tabs/src/index.ts"],
+      "@ngx-bootstrap-doc/timepicker": ["libs/doc-pages/timepicker/src/index.ts"],
+      "@ngx-bootstrap-doc/tooltip": ["libs/doc-pages/tooltip/src/index.ts"],
+      "@ngx-bootstrap-doc/typeahead": ["libs/doc-pages/typeahead/src/index.ts"],
+      "@period-year-norway/ngx-bootstrap/accordion": ["src/accordion/index.ts"],
+      "@period-year-norway/ngx-bootstrap/alert": ["src/alert/index.ts"],
+      "@period-year-norway/ngx-bootstrap/buttons": ["src/buttons/index.ts"],
+      "@period-year-norway/ngx-bootstrap/carousel": ["src/carousel/index.ts"],
+      "@period-year-norway/ngx-bootstrap/chronos": ["src/chronos/index.ts"],
+      "@period-year-norway/ngx-bootstrap/collapse": ["src/collapse/index.ts"],
+      "@period-year-norway/ngx-bootstrap/component-loader": ["src/component-loader/index.ts"],
+      "@period-year-norway/ngx-bootstrap/datepicker": ["src/datepicker/index.ts"],
+      "@period-year-norway/ngx-bootstrap/dropdown": ["src/dropdown/index.ts"],
+      "@period-year-norway/ngx-bootstrap/focus-trap": ["src/focus-trap/index.ts"],
+      "@period-year-norway/ngx-bootstrap/locale": ["src/locale/index.ts"],
+      "@period-year-norway/ngx-bootstrap/mini-ngrx": ["src/mini-ngrx/index.ts"],
+      "@period-year-norway/ngx-bootstrap/modal": ["src/modal/index.ts"],
+      "@period-year-norway/ngx-bootstrap/pagination": ["src/pagination/index.ts"],
+      "@period-year-norway/ngx-bootstrap/popover": ["src/popover/index.ts"],
+      "@period-year-norway/ngx-bootstrap/positioning": ["src/positioning/index.ts"],
+      "@period-year-norway/ngx-bootstrap/progressbar": ["src/progressbar/index.ts"],
+      "@period-year-norway/ngx-bootstrap/rating": ["src/rating/index.ts"],
+      "@period-year-norway/ngx-bootstrap/sortable": ["src/sortable/index.ts"],
+      "@period-year-norway/ngx-bootstrap/tabs": ["src/tabs/index.ts"],
+      "@period-year-norway/ngx-bootstrap/timepicker": ["src/timepicker/index.ts"],
+      "@period-year-norway/ngx-bootstrap/tooltip": ["src/tooltip/index.ts"],
+      "@period-year-norway/ngx-bootstrap/typeahead": ["src/typeahead/index.ts"],
+      "@period-year-norway/ngx-bootstrap/utils": ["src/utils/index.ts"]
     }
   },
   "angularCompilerOptions": {
@@ -157,8 +70,5 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "exclude": [
-    "node_modules/!(ngx-bootstrap)",
-    "tmp"
-  ]
+  "exclude": ["node_modules/!(ngx-bootstrap)", "tmp"]
 }

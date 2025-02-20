@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 // import { NgxPageScrollModule } from 'ngx-page-scroll';
@@ -13,13 +13,11 @@ import { DOCS_TOKENS, DocsModule, NgApiDoc, SIDEBAR_ROUTES, SidebarRoutesStructu
 import { routes } from './app.routing';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
   imports: [
     BrowserAnimationsModule,
     DocsModule,
-    HttpClientModule,
     RouterModule.forRoot(routes, { useHash: environment.useHash }),
     // NgxPageScrollModule,
     BsDropdownModule.forRoot()
@@ -28,8 +26,8 @@ import { routes } from './app.routing';
   providers: [
     { provide: NgApiDoc, useValue: ngdoc },
     { provide: DOCS_TOKENS, useValue: routes },
-    { provide: SIDEBAR_ROUTES, useValue: SidebarRoutesStructure }],
-  bootstrap: [AppComponent]
+    { provide: SIDEBAR_ROUTES, useValue: SidebarRoutesStructure },
+    provideHttpClient(withInterceptorsFromDi())
+  ]
 })
-export class AppModule {
-}
+export class AppModule {}
