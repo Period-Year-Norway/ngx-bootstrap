@@ -1,20 +1,4 @@
 {
-  "tasksRunnerOptions": {
-    "cloud": {
-      "runner": "nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "test", "lint", "e2e"],
-        "canTrackAnalytics": false,
-        "showUsageWarnings": true
-      }
-    },
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
-    }
-  },
   "generators": {
     "@nx/angular:application": {
       "style": "scss",
@@ -58,10 +42,14 @@
   },
   "targetDefaults": {
     "build": {
-      "inputs": ["production", "^production"]
+      "inputs": ["production", "^production"],
+      "cache": true
     },
     "e2e": {
       "inputs": ["default", "^production"]
+    },
+    "test": {
+      "cache": true
     },
     "@nx/jest:jest": {
       "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
@@ -82,6 +70,5 @@
     }
   },
   "useInferencePlugins": false,
-  "defaultBase": "development",
-  "useLegacyCache": true
+  "defaultBase": "development"
 }
