@@ -9,6 +9,7 @@
         "project": ["src/timepicker/tsconfig.*?.json"]
       },
       "rules": {
+        "@angular-eslint/prefer-inject": "warn",
         "@angular-eslint/prefer-standalone": "off"
       }
     },

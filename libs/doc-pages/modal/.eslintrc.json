@@ -25,6 +25,7 @@
             "style": "kebab-case"
           }
         ],
+        "@angular-eslint/prefer-inject": "warn",
         "@angular-eslint/prefer-standalone": "off"
       }
     },
