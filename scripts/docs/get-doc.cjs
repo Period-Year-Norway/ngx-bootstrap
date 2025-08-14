@@ -2,7 +2,7 @@
 // todo: add ng-bootstrap copyrights
 const fs = require('fs');
 const glob = require('glob');
-const doc = require('./api-doc');
+const doc = require('./api-doc.cjs');
 
 function getFileNames() {
   return glob.sync('src/**/*.ts', {

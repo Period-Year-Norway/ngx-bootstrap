@@ -7,9 +7,10 @@ import {
   OnChanges,
   QueryList, Renderer2,
   SimpleChanges,
-  ViewChildren
+  ViewChildren,
+  DOCUMENT
 } from "@angular/core";
-import { DOCUMENT } from '@angular/common';
+
 import { ContentSection } from '../../models/content-section.model';
 import { Router } from "@angular/router";
 interface IComponentContent {

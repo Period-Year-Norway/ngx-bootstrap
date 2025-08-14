@@ -74,7 +74,7 @@
       "executor": "nx:run-commands",
       "outputs": [],
       "options": {
-        "command": "node ./scripts/docs/get-doc.js"
+          "command": "node ./scripts/docs/get-doc.cjs"
       }
     },
     "version": {

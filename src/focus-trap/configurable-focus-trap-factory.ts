@@ -8,12 +8,13 @@
 
 /* eslint-disable */
 
-import { DOCUMENT } from '@angular/common';
+
 import {
   Inject,
   Injectable,
   Optional,
-  NgZone
+  NgZone,
+  DOCUMENT
 } from '@angular/core';
 import { InteractivityChecker } from './interactivity-checker';
 import { ConfigurableFocusTrap } from './configurable-focus-trap';

@@ -3,12 +3,11 @@
   "compilerOptions": {
     "declarationMap": false,
     "target": "ES2022",
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "moduleResolution": "bundler"
   },
   "angularCompilerOptions": {
     "compilationMode": "partial"
   },
-  "exclude": [
-    "jest.config.ts"
-  ]
+  "exclude": ["jest.config.ts"]
 }

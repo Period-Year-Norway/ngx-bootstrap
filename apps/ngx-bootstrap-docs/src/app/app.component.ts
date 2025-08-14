@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { AfterContentInit, Component, Inject } from '@angular/core';
+
+import { AfterContentInit, Component, Inject, DOCUMENT } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, UrlSerializer } from '@angular/router';
 import { Analytics } from '@ngx-bootstrap-doc/docs';
 import { filter } from 'rxjs/operators';

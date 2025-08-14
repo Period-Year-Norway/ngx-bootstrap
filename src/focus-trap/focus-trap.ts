@@ -9,7 +9,7 @@
 /* eslint-disable */
 
 import { coerceBooleanProperty, BooleanInput } from './boolean-property';
-import { DOCUMENT } from '@angular/common';
+
 import {
   AfterContentInit,
   Directive,
@@ -21,7 +21,8 @@ import {
   OnDestroy,
   DoCheck,
   SimpleChanges,
-  OnChanges
+  OnChanges,
+  DOCUMENT
 } from '@angular/core';
 import { take } from 'rxjs/operators';
 import { InteractivityChecker } from './interactivity-checker';
