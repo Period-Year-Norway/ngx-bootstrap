@@ -43,22 +43,6 @@
         "@typescript-eslint/no-extra-semi": "error",
         "no-extra-semi": "off"
       }
-    },
-    {
-      "files": ["{package,project}.json"],
-      "parser": "jsonc-eslint-parser",
-      "rules": {
-        "@nx/dependency-checks": [
-          "error",
-          {
-            "buildTargets": ["build"],
-            "checkMissingDependencies": true,
-            "checkObsoleteDependencies": true,
-            "checkVersionMismatches": true,
-            "ignoredDependencies": ["eslint"]
-          }
-        ]
-      }
     }
   ]
 }

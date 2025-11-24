@@ -20,18 +20,22 @@ import { getWorkspace } from '@schematics/angular/utility/workspace';
 const datepickerComponentName = 'datepicker';
 const bsName = 'ngx-bootstrap';
 const BOOTSTRAP_AVAILABLE_STYLES = {
-  'css': [`./node_modules/bootstrap/dist/css/bootstrap.min.css`],
-  'scss': [`
+  css: [`./node_modules/bootstrap/dist/css/bootstrap.min.css`],
+  scss: [
+    `
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
-`]
+`
+  ]
 };
 const DATEPICKER_AVAILABLESTYLES = {
-  'css': [`./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css`],
-  'scss': [`
+  css: [`./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css`],
+  scss: [
+    `
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
-`]
+`
+  ]
 };
 
 const components: { [key: string]: { moduleName: string; link: string; animated?: boolean } } = {
@@ -55,13 +59,11 @@ const components: { [key: string]: { moduleName: string; link: string; animated?
 };
 
 export default function addBsToPackage(options: Schema): Rule {
-  const componentName = options.component
-    ? options.component
-    : options['--'] && options['--'][1];
+  const componentName = options.component ? options.component : options['--'] && options['--'][1];
 
   return async (tree: Tree, context: SchematicContext) => {
-    const workspace = await getWorkspace(tree);
-    const projectName = options.project || workspace.extensions.defaultProject !.toString();
+    const workspace = (await getWorkspace(tree)) as unknown as workspaces.WorkspaceDefinition;
+    const projectName = options.project || workspace.extensions.defaultProject!.toString();
     const project = workspace.projects.get(projectName);
 
     addPackageJsonDependencies(tree, context);
@@ -80,7 +82,12 @@ export default function addBsToPackage(options: Schema): Rule {
   };
 }
 
-function addModuleOfComponent(project: workspaces.ProjectDefinition, host: Tree, context: SchematicContext, componentName: string): Rule {
+function addModuleOfComponent(
+  project: workspaces.ProjectDefinition,
+  host: Tree,
+  context: SchematicContext,
+  componentName: string
+): Rule {
   if (!project) {
     return;
   }
@@ -92,21 +99,29 @@ function addModuleOfComponent(project: workspaces.ProjectDefinition, host: Tree,
       return;
     }
     addModuleImportToRootModule(
-      host, `${components[componentName].moduleName}.forRoot()`, components[componentName].link, project
+      host,
+      `${components[componentName].moduleName}.forRoot()`,
+      components[componentName].link,
+      project
     );
   }
 }
 
 function addPackageJsonDependencies(host: Tree, context: SchematicContext): Tree {
   const dependencies = getDependencies();
-  dependencies.forEach(dependency => {
+  dependencies.forEach((dependency) => {
     addPackageToPackageJson(host, dependency.name, `${dependency.version}`);
     context.logger.log('info', `✅️ Added "${dependency.name}`);
   });
   return host;
 }
 
-function insertBootstrapStyles(project: workspaces.ProjectDefinition, host: Tree, projectName: string, extension?: string ): Tree {
+function insertBootstrapStyles(
+  project: workspaces.ProjectDefinition,
+  host: Tree,
+  projectName: string,
+  extension?: string
+): Tree {
   if (!project) {
     return;
   }
@@ -114,7 +129,12 @@ function insertBootstrapStyles(project: workspaces.ProjectDefinition, host: Tree
   return addStyles(project, 'build', host, BOOTSTRAP_AVAILABLE_STYLES, projectName, extension);
 }
 
-function insertCommonStyles(project: workspaces.ProjectDefinition, host: Tree, projectName: string, extension?: string): Tree {
+function insertCommonStyles(
+  project: workspaces.ProjectDefinition,
+  host: Tree,
+  projectName: string,
+  extension?: string
+): Tree {
   if (!project) {
     return;
   }
@@ -123,7 +143,12 @@ function insertCommonStyles(project: workspaces.ProjectDefinition, host: Tree, p
   return addStyles(project, 'build', host, DATEPICKER_AVAILABLESTYLES, projectName, extension);
 }
 
-function addAnimationModule(project: workspaces.ProjectDefinition, host: Tree, context: SchematicContext, componentName: string): Rule {
+function addAnimationModule(
+  project: workspaces.ProjectDefinition,
+  host: Tree,
+  context: SchematicContext,
+  componentName: string
+): Rule {
   if (!project || !(!componentName || components[componentName]?.animated)) {
     return;
   }

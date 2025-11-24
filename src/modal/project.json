@@ -7,9 +7,7 @@
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": [
-        "{workspaceRoot}/dist/ngx-bootstrap/modal"
-      ],
+      "outputs": ["{workspaceRoot}/dist/ngx-bootstrap/modal"],
       "options": {
         "tsConfig": "src/modal/tsconfig.lib.json",
         "project": "src/modal/ng-package.json"
@@ -31,11 +29,10 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/src/modal"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/src/modal"],
       "options": {
-        "jestConfig": "src/modal/jest.config.ts"
+        "jestConfig": "src/modal/jest.config.ts",
+        "tsConfig": "src/modal/tsconfig.spec.json"
       }
     }
   }

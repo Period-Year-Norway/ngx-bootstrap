@@ -34,7 +34,7 @@ type TypeaheadOptionArr = TypeaheadOption[] | Observable<TypeaheadOption>;
   exportAs: 'bs-typeahead',
   host: {
     '[attr.aria-activedescendant]': 'activeDescendant',
-    '[attr.aria-owns]': 'isOpen ? this._container.popupId : null',
+    '[attr.aria-owns]': 'isOpen ? this._container?.popupId : null',
     '[attr.aria-expanded]': 'isOpen',
     '[attr.aria-autocomplete]': 'list'
   },

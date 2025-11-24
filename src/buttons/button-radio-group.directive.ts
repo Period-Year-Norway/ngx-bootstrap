@@ -22,9 +22,9 @@ export const RADIO_CONTROL_VALUE_ACCESSOR: Provider = {
  * A value of a selected button is bound to a variable specified via ngModel.
  */
 @Directive({
-    selector: '[btnRadioGroup]',
-    providers: [RADIO_CONTROL_VALUE_ACCESSOR],
-    standalone: false
+  selector: '[btnRadioGroup]',
+  providers: [RADIO_CONTROL_VALUE_ACCESSOR],
+  standalone: false
 })
 export class ButtonRadioGroupDirective implements ControlValueAccessor {
   onChange = Function.prototype;
@@ -35,8 +35,7 @@ export class ButtonRadioGroupDirective implements ControlValueAccessor {
   @ContentChildren(forwardRef(() => ButtonRadioDirective))
   radioButtons?: QueryList<ButtonRadioDirective>;
 
-  constructor(private cdr: ChangeDetectorRef) {
-  }
+  constructor(private cdr: ChangeDetectorRef) {}
 
   private _value?: string;
 
@@ -80,7 +79,7 @@ export class ButtonRadioGroupDirective implements ControlValueAccessor {
   setDisabledState(disabled: boolean): void {
     if (this.radioButtons) {
       this._disabled = disabled;
-      this.radioButtons.forEach(buttons => {
+      this.radioButtons.forEach((buttons) => {
         buttons.setDisabledState(disabled);
       });
       this.cdr.markForCheck();
@@ -99,7 +98,7 @@ export class ButtonRadioGroupDirective implements ControlValueAccessor {
     }
 
     if (this.radioButtons) {
-      const firstEnabled = this.radioButtons.find(r => !r.disabled);
+      const firstEnabled = this.radioButtons.find((r) => !r.disabled);
       if (firstEnabled) {
         firstEnabled.focus();
       }
@@ -115,14 +114,14 @@ export class ButtonRadioGroupDirective implements ControlValueAccessor {
 
   @HostListener('keydown.ArrowRight', ['$event'])
   @HostListener('keydown.ArrowDown', ['$event'])
-  selectNext(event: KeyboardEvent) {
+  selectNext(event: Event) {
     this.selectInDirection('next');
     event.preventDefault();
   }
 
   @HostListener('keydown.ArrowLeft', ['$event'])
   @HostListener('keydown.ArrowUp', ['$event'])
-  selectPrevious(event: KeyboardEvent) {
+  selectPrevious(event: Event) {
     this.selectInDirection('previous');
     event.preventDefault();
   }
@@ -166,7 +165,6 @@ export class ButtonRadioGroupDirective implements ControlValueAccessor {
       return void 0;
     }
 
-    return this.radioButtons.find(button => button.isActive)
-      || this.radioButtons.find(button => button.hasFocus);
+    return this.radioButtons.find((button) => button.isActive) || this.radioButtons.find((button) => button.hasFocus);
   }
 }
