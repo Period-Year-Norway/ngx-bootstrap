@@ -7,9 +7,7 @@
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": [
-        "{workspaceRoot}/dist/ngx-bootstrap/accordion"
-      ],
+      "outputs": ["{workspaceRoot}/dist/ngx-bootstrap/accordion"],
       "options": {
         "tsConfig": "src/accordion/tsconfig.lib.json",
         "project": "src/accordion/ng-package.json"
@@ -31,11 +29,10 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/src/accordion"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/src/accordion"],
       "options": {
-        "jestConfig": "src/accordion/jest.config.ts"
+        "jestConfig": "src/accordion/jest.config.ts",
+        "tsConfig": "src/accordion/tsconfig.spec.json"
       }
     }
   }

@@ -7,9 +7,7 @@
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": [
-        "{workspaceRoot}/dist/ngx-bootstrap/focus-trap"
-      ],
+      "outputs": ["{workspaceRoot}/dist/ngx-bootstrap/focus-trap"],
       "options": {
         "tsConfig": "src/focus-trap/tsconfig.lib.json",
         "project": "src/focus-trap/ng-package.json"
@@ -25,11 +23,10 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/src/focus-trap"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/src/focus-trap"],
       "options": {
-        "jestConfig": "src/focus-trap/jest.config.ts"
+        "jestConfig": "src/focus-trap/jest.config.ts",
+        "tsConfig": "src/focus-trap/tsconfig.spec.json"
       }
     }
   }

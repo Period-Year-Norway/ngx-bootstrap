@@ -4,26 +4,37 @@
   "projectType": "application",
   "sourceRoot": "apps/ngx-bootstrap-docs/src",
   "prefix": "ngx-bootstrap-base",
-  "implicitDependencies": ["ngx-bootstrap"],
+  "implicitDependencies": [
+    "ngx-bootstrap"
+  ],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular/build:application",
       "options": {
         "baseHref": "/ngx-bootstrap/",
-        "outputPath": "dist/apps/ngx-bootstrap",
+        "outputPath": {
+          "base": "dist/apps/ngx-bootstrap"
+        },
         "index": "apps/ngx-bootstrap-docs/src/index.html",
-        "main": "apps/ngx-bootstrap-docs/src/main.ts",
-        "polyfills": "apps/ngx-bootstrap-docs/src/polyfills.ts",
+        "polyfills": [
+          "apps/ngx-bootstrap-docs/src/polyfills.ts"
+        ],
         "tsConfig": "apps/ngx-bootstrap-docs/tsconfig.app.json",
         "aot": true,
-        "assets": ["apps/ngx-bootstrap-docs/src/assets", "apps/ngx-bootstrap-docs/src/404.html"],
+        "assets": [
+          "apps/ngx-bootstrap-docs/src/assets",
+          "apps/ngx-bootstrap-docs/src/404.html"
+        ],
         "styles": [
           "apps/ngx-bootstrap-docs/src/assets/css/style.scss",
           "apps/ngx-bootstrap-docs/src/assets/css/prettify-angulario.css"
         ],
         "stylePreprocessorOptions": {
-          "includePaths": ["src/datepicker"]
-        }
+          "includePaths": [
+            "src/datepicker"
+          ]
+        },
+        "browser": "apps/ngx-bootstrap-docs/src/main.ts"
       },
       "configurations": {
         "production": {
@@ -38,8 +49,6 @@
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,
-          "vendorChunk": false,
-          "buildOptimizer": true,
           "budgets": [
             {
               "type": "initial",
@@ -52,15 +61,15 @@
               "maximumError": "10kb"
             }
           ],
-          "outputPath": "dist/apps/ngx-bootstrap",
+          "outputPath": {
+            "base": "dist/apps/ngx-bootstrap"
+          },
           "index": "apps/ngx-bootstrap-docs/src/index.html",
-          "main": "apps/ngx-bootstrap-docs/src/main.ts",
-          "tsConfig": "apps/ngx-bootstrap-docs/tsconfig.app.json"
+          "tsConfig": "apps/ngx-bootstrap-docs/tsconfig.app.json",
+          "browser": "apps/ngx-bootstrap-docs/src/main.ts"
         },
         "development": {
-          "buildOptimizer": false,
           "optimization": false,
-          "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true
@@ -68,7 +77,7 @@
       }
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@angular/build:dev-server",
       "options": {
         "buildTarget": "ngx-bootstrap-docs:build"
       },
@@ -83,7 +92,7 @@
       "continuous": true
     },
     "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "executor": "@angular/build:extract-i18n",
       "options": {
         "buildTarget": "ngx-bootstrap-docs:build"
       }
