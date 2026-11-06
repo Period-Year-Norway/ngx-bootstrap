@@ -62,7 +62,11 @@
       "@period-year-norway/ngx-bootstrap/tooltip": ["src/tooltip/index.ts"],
       "@period-year-norway/ngx-bootstrap/typeahead": ["src/typeahead/index.ts"],
       "@period-year-norway/ngx-bootstrap/utils": ["src/utils/index.ts"]
-    }
+    },
+    "noUncheckedSideEffectImports": false,
+    "types": ["*"],
+    "esModuleInterop": false,
+    "ignoreDeprecations": "6.0"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
