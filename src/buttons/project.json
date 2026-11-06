@@ -17,14 +17,6 @@
           "tsConfig": "src/buttons/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/buttons"],
-      "options": {
-        "jestConfig": "src/buttons/jest.config.ts",
-        "tsConfig": "src/buttons/tsconfig.spec.json"
-      }
     }
   }
 }

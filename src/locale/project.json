@@ -23,13 +23,6 @@
           "tsConfig": "src/locale/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/locale"],
-      "options": {
-        "jestConfig": "src/locale/jest.config.ts"
-      }
     }
   }
 }

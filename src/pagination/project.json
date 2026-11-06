@@ -17,14 +17,6 @@
           "tsConfig": "src/pagination/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/pagination"],
-      "options": {
-        "jestConfig": "src/pagination/jest.config.ts",
-        "tsConfig": "src/pagination/tsconfig.spec.json"
-      }
     }
   }
 }

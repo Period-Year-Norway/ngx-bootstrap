@@ -17,14 +17,6 @@
           "tsConfig": "src/rating/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/rating"],
-      "options": {
-        "jestConfig": "src/rating/jest.config.ts",
-        "tsConfig": "src/rating/tsconfig.spec.json"
-      }
     }
   }
 }

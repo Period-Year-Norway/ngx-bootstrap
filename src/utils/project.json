@@ -17,14 +17,6 @@
           "tsConfig": "src/utils/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/utils"],
-      "options": {
-        "jestConfig": "src/utils/jest.config.ts",
-        "tsConfig": "src/utils/tsconfig.spec.json"
-      }
     }
   }
 }

@@ -23,14 +23,6 @@
           "tsConfig": "src/progressbar/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/progressbar"],
-      "options": {
-        "jestConfig": "src/progressbar/jest.config.ts",
-        "tsConfig": "src/progressbar/tsconfig.spec.json"
-      }
     }
   }
 }

@@ -1,6 +1,8 @@
-const nxPreset = require('@nx/jest/preset').default;
+import nxPresetModule from '@nx/jest/preset';
 
-module.exports = {
+const nxPreset = nxPresetModule.default;
+
+export default {
   ...nxPreset,
   ...{
     coverageReporters: ['text-summary', 'json', 'lcov']

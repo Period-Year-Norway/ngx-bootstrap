@@ -23,14 +23,6 @@
           "tsConfig": "src/timepicker/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/timepicker"],
-      "options": {
-        "jestConfig": "src/timepicker/jest.config.ts",
-        "tsConfig": "src/timepicker/tsconfig.spec.json"
-      }
     }
   }
 }

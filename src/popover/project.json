@@ -23,14 +23,6 @@
           "tsConfig": "src/popover/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/popover"],
-      "options": {
-        "jestConfig": "src/popover/jest.config.ts",
-        "tsConfig": "src/popover/tsconfig.spec.json"
-      }
     }
   }
 }

@@ -23,14 +23,6 @@
           "tsConfig": "src/alert/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/alert"],
-      "options": {
-        "jestConfig": "src/alert/jest.config.ts",
-        "tsConfig": "src/alert/tsconfig.spec.json"
-      }
     }
   }
 }

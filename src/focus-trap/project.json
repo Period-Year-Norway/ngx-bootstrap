@@ -17,14 +17,6 @@
           "tsConfig": "src/focus-trap/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/focus-trap"],
-      "options": {
-        "jestConfig": "src/focus-trap/jest.config.ts",
-        "tsConfig": "src/focus-trap/tsconfig.spec.json"
-      }
     }
   }
 }

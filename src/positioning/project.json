@@ -23,14 +23,6 @@
           "tsConfig": "src/positioning/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/positioning"],
-      "options": {
-        "jestConfig": "src/positioning/jest.config.ts",
-        "tsConfig": "src/positioning/tsconfig.spec.json"
-      }
     }
   }
 }

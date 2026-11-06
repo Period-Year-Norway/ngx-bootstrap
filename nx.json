@@ -100,22 +100,25 @@
     "e2e": {
       "inputs": ["default", "^production"]
     },
-    "test": {
-      "cache": true
-    },
-    "@nx/jest:jest": {
-      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
-      "cache": true,
-      "options": {
-        "passWithNoTests": true
+    "test": [
+      {
+        "cache": true
       },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
+      {
+        "filter": {
+          "plugin": "@nx/jest/plugin"
+        },
+        "configurations": {
+          "ci": {
+            "ci": true,
+            "coverage": true
+          }
+        },
+        "options": {
+          "passWithNoTests": true
         }
       }
-    }
+    ]
   },
   "useInferencePlugins": false,
   "defaultBase": "development",
@@ -170,6 +173,38 @@
         "src/rating/**/*",
         "src/root/**/*",
         "src/schematics/src/**/*",
+        "src/sortable/**/*",
+        "src/tabs/**/*",
+        "src/timepicker/**/*",
+        "src/tooltip/**/*",
+        "src/typeahead/**/*",
+        "src/utils/**/*"
+      ]
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      },
+      "include": [
+        "src/accordion/**/*",
+        "src/alert/**/*",
+        "src/buttons/**/*",
+        "src/carousel/**/*",
+        "src/chronos/**/*",
+        "src/collapse/**/*",
+        "src/component-loader/**/*",
+        "src/datepicker/**/*",
+        "src/dropdown/**/*",
+        "src/focus-trap/**/*",
+        "src/locale/**/*",
+        "src/mini-ngrx/**/*",
+        "src/modal/**/*",
+        "src/pagination/**/*",
+        "src/popover/**/*",
+        "src/positioning/**/*",
+        "src/progressbar/**/*",
+        "src/rating/**/*",
         "src/sortable/**/*",
         "src/tabs/**/*",
         "src/timepicker/**/*",

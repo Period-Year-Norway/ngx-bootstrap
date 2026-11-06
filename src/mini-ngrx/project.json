@@ -17,13 +17,6 @@
           "tsConfig": "src/mini-ngrx/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/mini-ngrx"],
-      "options": {
-        "jestConfig": "src/mini-ngrx/jest.config.ts"
-      }
     }
   }
 }

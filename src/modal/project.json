@@ -23,14 +23,6 @@
           "tsConfig": "src/modal/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/modal"],
-      "options": {
-        "jestConfig": "src/modal/jest.config.ts",
-        "tsConfig": "src/modal/tsconfig.spec.json"
-      }
     }
   }
 }

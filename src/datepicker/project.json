@@ -23,14 +23,6 @@
           "tsConfig": "src/datepicker/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/datepicker"],
-      "options": {
-        "jestConfig": "src/datepicker/jest.config.ts",
-        "tsConfig": "src/datepicker/tsconfig.spec.json"
-      }
     }
   }
 }

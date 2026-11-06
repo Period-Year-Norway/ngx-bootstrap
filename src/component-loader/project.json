@@ -23,14 +23,6 @@
           "tsConfig": "src/component-loader/tsconfig.lib.prod.json"
         }
       }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/src/component-loader"],
-      "options": {
-        "jestConfig": "src/component-loader/jest.config.ts",
-        "tsConfig": "src/component-loader/tsconfig.spec.json"
-      }
     }
   }
 }
