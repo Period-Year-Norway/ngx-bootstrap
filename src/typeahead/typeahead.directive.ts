@@ -21,7 +21,7 @@ import { TypeaheadOptionItemContext, TypeaheadOptionListContext } from './models
 
 import { TypeaheadContainerComponent } from './typeahead-container.component';
 import { TypeaheadMatch } from './typeahead-match.class';
-import { TypeaheadOrder } from './typeahead-order.class';
+import { type TypeaheadOrder } from './typeahead-order.class';
 import { getValueFromObject, latinize, tokenize } from './typeahead-utils';
 import { TypeaheadConfig } from './typeahead.config';
 

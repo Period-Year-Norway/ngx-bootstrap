@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { BsDatepickerViewMode, BsNavigationDirection, NavigationViewModel } from '../../models';
+import { BsDatepickerViewMode, BsNavigationDirection, type NavigationViewModel } from '../../models';
 
 @Component({
     selector: 'bs-datepicker-navigation-view',

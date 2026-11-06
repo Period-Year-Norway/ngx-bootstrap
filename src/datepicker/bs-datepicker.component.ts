@@ -17,7 +17,7 @@ import { ComponentLoader, ComponentLoaderFactory } from '@period-year-norway/ngx
 import { BehaviorSubject, Observable, Subject, Subscription } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { BsDatepickerConfig } from './bs-datepicker.config';
-import { BsDatepickerViewMode, DatepickerDateCustomClasses, DatepickerDateTooltipText } from './models';
+import { type BsDatepickerViewMode, DatepickerDateCustomClasses, DatepickerDateTooltipText } from './models';
 import { BsDatepickerContainerComponent } from './themes/bs/bs-datepicker-container.component';
 import { copyTime } from './utils/copy-time-utils';
 import { checkBsValue, setCurrentTimeOnDateSelect } from './utils/bs-calendar-utils';

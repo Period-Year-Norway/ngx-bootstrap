@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { BarValue, ProgressbarType } from './progressbar-type.interface';
+import { BarValue, type ProgressbarType } from './progressbar-type.interface';
 import { ProgressbarConfig } from './progressbar.config';
 
 @Component({

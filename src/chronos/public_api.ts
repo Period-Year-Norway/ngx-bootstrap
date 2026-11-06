@@ -26,13 +26,13 @@ export {
   getSetGlobalLocale
 } from './locale/locales';
 
-export { LocaleData } from './locale/locale.class';
+export { type LocaleData } from './locale/locale.class';
 
 export { isAfter, isBefore, isDisabledDay, isSame } from './utils/date-compare';
 export { isArray, isDateValid, isDate } from './utils/type-checks';
 export { shiftDate, setFullDate } from './utils/date-setters';
 export { endOf, startOf } from './utils/start-end-of';
-export { TimeUnit } from './types';
+export { type TimeUnit } from './types';
 
 export { arLocale } from './i18n/ar';
 export { bgLocale } from './i18n/bg';

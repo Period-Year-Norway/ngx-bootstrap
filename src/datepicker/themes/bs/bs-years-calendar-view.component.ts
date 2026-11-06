@@ -6,7 +6,7 @@ import {
   BsNavigationEvent,
   CalendarCellViewModel,
   CellHoverEvent,
-  YearsCalendarViewModel
+  type YearsCalendarViewModel
 } from '../../models';
 
 @Component({

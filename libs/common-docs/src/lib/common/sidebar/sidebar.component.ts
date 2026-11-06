@@ -1,4 +1,4 @@
-import { ActivatedRoute, NavigationEnd, Router, Routes, UrlSegment } from "@angular/router";
+import { ActivatedRoute, NavigationEnd, Router, type Routes, UrlSegment } from "@angular/router";
 import { Component, Inject, HostBinding, Renderer2, inject, OnDestroy, ChangeDetectionStrategy } from "@angular/core";
 
 import { setTheme, getBsVer, currentBsVersion, IBsVersion, AvailableBsVersions } from '@period-year-norway/ngx-bootstrap/utils';
@@ -6,7 +6,7 @@ import { StyleManager } from '../../theme/style-manager';
 import { ThemeStorage } from '../../theme/theme-storage';
 import { DOCS_TOKENS } from '../../tokens/docs-routes-token';
 import {
-  SidebarRoutesType,
+  type SidebarRoutesType,
   NestedRouteType,
   SidebarRouteItemValueType
 } from "../../models/sidebar-routes.model";

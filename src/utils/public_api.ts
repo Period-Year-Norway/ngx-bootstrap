@@ -4,9 +4,9 @@ export {
   setTheme,
   getBsVer,
   currentBsVersion,
-  IBsVersion,
+  type IBsVersion,
   BsVerions,
-  AvailableBsVersions
+  type AvailableBsVersions
 } from './theme-provider';
 export { LinkedList } from './linked-list.class';
 

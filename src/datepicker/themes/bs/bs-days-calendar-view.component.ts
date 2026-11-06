@@ -13,8 +13,8 @@ import {
   BsNavigationDirection,
   BsNavigationEvent,
   CellHoverEvent, DatepickerDateTooltipText,
-  DatepickerRenderOptions,
-  DaysCalendarViewModel,
+  type DatepickerRenderOptions,
+  type DaysCalendarViewModel,
   DayViewModel, WeekViewModel
 } from '../../models';
 

@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
-import { ProgressbarType } from './progressbar-type.interface';
+import { type ProgressbarType } from './progressbar-type.interface';
 
 @Component({
   selector: 'bar',

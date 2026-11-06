@@ -4,7 +4,7 @@ import {
   BsNavigationDirection,
   BsNavigationEvent,
   CellHoverEvent,
-  MonthsCalendarViewModel,
+  type MonthsCalendarViewModel,
   CalendarCellViewModel
 } from '../../models';
 

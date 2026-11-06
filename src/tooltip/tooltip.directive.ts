@@ -19,7 +19,7 @@ import { OnChange, warnOnce, parseTriggers, Trigger } from '@period-year-norway/
 import { PositioningService } from '@period-year-norway/ngx-bootstrap/positioning';
 
 import { timer, Subscription } from 'rxjs';
-import { AvailbleBSPositions } from '@period-year-norway/ngx-bootstrap/positioning';
+import { type AvailbleBSPositions } from '@period-year-norway/ngx-bootstrap/positioning';
 
 let id = 0;
 

@@ -5,7 +5,7 @@ import {
 import { PopoverConfig } from './popover.config';
 import { ComponentLoader, ComponentLoaderFactory } from '@period-year-norway/ngx-bootstrap/component-loader';
 import { PopoverContainerComponent } from './popover-container.component';
-import { PositioningService, AvailbleBSPositions } from '@period-year-norway/ngx-bootstrap/positioning';
+import { PositioningService, type AvailbleBSPositions } from '@period-year-norway/ngx-bootstrap/positioning';
 import { timer } from 'rxjs';
 import { parseTriggers, Trigger } from '@period-year-norway/ngx-bootstrap/utils';
 

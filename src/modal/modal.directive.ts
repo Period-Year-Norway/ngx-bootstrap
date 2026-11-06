@@ -28,7 +28,7 @@ import {
   MODAL_CONFIG_DEFAULT_OVERRIDE
 } from './modal-options.class';
 import { ComponentLoader, ComponentLoaderFactory } from '@period-year-norway/ngx-bootstrap/component-loader';
-import { CloseInterceptorFn } from './models';
+import { type CloseInterceptorFn } from './models';
 
 const TRANSITION_DURATION = 300;
 const BACKDROP_TRANSITION_DURATION = 150;

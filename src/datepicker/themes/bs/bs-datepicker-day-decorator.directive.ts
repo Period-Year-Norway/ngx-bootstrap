@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 
 import { BsDatepickerConfig } from '../../bs-datepicker.config';
-import { DayViewModel } from '../../models';
+import { type DayViewModel } from '../../models';
 
 @Component({
     selector: '[bsDatepickerDayDecorator]',

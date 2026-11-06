@@ -1,6 +1,6 @@
 import { Component, Inject, ChangeDetectionStrategy } from "@angular/core";
 import { DOCS_TOKENS } from "../../tokens/docs-routes-token";
-import { Routes } from "@angular/router";
+import { type Routes } from "@angular/router";
 
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
