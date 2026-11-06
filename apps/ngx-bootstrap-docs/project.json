@@ -87,9 +87,6 @@
       "options": {
         "buildTarget": "ngx-bootstrap-docs:build"
       }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
     }
   }
 }

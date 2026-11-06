@@ -19,9 +19,6 @@
           "devServerTarget": "ngx-bootstrap-docs:serve:production"
         }
       }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint"
     }
   }
 }
