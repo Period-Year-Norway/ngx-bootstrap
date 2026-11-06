@@ -122,5 +122,6 @@
     }
   },
   "useInferencePlugins": false,
-  "defaultBase": "development"
+  "defaultBase": "development",
+  "analytics": false
 }
