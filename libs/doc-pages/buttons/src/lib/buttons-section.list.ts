@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoButtonsBasicComponent } from './demos/basic/basic';
 import { DemoButtonsCheckboxComponent } from './demos/checkbox/checkbox';
 import { DemoButtonsRadioComponent } from './demos/radio/radio';
@@ -14,6 +16,26 @@ import { ApiSectionsComponent } from '@ngx-bootstrap-doc/docs';
 
 import { NgApiDocComponent } from '@ngx-bootstrap-doc/docs';
 
+import * as rawDemosBasicBasicTs from './demos/basic/basic.ts?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosCheckboxCheckboxTs from './demos/checkbox/checkbox.ts?raw' with { loader: 'text' };
+import * as rawDemosCheckboxCheckboxHtml from './demos/checkbox/checkbox.html?raw' with { loader: 'text' };
+import * as rawDemosCustomCheckboxValueCustomCheckboxValueTs from './demos/custom-checkbox-value/custom-checkbox-value.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomCheckboxValueCustomCheckboxValueHtml from './demos/custom-checkbox-value/custom-checkbox-value.html?raw' with { loader: 'text' };
+import * as rawDemosCheckboxReactiveformsCheckboxReactiveformsTs from './demos/checkbox-reactiveforms/checkbox-reactiveforms.ts?raw' with { loader: 'text' };
+import * as rawDemosCheckboxReactiveformsCheckboxReactiveformsHtml from './demos/checkbox-reactiveforms/checkbox-reactiveforms.html?raw' with { loader: 'text' };
+import * as rawDemosRadioWithGroupRadioWithGroupTs from './demos/radio-with-group/radio-with-group.ts?raw' with { loader: 'text' };
+import * as rawDemosRadioWithGroupRadioWithGroupHtml from './demos/radio-with-group/radio-with-group.html?raw' with { loader: 'text' };
+import * as rawDemosRadioRadioTs from './demos/radio/radio.ts?raw' with { loader: 'text' };
+import * as rawDemosRadioRadioHtml from './demos/radio/radio.html?raw' with { loader: 'text' };
+import * as rawDemosUncheckableRadioUncheckableRadioTs from './demos/uncheckable-radio/uncheckable-radio.ts?raw' with { loader: 'text' };
+import * as rawDemosUncheckableRadioUncheckableRadioHtml from './demos/uncheckable-radio/uncheckable-radio.html?raw' with { loader: 'text' };
+import * as rawDemosRadioReactiveformsRadioReactiveformsTs from './demos/radio-reactiveforms/radio-reactiveforms.ts?raw' with { loader: 'text' };
+import * as rawDemosRadioReactiveformsRadioReactiveformsHtml from './demos/radio-reactiveforms/radio-reactiveforms.html?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledTs from './demos/disabled/disabled.ts?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledHtml from './demos/disabled/disabled.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -24,31 +46,31 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic.ts'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasicTs,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoButtonsBasicComponent
       },
       {
         title: 'Checkbox',
         anchor: 'checkbox',
         description: `Checkbox-like buttons set with variable states`,
-        component: require('!!raw-loader!./demos/checkbox/checkbox.ts'),
-        html: require('!!raw-loader!./demos/checkbox/checkbox.html'),
+        component: rawDemosCheckboxCheckboxTs,
+        html: rawDemosCheckboxCheckboxHtml,
         outlet: DemoButtonsCheckboxComponent
       },
       {
         title: 'Custom checkbox value',
         anchor: 'custom-checkbox-value',
-        component: require('!!raw-loader!./demos/custom-checkbox-value/custom-checkbox-value.ts'),
-        html: require('!!raw-loader!./demos/custom-checkbox-value/custom-checkbox-value.html'),
+        component: rawDemosCustomCheckboxValueCustomCheckboxValueTs,
+        html: rawDemosCustomCheckboxValueCustomCheckboxValueHtml,
         outlet: DemoButtonsCustomCheckboxValueComponent
       },
       {
         title: 'Checkbox with Reactive Forms',
         anchor: 'checkbox-reactiveforms',
         description: `Checkbox buttons with ReactiveForms`,
-        component: require('!!raw-loader!./demos/checkbox-reactiveforms/checkbox-reactiveforms.ts'),
-        html: require('!!raw-loader!./demos/checkbox-reactiveforms/checkbox-reactiveforms.html'),
+        component: rawDemosCheckboxReactiveformsCheckboxReactiveformsTs,
+        html: rawDemosCheckboxReactiveformsCheckboxReactiveformsHtml,
         outlet: DemoButtonsCheckboxReactiveFormsComponent
       },
       {
@@ -65,8 +87,8 @@ Meaning
 </ul>
 Individual buttons or the whole group can be marked as disabled.
 `,
-        component: require('!!raw-loader!./demos/radio-with-group/radio-with-group.ts'),
-        html: require('!!raw-loader!./demos/radio-with-group/radio-with-group.html'),
+        component: rawDemosRadioWithGroupRadioWithGroupTs,
+        html: rawDemosRadioWithGroupRadioWithGroupHtml,
         outlet: DemoButtonsRadioWithGroupComponent
       },
       {
@@ -76,15 +98,15 @@ Individual buttons or the whole group can be marked as disabled.
  This works only for template driven forms and is not generally advised. But there are use cases were this might be useful, e.g. in tables.
  In terms of accessibility the buttons in the group can not be selected with the arrow keys, but individually reached by using the tab key
  and then be toggled by using the space key. You can check out the demo below.`,
-        component: require('!!raw-loader!./demos/radio/radio.ts'),
-        html: require('!!raw-loader!./demos/radio/radio.html'),
+        component: rawDemosRadioRadioTs,
+        html: rawDemosRadioRadioHtml,
         outlet: DemoButtonsRadioComponent
       },
       {
         title: 'Uncheckable Radio',
         anchor: 'uncheckable-radio-button',
-        component: require('!!raw-loader!./demos/uncheckable-radio/uncheckable-radio.ts'),
-        html: require('!!raw-loader!./demos/uncheckable-radio/uncheckable-radio.html'),
+        component: rawDemosUncheckableRadioUncheckableRadioTs,
+        html: rawDemosUncheckableRadioUncheckableRadioHtml,
         outlet: DemoButtonsUncheckableRadioComponent
       },
       {
@@ -93,15 +115,15 @@ Individual buttons or the whole group can be marked as disabled.
         description: `Radio buttons with ReactiveForms. Example below shows how to use radio buttons with reactive
  forms. Please be aware that for reactive forms it's required to use <code>btnRadioGroup</code> directive along with
  <code>btnRadio</code>'s`,
-        component: require('!!raw-loader!./demos/radio-reactiveforms/radio-reactiveforms.ts'),
-        html: require('!!raw-loader!./demos/radio-reactiveforms/radio-reactiveforms.html'),
+        component: rawDemosRadioReactiveformsRadioReactiveformsTs,
+        html: rawDemosRadioReactiveformsRadioReactiveformsHtml,
         outlet: DemoButtonsRadioReactiveFormsComponent
       },
       {
         title: 'Disabled Buttons',
         anchor: 'disabled-buttons',
-        component: require('!!raw-loader!./demos/disabled/disabled.ts'),
-        html: require('!!raw-loader!./demos/disabled/disabled.html'),
+        component: rawDemosDisabledDisabledTs,
+        html: rawDemosDisabledDisabledHtml,
         outlet: DemoButtonsDisabledComponent
       }
     ]
@@ -111,7 +133,7 @@ Individual buttons or the whole group can be marked as disabled.
     anchor: 'api-reference',
     tabName: 'api',
     outlet: ApiSectionsComponent,
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> &#45;&#45;component <span class="pln">buttons</span>',
     content: [
       {

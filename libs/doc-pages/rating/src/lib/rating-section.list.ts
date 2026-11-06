@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoRatingBasicComponent } from './demos/basic/basic';
 import { DemoRatingCustomComponent } from './demos/custom/custom';
 import { DemoRatingDynamicComponent } from './demos/dynamic/dynamic';
@@ -10,6 +12,18 @@ import { ApiSectionsComponent } from '@ngx-bootstrap-doc/docs';
 
 import { NgApiDocComponent, NgApiDocConfigComponent } from '@ngx-bootstrap-doc/docs';
 
+import * as rawDemosBasicBasic from './demos/basic/basic?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamic from './demos/dynamic/dynamic?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicHtml from './demos/dynamic/dynamic.html?raw' with { loader: 'text' };
+import * as rawDemosCustomCustom from './demos/custom/custom?raw' with { loader: 'text' };
+import * as rawDemosCustomCustomHtml from './demos/custom/custom.html?raw' with { loader: 'text' };
+import * as rawDemosSelectOnEnterSelectOnEnter from './demos/select-on-enter/select-on-enter?raw' with { loader: 'text' };
+import * as rawDemosSelectOnEnterSelectOnEnterHtml from './demos/select-on-enter/select-on-enter.html?raw' with { loader: 'text' };
+import * as rawDemosConfigConfig from './demos/config/config?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigHtml from './demos/config/config.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -20,22 +34,22 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic rating',
         anchor: 'rating-basic',
-        component: require('!!raw-loader!./demos/basic/basic'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasic,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoRatingBasicComponent
       },
       {
         title: 'Dynamic rating',
         anchor: 'rating-dynamic',
-        component: require('!!raw-loader!./demos/dynamic/dynamic'),
-        html: require('!!raw-loader!./demos/dynamic/dynamic.html'),
+        component: rawDemosDynamicDynamic,
+        html: rawDemosDynamicDynamicHtml,
         outlet: DemoRatingDynamicComponent
       },
       {
         title: 'Custom icons',
         anchor: 'rating-custom',
-        component: require('!!raw-loader!./demos/custom/custom'),
-        html: require('!!raw-loader!./demos/custom/custom.html'),
+        component: rawDemosCustomCustom,
+        html: rawDemosCustomCustomHtml,
         outlet: DemoRatingCustomComponent
       },
       {
@@ -43,15 +57,15 @@ export const demoComponentContent: ContentSection[] = [
         description: `Key navigation example. Focus on rating and use arrow keys to set its value,
           then press <code>Enter</code> to select the value, after this, the rating state will be changed to readonly.`,
         anchor: 'select-on-enter',
-        component: require('!!raw-loader!./demos/select-on-enter/select-on-enter'),
-        html: require('!!raw-loader!./demos/select-on-enter/select-on-enter.html'),
+        component: rawDemosSelectOnEnterSelectOnEnter,
+        html: rawDemosSelectOnEnterSelectOnEnterHtml,
         outlet: DemoRatingSelectOnEnterComponent
       },
       {
         title: 'Configuring defaults',
         anchor: 'demo-rating-config',
-        component: require('!!raw-loader!./demos/config/config'),
-        html: require('!!raw-loader!./demos/config/config.html'),
+        component: rawDemosConfigConfig,
+        html: rawDemosConfigConfigHtml,
         outlet: DemoRatingConfigComponent
       }
     ]
@@ -60,7 +74,7 @@ export const demoComponentContent: ContentSection[] = [
     name: 'Installation',
     anchor: 'api-reference',
     tabName: 'api',
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">rating</span>',
     outlet: ApiSectionsComponent,
     content: [

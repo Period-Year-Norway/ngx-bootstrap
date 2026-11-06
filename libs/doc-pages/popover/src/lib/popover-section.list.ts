@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoPopoverAdaptivePositionComponent } from './demos/adaptive-position/adaptive-position';
 import { DemoPopoverBasicComponent } from './demos/basic/basic';
 import { DemoPopoverByIsOpenPropComponent } from './demos/trigger-by-isopen-property/trigger-by-isopen-property';
@@ -28,6 +30,48 @@ import {
 } from '@ngx-bootstrap-doc/docs';
 import { DemoAdaptivePositionOverflowBoundaryComponent } from './demos/adaptive-position-overflow-boundary/adaptive-position-overflow-boundary';
 
+import * as rawDemosBasicBasicTs from './demos/basic/basic.ts?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosPlacementPlacementTs from './demos/placement/placement.ts?raw' with { loader: 'text' };
+import * as rawDemosPlacementPlacementHtml from './demos/placement/placement.html?raw' with { loader: 'text' };
+import * as rawDemosCornerPlacementCornerPlacementTs from './demos/corner-placement/corner-placement.ts?raw' with { loader: 'text' };
+import * as rawDemosCornerPlacementCornerPlacementHtml from './demos/corner-placement/corner-placement.html?raw' with { loader: 'text' };
+import * as rawDemosAdaptivePositionAdaptivePositionTs from './demos/adaptive-position/adaptive-position.ts?raw' with { loader: 'text' };
+import * as rawDemosAdaptivePositionAdaptivePositionHtml from './demos/adaptive-position/adaptive-position.html?raw' with { loader: 'text' };
+import * as rawDemosAdaptivePositionOverflowBoundaryAdaptivePositionOverflowBoundaryTs from './demos/adaptive-position-overflow-boundary/adaptive-position-overflow-boundary.ts?raw' with { loader: 'text' };
+import * as rawDemosAdaptivePositionOverflowBoundaryAdaptivePositionOverflowBoundaryHtml from './demos/adaptive-position-overflow-boundary/adaptive-position-overflow-boundary.html?raw' with { loader: 'text' };
+import * as rawDemosDismissDismissTs from './demos/dismiss/dismiss.ts?raw' with { loader: 'text' };
+import * as rawDemosDismissDismissHtml from './demos/dismiss/dismiss.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicTs from './demos/dynamic/dynamic.ts?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicHtml from './demos/dynamic/dynamic.html?raw' with { loader: 'text' };
+import * as rawDemosCustomContentCustomContentTs from './demos/custom-content/custom-content.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomContentCustomContentHtml from './demos/custom-content/custom-content.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicHtmlDynamicHtmlTs from './demos/dynamic-html/dynamic-html.ts?raw' with { loader: 'text' };
+import * as rawDemosDynamicHtmlDynamicHtmlHtml from './demos/dynamic-html/dynamic-html.html?raw' with { loader: 'text' };
+import * as rawDemosContainerContainerTs from './demos/container/container.ts?raw' with { loader: 'text' };
+import * as rawDemosContainerContainerHtml from './demos/container/container.html?raw' with { loader: 'text' };
+import * as rawDemosEventsEventsTs from './demos/events/events.ts?raw' with { loader: 'text' };
+import * as rawDemosEventsEventsHtml from './demos/events/events.html?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigTs from './demos/config/config.ts?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigHtml from './demos/config/config.html?raw' with { loader: 'text' };
+import * as rawDemosOutsideClickOutsideClickTs from './demos/outside-click/outside-click.ts?raw' with { loader: 'text' };
+import * as rawDemosOutsideClickOutsideClickHtml from './demos/outside-click/outside-click.html?raw' with { loader: 'text' };
+import * as rawDemosTriggersCustomTriggersCustomTs from './demos/triggers-custom/triggers-custom.ts?raw' with { loader: 'text' };
+import * as rawDemosTriggersCustomTriggersCustomHtml from './demos/triggers-custom/triggers-custom.html?raw' with { loader: 'text' };
+import * as rawDemosTriggersManualTriggersManualTs from './demos/triggers-manual/triggers-manual.ts?raw' with { loader: 'text' };
+import * as rawDemosTriggersManualTriggersManualHtml from './demos/triggers-manual/triggers-manual.html?raw' with { loader: 'text' };
+import * as rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyTs from './demos/trigger-by-isopen-property/trigger-by-isopen-property.ts?raw' with { loader: 'text' };
+import * as rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyHtml from './demos/trigger-by-isopen-property/trigger-by-isopen-property.html?raw' with { loader: 'text' };
+import * as rawDemosStylingLocalStylingLocalTs from './demos/styling-local/styling-local.ts?raw' with { loader: 'text' };
+import * as rawDemosStylingLocalStylingLocalHtml from './demos/styling-local/styling-local.html?raw' with { loader: 'text' };
+import * as rawDemosClassClassTs from './demos/class/class.ts?raw' with { loader: 'text' };
+import * as rawDemosClassClassHtml from './demos/class/class.html?raw' with { loader: 'text' };
+import * as rawDemosPopoverContextPopoverContextTs from './demos/popover-context/popover-context.ts?raw' with { loader: 'text' };
+import * as rawDemosPopoverContextPopoverContextHtml from './demos/popover-context/popover-context.html?raw' with { loader: 'text' };
+import * as rawDemosDelayDelayTs from './demos/delay/delay.ts?raw' with { loader: 'text' };
+import * as rawDemosDelayDelayHtml from './demos/delay/delay.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -38,15 +82,15 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic.ts'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasicTs,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoPopoverBasicComponent
       },
       {
         title: 'Placement',
         anchor: 'placement',
-        component: require('!!raw-loader!./demos/placement/placement.ts'),
-        html: require('!!raw-loader!./demos/placement/placement.html'),
+        component: rawDemosPlacementPlacementTs,
+        html: rawDemosPlacementPlacementHtml,
         description: `<p>Four base positioning options are available: <code>top</code>, <code>right</code>,
         <code>bottom</code>, and <code>left</code>.
         Besides that, <code>auto</code> option may be used to detect a position that fits the component on screen.</p>`,
@@ -60,8 +104,8 @@ export const demoComponentContent: ContentSection[] = [
           Thus, in addition to the four base positioning options, namely <code>top</code>, <code>right</code>,
           <code>bottom</code>, and <code>left</code>, eight more positioning options are available: <code>top left</code>, <code>top right</code>,
           <code>right top</code>, <code>right bottom</code>, <code>bottom right</code>, <code>bottom left</code>, <code>left bottom</code>, and <code>left top</code>.`,
-        component: require('!!raw-loader!./demos/corner-placement/corner-placement.ts'),
-        html: require('!!raw-loader!./demos/corner-placement/corner-placement.html'),
+        component: rawDemosCornerPlacementCornerPlacementTs,
+        html: rawDemosCornerPlacementCornerPlacementHtml,
         outlet: DemoPopoverCornerPlacementComponent
       },
       {
@@ -70,8 +114,8 @@ export const demoComponentContent: ContentSection[] = [
         description: `
           <p>You can disable adaptive position via <code>adaptivePosition</code> input or config option</p>
         `,
-        component: require('!!raw-loader!./demos/adaptive-position/adaptive-position.ts'),
-        html: require('!!raw-loader!./demos/adaptive-position/adaptive-position.html'),
+        component: rawDemosAdaptivePositionAdaptivePositionTs,
+        html: rawDemosAdaptivePositionAdaptivePositionHtml,
         outlet: DemoPopoverAdaptivePositionComponent
       },
       {
@@ -80,15 +124,15 @@ export const demoComponentContent: ContentSection[] = [
         description: `
           <p>You can control the popover boundaries via <code>boundariesElement</code> input or config option.   <code>boundariesElement</code> property of a popover can contain boundaries namely <code>viewport, scrollParent, window</code>.</p>
         `,
-        component: require('!!raw-loader!./demos/adaptive-position-overflow-boundary/adaptive-position-overflow-boundary.ts'),
-        html: require('!!raw-loader!./demos/adaptive-position-overflow-boundary/adaptive-position-overflow-boundary.html'),
+        component: rawDemosAdaptivePositionOverflowBoundaryAdaptivePositionOverflowBoundaryTs,
+        html: rawDemosAdaptivePositionOverflowBoundaryAdaptivePositionOverflowBoundaryHtml,
         outlet: DemoAdaptivePositionOverflowBoundaryComponent
       },
       {
         title: 'Dismiss on next click',
         anchor: 'popover-dismiss',
-        component: require('!!raw-loader!./demos/dismiss/dismiss.ts'),
-        html: require('!!raw-loader!./demos/dismiss/dismiss.html'),
+        component: rawDemosDismissDismissTs,
+        html: rawDemosDismissDismissHtml,
         description: `<p>Use the <code>focus</code> trigger to dismiss popovers on the next click that the
       user makes.</p>`,
         outlet: DemoPopoverDismissComponent
@@ -96,16 +140,16 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Dynamic content',
         anchor: 'dynamic-content',
-        component: require('!!raw-loader!./demos/dynamic/dynamic.ts'),
-        html: require('!!raw-loader!./demos/dynamic/dynamic.html'),
+        component: rawDemosDynamicDynamicTs,
+        html: rawDemosDynamicDynamicHtml,
         description: `<p>Pass a string as popover content.</p>`,
         outlet: DemoPopoverDynamicComponent
       },
       {
         title: 'Custom content template',
         anchor: 'custom-content-template',
-        component: require('!!raw-loader!./demos/custom-content/custom-content.ts'),
-        html: require('!!raw-loader!./demos/custom-content/custom-content.html'),
+        component: rawDemosCustomContentCustomContentTs,
+        html: rawDemosCustomContentCustomContentHtml,
         description: `<p>Create <code>&lt;ng-template #myId></code> with any html allowed by Angular,
         and provide template ref <code>[popover]="myId"</code> as popover content.</p>`,
         outlet: DemoPopoverCustomContentComponent
@@ -113,16 +157,16 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Dynamic Html',
         anchor: 'dynamic-html',
-        component: require('!!raw-loader!./demos/dynamic-html/dynamic-html.ts'),
-        html: require('!!raw-loader!./demos/dynamic-html/dynamic-html.html'),
+        component: rawDemosDynamicHtmlDynamicHtmlTs,
+        html: rawDemosDynamicHtmlDynamicHtmlHtml,
         description: `<p>By using <code>[innerHtml]</code> inside <code>ng-template</code> you can display any dynamic html</p>`,
         outlet: DemoPopoverDynamicHtmlComponent
       },
       {
         title: 'Append to body',
         anchor: 'container-body',
-        component: require('!!raw-loader!./demos/container/container.ts'),
-        html: require('!!raw-loader!./demos/container/container.html'),
+        component: rawDemosContainerContainerTs,
+        html: rawDemosContainerContainerHtml,
         description: `<p>When you have any styles on a parent element that interfere with a popover,
         you’ll want to specify a <code>container="body"</code> so that the popover’s HTML will be
         appended to body. This will help to avoid rendering problems in more complex components
@@ -132,36 +176,36 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Visibility events',
         anchor: 'events',
-        component: require('!!raw-loader!./demos/events/events.ts'),
-        html: require('!!raw-loader!./demos/events/events.html'),
+        component: rawDemosEventsEventsTs,
+        html: rawDemosEventsEventsHtml,
         outlet: DemoPopoverEventsComponent
       },
       {
         title: 'Configuring defaults',
         anchor: 'config-defaults',
-        component: require('!!raw-loader!./demos/config/config.ts'),
-        html: require('!!raw-loader!./demos/config/config.html'),
+        component: rawDemosConfigConfigTs,
+        html: rawDemosConfigConfigHtml,
         outlet: DemoPopoverConfigComponent
       },
       {
         title: 'Outside click',
         anchor: 'outside-click',
-        component: require('!!raw-loader!./demos/outside-click/outside-click.ts'),
-        html: require('!!raw-loader!./demos/outside-click/outside-click.html'),
+        component: rawDemosOutsideClickOutsideClickTs,
+        html: rawDemosOutsideClickOutsideClickHtml,
         outlet: DemoPopoverOutsideClickComponent
       },
       {
         title: 'Custom triggers',
         anchor: 'triggers-custom',
-        component: require('!!raw-loader!./demos/triggers-custom/triggers-custom.ts'),
-        html: require('!!raw-loader!./demos/triggers-custom/triggers-custom.html'),
+        component: rawDemosTriggersCustomTriggersCustomTs,
+        html: rawDemosTriggersCustomTriggersCustomHtml,
         outlet: DemoPopoverTriggersCustomComponent
       },
       {
         title: 'Manual triggering',
         anchor: 'triggers-manual',
-        component: require('!!raw-loader!./demos/triggers-manual/triggers-manual.ts'),
-        html: require('!!raw-loader!./demos/triggers-manual/triggers-manual.html'),
+        component: rawDemosTriggersManualTriggersManualTs,
+        html: rawDemosTriggersManualTriggersManualHtml,
         description: `<p>This demo shows manipulating popover by <code>show</code>,
         <code>hide</code> and <code>toggle</code> methods</p>`,
         outlet: DemoPopoverTriggersManualComponent
@@ -169,37 +213,37 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Trigger by isOpen property',
         anchor: 'trigger-by-isopen-property',
-        component: require('!!raw-loader!./demos/trigger-by-isopen-property/trigger-by-isopen-property.ts'),
-        html: require('!!raw-loader!./demos/trigger-by-isopen-property/trigger-by-isopen-property.html'),
+        component: rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyTs,
+        html: rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyHtml,
         description: `<p>You can show/hide popover by switching <code>isOpen</code> property</p>`,
         outlet: DemoPopoverByIsOpenPropComponent
       },
       {
         title: 'Component level styling',
         anchor: 'styling-local',
-        component: require('!!raw-loader!./demos/styling-local/styling-local.ts'),
-        html: require('!!raw-loader!./demos/styling-local/styling-local.html'),
+        component: rawDemosStylingLocalStylingLocalTs,
+        html: rawDemosStylingLocalStylingLocalHtml,
         outlet: DemoPopoverStylingLocalComponent
       },
       {
         title: 'Custom class',
         anchor: 'popover-custom-class',
-        component: require('!!raw-loader!./demos/class/class.ts'),
-        html: require('!!raw-loader!./demos/class/class.html'),
+        component: rawDemosClassClassTs,
+        html: rawDemosClassClassHtml,
         outlet: DemoPopoverClassComponent
       },
       {
         title: 'Popover context',
         anchor: 'popover-context',
-        component: require('!!raw-loader!./demos/popover-context/popover-context.ts'),
-        html: require('!!raw-loader!./demos/popover-context/popover-context.html'),
+        component: rawDemosPopoverContextPopoverContextTs,
+        html: rawDemosPopoverContextPopoverContextHtml,
         outlet: DemoPopoverContextComponent
       },
       {
         title: 'Popover with delay',
         anchor: 'popover-delay',
-        component: require('!!raw-loader!./demos/delay/delay.ts'),
-        html: require('!!raw-loader!./demos/delay/delay.html'),
+        component: rawDemosDelayDelayTs,
+        html: rawDemosDelayDelayHtml,
         description: `<p>Click on the button to see popover delayed for 0,5 second </p>`,
         outlet: DemoPopoverDelayComponent
       }
@@ -209,7 +253,7 @@ export const demoComponentContent: ContentSection[] = [
     name: 'Installation',
     anchor: 'api-reference',
     tabName: 'api',
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">popover</span>',
     outlet: ApiSectionsComponent,
     content: [

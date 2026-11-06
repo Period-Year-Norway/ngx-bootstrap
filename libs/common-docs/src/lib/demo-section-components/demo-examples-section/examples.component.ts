@@ -43,8 +43,8 @@ export class ExamplesComponent {
   }
 
   @HostListener('document:click', ['$event'])
-  preventEmptyHrefNav(event: MouseEvent & { target: Element }): void {
-    let element: Element = event.target;
+  preventEmptyHrefNav(event: MouseEvent): void {
+    let element = event.target as Element;
     let preventNav = element.getAttribute('href') === '#';
 
     if (preventNav) {

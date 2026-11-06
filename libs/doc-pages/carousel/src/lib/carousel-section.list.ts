@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoCarouseBasicComponent } from './demos/basic/basic';
 import { DemoCarouselCaptionsComponent } from './demos/captions/captions';
 import { DemoCarouselConfigComponent } from './demos/config/config';
@@ -22,6 +24,40 @@ import { NgApiDocComponent, NgApiDocConfigComponent } from '@ngx-bootstrap-doc/d
 import { DemoCarouselPauseOnFocusComponent } from './demos/pause-on-focus/pause-on-focus';
 import { DemoCarouseAnimatedComponent } from './demos/animated/animated';
 
+import * as rawDemosBasicBasicTs from './demos/basic/basic.ts?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosCaptionsCaptionsTs from './demos/captions/captions.ts?raw' with { loader: 'text' };
+import * as rawDemosCaptionsCaptionsHtml from './demos/captions/captions.html?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigTs from './demos/config/config.ts?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigHtml from './demos/config/config.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicTs from './demos/dynamic/dynamic.ts?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicHtml from './demos/dynamic/dynamic.html?raw' with { loader: 'text' };
+import * as rawDemosPauseOnHoverPauseOnHoverTs from './demos/pause-on-hover/pause-on-hover.ts?raw' with { loader: 'text' };
+import * as rawDemosPauseOnHoverPauseOnHoverHtml from './demos/pause-on-hover/pause-on-hover.html?raw' with { loader: 'text' };
+import * as rawDemosPauseOnFocusPauseOnFocusTs from './demos/pause-on-focus/pause-on-focus.ts?raw' with { loader: 'text' };
+import * as rawDemosPauseOnFocusPauseOnFocusHtml from './demos/pause-on-focus/pause-on-focus.html?raw' with { loader: 'text' };
+import * as rawDemosCustomContentCustomContentTs from './demos/custom-content/custom-content.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomContentCustomContentHtml from './demos/custom-content/custom-content.html?raw' with { loader: 'text' };
+import * as rawDemosDisableLoopingDisableLoopingTs from './demos/disable-looping/disable-looping.ts?raw' with { loader: 'text' };
+import * as rawDemosDisableLoopingDisableLoopingHtml from './demos/disable-looping/disable-looping.html?raw' with { loader: 'text' };
+import * as rawDemosDisableIndicatorDisableIndicatorTs from './demos/disable-indicator/disable-indicator.ts?raw' with { loader: 'text' };
+import * as rawDemosDisableIndicatorDisableIndicatorHtml from './demos/disable-indicator/disable-indicator.html?raw' with { loader: 'text' };
+import * as rawDemosIntervalIntervalTs from './demos/interval/interval.ts?raw' with { loader: 'text' };
+import * as rawDemosIntervalIntervalHtml from './demos/interval/interval.html?raw' with { loader: 'text' };
+import * as rawDemosSlideChangedEventSlideChangedEventTs from './demos/slide-changed-event/slide-changed-event.ts?raw' with { loader: 'text' };
+import * as rawDemosSlideChangedEventSlideChangedEventHtml from './demos/slide-changed-event/slide-changed-event.html?raw' with { loader: 'text' };
+import * as rawDemosMultilistMultilistTs from './demos/multilist/multilist.ts?raw' with { loader: 'text' };
+import * as rawDemosMultilistMultilistHtml from './demos/multilist/multilist.html?raw' with { loader: 'text' };
+import * as rawDemosMultilistSingleOffsetMultilistSingleOffsetTs from './demos/multilist-single-offset/multilist-single-offset.ts?raw' with { loader: 'text' };
+import * as rawDemosMultilistSingleOffsetMultilistSingleOffsetHtml from './demos/multilist-single-offset/multilist-single-offset.html?raw' with { loader: 'text' };
+import * as rawDemosMultilistFromIndexMultilistFromIndexTs from './demos/multilist-from-index/multilist-from-index.ts?raw' with { loader: 'text' };
+import * as rawDemosMultilistFromIndexMultilistFromIndexHtml from './demos/multilist-from-index/multilist-from-index.html?raw' with { loader: 'text' };
+import * as rawDemosMultilistIndicatorsByChunkMultilistIndicatorsByChunkTs from './demos/multilist-indicators-by-chunk/multilist-indicators-by-chunk.ts?raw' with { loader: 'text' };
+import * as rawDemosMultilistIndicatorsByChunkMultilistIndicatorsByChunkHtml from './demos/multilist-indicators-by-chunk/multilist-indicators-by-chunk.html?raw' with { loader: 'text' };
+import * as rawDemosAnimatedAnimatedTs from './demos/animated/animated.ts?raw' with { loader: 'text' };
+import * as rawDemosAnimatedAnimatedHtml from './demos/animated/animated.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -32,8 +68,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic.ts'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasicTs,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoCarouseBasicComponent
       },
       {
@@ -42,22 +78,22 @@ export const demoComponentContent: ContentSection[] = [
         description: `<p>Add captions to your slides easily with the <code>.carousel-caption</code>
           element within any <code>&lt;slide></code>. Place just about any optional HTML within there
           and it will be automatically aligned and formatted.</p>`,
-        component: require('!!raw-loader!./demos/captions/captions.ts'),
-        html: require('!!raw-loader!./demos/captions/captions.html'),
+        component: rawDemosCaptionsCaptionsTs,
+        html: rawDemosCaptionsCaptionsHtml,
         outlet: DemoCarouselCaptionsComponent
       },
       {
         title: 'Configuring defaults',
         anchor: 'config-defaults',
-        component: require('!!raw-loader!./demos/config/config.ts'),
-        html: require('!!raw-loader!./demos/config/config.html'),
+        component: rawDemosConfigConfigTs,
+        html: rawDemosConfigConfigHtml,
         outlet: DemoCarouselConfigComponent
       },
       {
         title: 'Dynamic Slides',
         anchor: 'dynamic-slides',
-        component: require('!!raw-loader!./demos/dynamic/dynamic.ts'),
-        html: require('!!raw-loader!./demos/dynamic/dynamic.html'),
+        component: rawDemosDynamicDynamicTs,
+        html: rawDemosDynamicDynamicHtml,
         outlet: DemoCarouselDynamicComponent
       },
       {
@@ -65,8 +101,8 @@ export const demoComponentContent: ContentSection[] = [
         anchor: 'pause-on-hover',
         description: `<p>If <code>noPause</code> is set to <code>false</code>
           , carousel autoplay will be stopped when carousel receives hover.</p>`,
-        component: require('!!raw-loader!./demos/pause-on-hover/pause-on-hover.ts'),
-        html: require('!!raw-loader!./demos/pause-on-hover/pause-on-hover.html'),
+        component: rawDemosPauseOnHoverPauseOnHoverTs,
+        html: rawDemosPauseOnHoverPauseOnHoverHtml,
         outlet: DemoCarouselPauseOnHoverComponent
       },
       {
@@ -74,78 +110,78 @@ export const demoComponentContent: ContentSection[] = [
         anchor: 'pause-on-focus',
         description: `<p>If <code>pauseOnFocus</code> is set to <code>true</code>
           , carousel autoplay will be stopped when carousel receives focus.</p>`,
-        component: require('!!raw-loader!./demos/pause-on-focus/pause-on-focus.ts'),
-        html: require('!!raw-loader!./demos/pause-on-focus/pause-on-focus.html'),
+        component: rawDemosPauseOnFocusPauseOnFocusTs,
+        html: rawDemosPauseOnFocusPauseOnFocusHtml,
         outlet: DemoCarouselPauseOnFocusComponent
       },
       {
         title: 'Custom content',
         anchor: 'custom-content',
-        component: require('!!raw-loader!./demos/custom-content/custom-content.ts'),
-        html: require('!!raw-loader!./demos/custom-content/custom-content.html'),
+        component: rawDemosCustomContentCustomContentTs,
+        html: rawDemosCustomContentCustomContentHtml,
         outlet: DemoCarouselCustomContentComponent
       },
       {
         title: 'Disable slide looping',
         anchor: 'disable-looping',
-        component: require('!!raw-loader!./demos/disable-looping/disable-looping.ts'),
-        html: require('!!raw-loader!./demos/disable-looping/disable-looping.html'),
+        component: rawDemosDisableLoopingDisableLoopingTs,
+        html: rawDemosDisableLoopingDisableLoopingHtml,
         outlet: DemoCarouselDisableLoopingComponent
       },
       {
         title: 'Disable indicator',
         anchor: 'disable-indicator',
-        component: require('!!raw-loader!./demos/disable-indicator/disable-indicator.ts'),
-        html: require('!!raw-loader!./demos/disable-indicator/disable-indicator.html'),
+        component: rawDemosDisableIndicatorDisableIndicatorTs,
+        html: rawDemosDisableIndicatorDisableIndicatorHtml,
         outlet: DemoCarouselDisableIndicatorComponent
       },
       {
         title: 'Interval',
         anchor: 'slides-interval',
-        component: require('!!raw-loader!./demos/interval/interval.ts'),
-        html: require('!!raw-loader!./demos/interval/interval.html'),
+        component: rawDemosIntervalIntervalTs,
+        html: rawDemosIntervalIntervalHtml,
         outlet: DemoCarouselIntervalComponent
       },
       {
         title: 'Slide changed event',
         anchor: 'slide-changed-event',
-        component: require('!!raw-loader!./demos/slide-changed-event/slide-changed-event.ts'),
-        html: require('!!raw-loader!./demos/slide-changed-event/slide-changed-event.html'),
+        component: rawDemosSlideChangedEventSlideChangedEventTs,
+        html: rawDemosSlideChangedEventSlideChangedEventHtml,
         outlet: DemoCarouselSlideChangedEventComponent
       },
       {
         title: 'Multilist',
         anchor: 'multilist',
-        component: require('!!raw-loader!./demos/multilist/multilist.ts'),
-        html: require('!!raw-loader!./demos/multilist/multilist.html'),
+        component: rawDemosMultilistMultilistTs,
+        html: rawDemosMultilistMultilistHtml,
         outlet: DemoCarouselMultilistComponent
       },
       {
         title: 'Multilist Single Offset',
         anchor: 'multilist-single-offset',
-        component: require('!!raw-loader!./demos/multilist-single-offset/multilist-single-offset.ts'),
-        html: require('!!raw-loader!./demos/multilist-single-offset/multilist-single-offset.html'),
+        component: rawDemosMultilistSingleOffsetMultilistSingleOffsetTs,
+        html: rawDemosMultilistSingleOffsetMultilistSingleOffsetHtml,
         outlet: DemoCarouselMultilistSingleOffsetComponent
       },
       {
         title: 'Multilist Start From Index',
         anchor: 'multilist-from-index',
-        component: require('!!raw-loader!./demos/multilist-from-index/multilist-from-index.ts'),
-        html: require('!!raw-loader!./demos/multilist-from-index/multilist-from-index.html'),
+        component: rawDemosMultilistFromIndexMultilistFromIndexTs,
+        html: rawDemosMultilistFromIndexMultilistFromIndexHtml,
         outlet: DemoCarouselMultilistFromIndexComponent
       },
       {
         title: 'Multilist Indicators By Chunk',
         anchor: 'multilist-indicators-by-chunk',
-        component: require('!!raw-loader!./demos/multilist-indicators-by-chunk/multilist-indicators-by-chunk.ts'),
-        html: require('!!raw-loader!./demos/multilist-indicators-by-chunk/multilist-indicators-by-chunk.html'),
+        component: rawDemosMultilistIndicatorsByChunkMultilistIndicatorsByChunkTs,
+        html: rawDemosMultilistIndicatorsByChunkMultilistIndicatorsByChunkHtml,
         outlet: DemoCarouselMultilistIndicatorsByChunkComponent
       },
       {
         title: 'With animation',
         anchor: 'animated',
-        component: require('!!raw-loader!./demos/animated/animated.ts'),
-        html: require('!!raw-loader!./demos/animated/animated.html'),
+        component: rawDemosAnimatedAnimatedTs,
+        html: rawDemosAnimatedAnimatedHtml,
         outlet: DemoCarouseAnimatedComponent
       },
       {
@@ -159,7 +195,7 @@ export const demoComponentContent: ContentSection[] = [
     name: 'Installation',
     anchor: 'api-reference',
     tabName: 'api',
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">carousel</span>',
     outlet: ApiSectionsComponent,
     content: [

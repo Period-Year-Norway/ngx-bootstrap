@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoTimepickerBasicComponent } from './demos/basic/basic';
 import { DemoTimepickerMeridianComponent } from './demos/meridian/meridian';
 import { DemoTimepickerCustomMeridianComponent } from './demos/custom-meridian/custom-meridian';
@@ -26,6 +28,44 @@ import {
 import { DemoTimepickerIsValidComponent } from './demos/isvalid/isvalid';
 import { DemoTimepickerFormComponent } from './demos/form/form';
 
+import * as rawDemosBasicBasic from './demos/basic/basic?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosFormForm from './demos/form/form?raw' with { loader: 'text' };
+import * as rawDemosFormFormHtml from './demos/form/form.html?raw' with { loader: 'text' };
+import * as rawDemosMeridianMeridian from './demos/meridian/meridian?raw' with { loader: 'text' };
+import * as rawDemosMeridianMeridianHtml from './demos/meridian/meridian.html?raw' with { loader: 'text' };
+import * as rawDemosCustomMeridianCustomMeridian from './demos/custom-meridian/custom-meridian?raw' with { loader: 'text' };
+import * as rawDemosCustomMeridianCustomMeridianHtml from './demos/custom-meridian/custom-meridian.html?raw' with { loader: 'text' };
+import * as rawDemosMinMaxMinMax from './demos/min-max/min-max?raw' with { loader: 'text' };
+import * as rawDemosMinMaxMinMaxHtml from './demos/min-max/min-max.html?raw' with { loader: 'text' };
+import * as rawDemosToggleMinutesSecondsToggleMinutesSeconds from './demos/toggle-minutes-seconds/toggle-minutes-seconds?raw' with { loader: 'text' };
+import * as rawDemosToggleMinutesSecondsToggleMinutesSecondsHtml from './demos/toggle-minutes-seconds/toggle-minutes-seconds.html?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabled from './demos/disabled/disabled?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledHtml from './demos/disabled/disabled.html?raw' with { loader: 'text' };
+import * as rawDemosReadonlyReadonly from './demos/readonly/readonly?raw' with { loader: 'text' };
+import * as rawDemosReadonlyReadonlyHtml from './demos/readonly/readonly.html?raw' with { loader: 'text' };
+import * as rawDemosCustomCustom from './demos/custom/custom?raw' with { loader: 'text' };
+import * as rawDemosCustomCustomHtml from './demos/custom/custom.html?raw' with { loader: 'text' };
+import * as rawDemosCustomValidationCustomValidation from './demos/custom-validation/custom-validation?raw' with { loader: 'text' };
+import * as rawDemosCustomValidationCustomValidationHtml from './demos/custom-validation/custom-validation.html?raw' with { loader: 'text' };
+import * as rawDemosIsvalidIsvalid from './demos/isvalid/isvalid?raw' with { loader: 'text' };
+import * as rawDemosIsvalidIsvalidHtml from './demos/isvalid/isvalid.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamic from './demos/dynamic/dynamic?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicHtml from './demos/dynamic/dynamic.html?raw' with { loader: 'text' };
+import * as rawDemosMousewheelMousewheel from './demos/mousewheel/mousewheel?raw' with { loader: 'text' };
+import * as rawDemosMousewheelMousewheelHtml from './demos/mousewheel/mousewheel.html?raw' with { loader: 'text' };
+import * as rawDemosEmptyDateEmptyDate from './demos/empty-date/empty-date?raw' with { loader: 'text' };
+import * as rawDemosEmptyDateEmptyDateHtml from './demos/empty-date/empty-date.html?raw' with { loader: 'text' };
+import * as rawDemosArrowkeysArrowkeys from './demos/arrowkeys/arrowkeys?raw' with { loader: 'text' };
+import * as rawDemosArrowkeysArrowkeysHtml from './demos/arrowkeys/arrowkeys.html?raw' with { loader: 'text' };
+import * as rawDemosSpinnersSpinners from './demos/spinners/spinners?raw' with { loader: 'text' };
+import * as rawDemosSpinnersSpinnersHtml from './demos/spinners/spinners.html?raw' with { loader: 'text' };
+import * as rawDemosPlaceholderPlaceholder from './demos/placeholder/placeholder?raw' with { loader: 'text' };
+import * as rawDemosPlaceholderPlaceholderHtml from './demos/placeholder/placeholder.html?raw' with { loader: 'text' };
+import * as rawDemosConfigConfig from './demos/config/config?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigHtml from './demos/config/config.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -36,79 +76,79 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasic,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoTimepickerBasicComponent
       },
       {
         title: 'Form',
         anchor: 'form',
-        component: require('!!raw-loader!./demos/form/form'),
-        html: require('!!raw-loader!./demos/form/form.html'),
+        component: rawDemosFormForm,
+        html: rawDemosFormFormHtml,
         outlet: DemoTimepickerFormComponent
       },
       {
         title: 'Meridian',
         anchor: 'meridian',
-        component: require('!!raw-loader!./demos/meridian/meridian'),
-        html: require('!!raw-loader!./demos/meridian/meridian.html'),
+        component: rawDemosMeridianMeridian,
+        html: rawDemosMeridianMeridianHtml,
         outlet: DemoTimepickerMeridianComponent
       },
       {
         title: 'Custom meridian',
         anchor: 'custom-meridian',
-        component: require('!!raw-loader!./demos/custom-meridian/custom-meridian'),
-        html: require('!!raw-loader!./demos/custom-meridian/custom-meridian.html'),
+        component: rawDemosCustomMeridianCustomMeridian,
+        html: rawDemosCustomMeridianCustomMeridianHtml,
         description: `<p>Text in meridian labels can be customized by using <code>meridians</code> input property</p>`,
         outlet: DemoTimepickerCustomMeridianComponent
       },
       {
         title: 'Min - Max',
         anchor: 'min-max',
-        component: require('!!raw-loader!./demos/min-max/min-max'),
-        html: require('!!raw-loader!./demos/min-max/min-max.html'),
+        component: rawDemosMinMaxMinMax,
+        html: rawDemosMinMaxMinMaxHtml,
         outlet: DemoTimepickerMinMaxComponent
       },
       {
         title: 'Toggle minutes/seconds',
         anchor: 'toggleMinutesSeconds',
-        component: require('!!raw-loader!./demos/toggle-minutes-seconds/toggle-minutes-seconds'),
-        html: require('!!raw-loader!./demos/toggle-minutes-seconds/toggle-minutes-seconds.html'),
+        component: rawDemosToggleMinutesSecondsToggleMinutesSeconds,
+        html: rawDemosToggleMinutesSecondsToggleMinutesSecondsHtml,
         outlet: DemoTimepickerToggleMinutesSecondsComponent
       },
       {
         title: 'Disabled',
         anchor: 'disabled',
-        component: require('!!raw-loader!./demos/disabled/disabled'),
-        html: require('!!raw-loader!./demos/disabled/disabled.html'),
+        component: rawDemosDisabledDisabled,
+        html: rawDemosDisabledDisabledHtml,
         outlet: DemoTimepickerDisabledComponent
       },
       {
         title: 'Readonly',
         anchor: 'readonly',
-        component: require('!!raw-loader!./demos/readonly/readonly'),
-        html: require('!!raw-loader!./demos/readonly/readonly.html'),
+        component: rawDemosReadonlyReadonly,
+        html: rawDemosReadonlyReadonlyHtml,
         outlet: DemoTimepickerReadonlyComponent
       },
       {
         title: 'Custom steps',
         anchor: 'custom',
-        component: require('!!raw-loader!./demos/custom/custom'),
-        html: require('!!raw-loader!./demos/custom/custom.html'),
+        component: rawDemosCustomCustom,
+        html: rawDemosCustomCustomHtml,
         outlet: DemoTimepickerCustomComponent
       },
       {
         title: 'Custom validation',
         anchor: 'custom-validation',
-        component: require('!!raw-loader!./demos/custom-validation/custom-validation'),
-        html: require('!!raw-loader!./demos/custom-validation/custom-validation.html'),
+        component: rawDemosCustomValidationCustomValidation,
+        html: rawDemosCustomValidationCustomValidationHtml,
         outlet: DemoTimepickerCustomValidationComponent
       },
       {
         title: 'Custom validation with isValid event',
         anchor: 'isvalid',
-        component: require('!!raw-loader!./demos/isvalid/isvalid'),
-        html: require('!!raw-loader!./demos/isvalid/isvalid.html'),
+        component: rawDemosIsvalidIsvalid,
+        html: rawDemosIsvalidIsvalidHtml,
         description: `<p><code>isValid</code> event emits true if a value is a valid data.
             Enter an invalid data to see error</p>`,
         outlet: DemoTimepickerIsValidComponent
@@ -116,50 +156,50 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Dynamic',
         anchor: 'dynamic',
-        component: require('!!raw-loader!./demos/dynamic/dynamic'),
-        html: require('!!raw-loader!./demos/dynamic/dynamic.html'),
+        component: rawDemosDynamicDynamic,
+        html: rawDemosDynamicDynamicHtml,
         outlet: DemoTimepickerDynamicComponent
       },
       {
         title: 'Mouse wheel',
         anchor: 'mouse-wheel',
-        component: require('!!raw-loader!./demos/mousewheel/mousewheel'),
-        html: require('!!raw-loader!./demos/mousewheel/mousewheel.html'),
+        component: rawDemosMousewheelMousewheel,
+        html: rawDemosMousewheelMousewheelHtml,
         outlet: DemoTimepickerMousewheelComponent
       },
       {
         title: 'Empty date',
         anchor: 'empty-date',
-        component: require('!!raw-loader!./demos/empty-date/empty-date'),
-        html: require('!!raw-loader!./demos/empty-date/empty-date.html'),
+        component: rawDemosEmptyDateEmptyDate,
+        html: rawDemosEmptyDateEmptyDateHtml,
         outlet: DemoTimepickerEmptyDateComponent
       },
       {
         title: 'Arrow keys',
         anchor: 'arrow keys',
-        component: require('!!raw-loader!./demos/arrowkeys/arrowkeys'),
-        html: require('!!raw-loader!./demos/arrowkeys/arrowkeys.html'),
+        component: rawDemosArrowkeysArrowkeys,
+        html: rawDemosArrowkeysArrowkeysHtml,
         outlet: DemoTimepickerArrowkeysComponent
       },
       {
         title: 'Spinners',
         anchor: 'spinners',
-        component: require('!!raw-loader!./demos/spinners/spinners'),
-        html: require('!!raw-loader!./demos/spinners/spinners.html'),
+        component: rawDemosSpinnersSpinners,
+        html: rawDemosSpinnersSpinnersHtml,
         outlet: DemoTimepickerSpinnersComponent
       },
       {
         title: 'Placeholder',
         anchor: 'placeholder',
-        component: require('!!raw-loader!./demos/placeholder/placeholder'),
-        html: require('!!raw-loader!./demos/placeholder/placeholder.html'),
+        component: rawDemosPlaceholderPlaceholder,
+        html: rawDemosPlaceholderPlaceholderHtml,
         outlet: DemoTimepickerPlaceholderComponent
       },
       {
         title: 'Configuring defaults',
         anchor: 'config-defaults',
-        component: require('!!raw-loader!./demos/config/config'),
-        html: require('!!raw-loader!./demos/config/config.html'),
+        component: rawDemosConfigConfig,
+        html: rawDemosConfigConfigHtml,
         outlet: DemoTimepickerConfigComponent
       }
     ]
@@ -169,7 +209,7 @@ export const demoComponentContent: ContentSection[] = [
     anchor: 'api-reference',
     tabName: 'api',
     outlet: ApiSectionsComponent,
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">timepicker</span>',
     content: [
       {

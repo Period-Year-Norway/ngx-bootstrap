@@ -1,5 +1,5 @@
 import {
-  ApplicationRef, ComponentFactoryResolver, ElementRef, Inject, Injectable, Injector,
+  ApplicationRef, ElementRef, Inject, Injectable, Injector,
   NgZone, Renderer2, ViewContainerRef,
   DOCUMENT
 } from '@angular/core';
@@ -9,8 +9,7 @@ import { PositioningService } from '@period-year-norway/ngx-bootstrap/positionin
 
 @Injectable({providedIn: 'root'})
 export class ComponentLoaderFactory {
-  constructor(private _componentFactoryResolver: ComponentFactoryResolver,
-              private _ngZone: NgZone,
+  constructor(private _ngZone: NgZone,
               private _injector: Injector,
               private _posService: PositioningService,
               private _applicationRef: ApplicationRef,
@@ -32,7 +31,6 @@ export class ComponentLoaderFactory {
       _renderer,
       _elementRef,
       this._injector,
-      this._componentFactoryResolver,
       this._ngZone,
       this._applicationRef,
       this._posService,

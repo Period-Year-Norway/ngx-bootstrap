@@ -14,6 +14,7 @@ const template = `
 
 @Component({
   selector: 'collapse-test',
+  standalone: false,
   changeDetection: ChangeDetectionStrategy.Eager,
   template
 })

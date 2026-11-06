@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoAccordionAnimatedComponent } from './demos/animated/animated';
 import { DemoAccordionBasicComponent } from './demos/basic/basic';
 import { DemoAccordionConfigComponent } from './demos/config/config';
@@ -21,6 +23,32 @@ import {
 import { DemoAccordionOpenedComponent } from './demos/opened/opened';
 import { DemoAccordionDynamicBodyComponent } from './demos/dynamic-body/dynamic-body';
 
+import * as rawDemosBasicBasic from './demos/basic/basic?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosAnimatedAnimated from './demos/animated/animated?raw' with { loader: 'text' };
+import * as rawDemosAnimatedAnimatedHtml from './demos/animated/animated.html?raw' with { loader: 'text' };
+import * as rawDemosOpenEventOpenEvent from './demos/open-event/open-event?raw' with { loader: 'text' };
+import * as rawDemosOpenEventOpenEventHtml from './demos/open-event/open-event.html?raw' with { loader: 'text' };
+import * as rawDemosCustomHtmlCustomHtml from './demos/custom-html/custom-html?raw' with { loader: 'text' };
+import * as rawDemosCustomHtmlCustomHtmlHtml from './demos/custom-html/custom-html.html?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabled from './demos/disabled/disabled?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledHtml from './demos/disabled/disabled.html?raw' with { loader: 'text' };
+import * as rawDemosOpenedOpened from './demos/opened/opened?raw' with { loader: 'text' };
+import * as rawDemosOpenedOpenedHtml from './demos/opened/opened.html?raw' with { loader: 'text' };
+import * as rawDemosDymanicDynamic from './demos/dymanic/dynamic?raw' with { loader: 'text' };
+import * as rawDemosDymanicDynamicHtml from './demos/dymanic/dynamic.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicBodyDynamicBody from './demos/dynamic-body/dynamic-body?raw' with { loader: 'text' };
+import * as rawDemosDynamicBodyDynamicBodyHtml from './demos/dynamic-body/dynamic-body.html?raw' with { loader: 'text' };
+import * as rawDemosManualToggleManualToggle from './demos/manual-toggle/manual-toggle?raw' with { loader: 'text' };
+import * as rawDemosManualToggleManualToggleHtml from './demos/manual-toggle/manual-toggle.html?raw' with { loader: 'text' };
+import * as rawDemosOneAtATimeOneAtATime from './demos/one-at-a-time/one-at-a-time?raw' with { loader: 'text' };
+import * as rawDemosOneAtATimeOneAtATimeHtml from './demos/one-at-a-time/one-at-a-time.html?raw' with { loader: 'text' };
+import * as rawDemosStylingStyling from './demos/styling/styling?raw' with { loader: 'text' };
+import * as rawDemosStylingStylingHtml from './demos/styling/styling.html?raw' with { loader: 'text' };
+import * as rawDemosConfigConfig from './demos/config/config?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigHtml from './demos/config/config.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -33,87 +61,87 @@ export const demoComponentContent: ContentSection[] = [
         anchor: 'basic-accordion',
         description: `<p>Click headers to expand/collapse content that is broken into logical sections, much
           like tabs.</p>`,
-        component: require('!!raw-loader!./demos/basic/basic'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasic,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoAccordionBasicComponent
       },
       {
         title: 'With animation',
         anchor: 'animated-accordion',
         description: `<p>Use input property or config property <code>isAnimated</code> to enable/disable animation</p>`,
-        component: require('!!raw-loader!./demos/animated/animated'),
-        html: require('!!raw-loader!./demos/animated/animated.html'),
+        component: rawDemosAnimatedAnimated,
+        html: rawDemosAnimatedAnimatedHtml,
         outlet: DemoAccordionAnimatedComponent
       },
       {
         title: 'Group opening event',
         anchor: 'open-event',
         description: `<p>Accordion with <code>isOpenChange</code> event listener.</p>`,
-        component: require('!!raw-loader!./demos/open-event/open-event'),
-        html: require('!!raw-loader!./demos/open-event/open-event.html'),
+        component: rawDemosOpenEventOpenEvent,
+        html: rawDemosOpenEventOpenEventHtml,
         outlet: DemoAccordionOpenEventComponent
       },
       {
         title: 'Custom HTML',
         anchor: 'custom-html',
-        component: require('!!raw-loader!./demos/custom-html/custom-html'),
-        html: require('!!raw-loader!./demos/custom-html/custom-html.html'),
+        component: rawDemosCustomHtmlCustomHtml,
+        html: rawDemosCustomHtmlCustomHtmlHtml,
         outlet: DemoAccordionCustomHTMLComponent
       },
       {
         title: 'Disabled',
         anchor: 'disabled',
-        component: require('!!raw-loader!./demos/disabled/disabled'),
-        html: require('!!raw-loader!./demos/disabled/disabled.html'),
+        component: rawDemosDisabledDisabled,
+        html: rawDemosDisabledDisabledHtml,
         outlet: DemoAccordionDisabledComponent
       },
       {
         title: 'Initially opened',
         anchor: 'opened',
-        component: require('!!raw-loader!./demos/opened/opened'),
-        html: require('!!raw-loader!./demos/opened/opened.html'),
+        component: rawDemosOpenedOpened,
+        html: rawDemosOpenedOpenedHtml,
         outlet: DemoAccordionOpenedComponent
       },
       {
         title: 'Dynamic accordion',
         anchor: 'dynamic-accordion',
-        component: require('!!raw-loader!./demos/dymanic/dynamic'),
-        html: require('!!raw-loader!./demos/dymanic/dynamic.html'),
+        component: rawDemosDymanicDynamic,
+        html: rawDemosDymanicDynamicHtml,
         outlet: DemoAccordionDynamicComponent
       },
       {
         title: 'Dynamic body content',
         anchor: 'dynamic-body',
-        component: require('!!raw-loader!./demos/dynamic-body/dynamic-body'),
-        html: require('!!raw-loader!./demos/dynamic-body/dynamic-body.html'),
+        component: rawDemosDynamicBodyDynamicBody,
+        html: rawDemosDynamicBodyDynamicBodyHtml,
         outlet: DemoAccordionDynamicBodyComponent
       },
       {
         title: 'Manual toggle',
         anchor: 'manual-toggle',
-        component: require('!!raw-loader!./demos/manual-toggle/manual-toggle'),
-        html: require('!!raw-loader!./demos/manual-toggle/manual-toggle.html'),
+        component: rawDemosManualToggleManualToggle,
+        html: rawDemosManualToggleManualToggleHtml,
         outlet: DemoAccordionManualToggleComponent
       },
       {
         title: 'Open only one at a time',
         anchor: 'one-time',
-        component: require('!!raw-loader!./demos/one-at-a-time/one-at-a-time'),
-        html: require('!!raw-loader!./demos/one-at-a-time/one-at-a-time.html'),
+        component: rawDemosOneAtATimeOneAtATime,
+        html: rawDemosOneAtATimeOneAtATimeHtml,
         outlet: DemoAccordionOneAtATimeComponent
       },
       {
         title: 'Styling',
         anchor: 'styling',
-        component: require('!!raw-loader!./demos/styling/styling'),
-        html: require('!!raw-loader!./demos/styling/styling.html'),
+        component: rawDemosStylingStyling,
+        html: rawDemosStylingStylingHtml,
         outlet: DemoAccordionStylingComponent
       },
       {
         title: 'Configuring defaults',
         anchor: 'config',
-        component: require('!!raw-loader!./demos/config/config'),
-        html: require('!!raw-loader!./demos/config/config.html'),
+        component: rawDemosConfigConfig,
+        html: rawDemosConfigConfigHtml,
         outlet: DemoAccordionConfigComponent
       }
     ]
@@ -123,7 +151,7 @@ export const demoComponentContent: ContentSection[] = [
     anchor: 'api-reference',
     tabName: 'api',
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">accordion</span>',
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     outlet: ApiSectionsComponent,
     content: [
       {

@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoBasicComponent } from './demos/basic/basic.component';
 import { ComplexDatamodelDemoComponent } from './demos/complex-datamodel/complex-datamodel.component';
 import { CustomItemTemplateDemoComponent } from './demos/custom-item-template/custom-item-template';
@@ -9,6 +11,14 @@ import { ApiSectionsComponent } from '@ngx-bootstrap-doc/docs';
 import { NgApiDocComponent } from '@ngx-bootstrap-doc/docs';
 import { DemoAccessibilityComponent } from './demos/accessibility/accessibility';
 
+import * as rawDemosBasicBasicComponentTs from './demos/basic/basic.component.ts?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicComponentHtml from './demos/basic/basic.component.html?raw' with { loader: 'text' };
+import * as rawDemosComplexDatamodelComplexDatamodelComponentTs from './demos/complex-datamodel/complex-datamodel.component.ts?raw' with { loader: 'text' };
+import * as rawDemosComplexDatamodelComplexDatamodelComponentHtml from './demos/complex-datamodel/complex-datamodel.component.html?raw' with { loader: 'text' };
+import * as rawDemosCustomItemTemplateCustomItemTemplateTs from './demos/custom-item-template/custom-item-template.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomItemTemplateCustomItemTemplateHtml from './demos/custom-item-template/custom-item-template.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -19,22 +29,22 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic.component.ts'),
-        html: require('!!raw-loader!./demos/basic/basic.component.html'),
+        component: rawDemosBasicBasicComponentTs,
+        html: rawDemosBasicBasicComponentHtml,
         outlet: DemoBasicComponent
       },
       {
         title: 'Complex data model',
         anchor: 'complexDatamodel',
-        component: require('!!raw-loader!./demos/complex-datamodel/complex-datamodel.component.ts'),
-        html: require('!!raw-loader!./demos/complex-datamodel/complex-datamodel.component.html'),
+        component: rawDemosComplexDatamodelComplexDatamodelComponentTs,
+        html: rawDemosComplexDatamodelComplexDatamodelComponentHtml,
         outlet: ComplexDatamodelDemoComponent
       },
       {
         title: 'Custom item template',
         anchor: 'itemTemplate',
-        component: require('!!raw-loader!./demos/custom-item-template/custom-item-template.ts'),
-        html: require('!!raw-loader!./demos/custom-item-template/custom-item-template.html'),
+        component: rawDemosCustomItemTemplateCustomItemTemplateTs,
+        html: rawDemosCustomItemTemplateCustomItemTemplateHtml,
         outlet: CustomItemTemplateDemoComponent
       },
       {
@@ -49,7 +59,7 @@ export const demoComponentContent: ContentSection[] = [
     anchor: 'api-reference',
     tabName: 'api',
     outlet: ApiSectionsComponent,
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">sortable</span>',
     content: [
       {

@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { ApiSectionsComponent } from '@ngx-bootstrap-doc/docs';
 import { ContentSection } from '@ngx-bootstrap-doc/docs';
 import { DemoDatepickerBasicComponent } from './demos/basic/basic';
@@ -52,6 +54,93 @@ import { DemoDatepickerStartViewComponent } from "./demos/start-view/start-view"
 import { DemoDatepickerPreventChangeToNextMonthComponent } from './demos/prevent-change-to-next-month/prevent-change-to-next-month.component';
 import { DemoDatepickerWithTimepickerComponent } from './demos/with-timepicker/with-timepicker';
 
+import * as rawDemosBasicBasicTs from './demos/basic/basic.ts?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosInlineDatepickerInlineDatepickerComponentTs from './demos/inline-datepicker/inline-datepicker.component.ts?raw' with { loader: 'text' };
+import * as rawDemosInlineDatepickerInlineDatepickerComponentHtml from './demos/inline-datepicker/inline-datepicker.component.html?raw' with { loader: 'text' };
+import * as rawDemosAnimatedAnimated from './demos/animated/animated?raw' with { loader: 'text' };
+import * as rawDemosAnimatedAnimatedHtml from './demos/animated/animated.html?raw' with { loader: 'text' };
+import * as rawDemosAdaptivePositionAdaptivePositionTs from './demos/adaptive-position/adaptive-position.ts?raw' with { loader: 'text' };
+import * as rawDemosAdaptivePositionAdaptivePositionHtml from './demos/adaptive-position/adaptive-position.html?raw' with { loader: 'text' };
+import * as rawDemosDateInitialStateDateInitialStateTs from './demos/date-initial-state/date-initial-state.ts?raw' with { loader: 'text' };
+import * as rawDemosDateInitialStateDateInitialStateHtml from './demos/date-initial-state/date-initial-state.html?raw' with { loader: 'text' };
+import * as rawDemosCustomFormatCustomFormatTs from './demos/custom-format/custom-format.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomFormatCustomFormatHtml from './demos/custom-format/custom-format.html?raw' with { loader: 'text' };
+import * as rawDemosHideOnScrollHideOnScrollTs from './demos/hide-on-scroll/hide-on-scroll.ts?raw' with { loader: 'text' };
+import * as rawDemosHideOnScrollHideOnScrollHtml from './demos/hide-on-scroll/hide-on-scroll.html?raw' with { loader: 'text' };
+import * as rawDemosColorThemingColorThemingTs from './demos/color-theming/color-theming.ts?raw' with { loader: 'text' };
+import * as rawDemosColorThemingColorThemingHtml from './demos/color-theming/color-theming.html?raw' with { loader: 'text' };
+import * as rawDemosChangeLocaleChangeLocaleTs from './demos/change-locale/change-locale.ts?raw' with { loader: 'text' };
+import * as rawDemosChangeLocaleChangeLocaleHtml from './demos/change-locale/change-locale.html?raw' with { loader: 'text' };
+import * as rawDemosMinMaxMinMaxComponentTs from './demos/min-max/min-max.component.ts?raw' with { loader: 'text' };
+import * as rawDemosMinMaxMinMaxComponentHtml from './demos/min-max/min-max.component.html?raw' with { loader: 'text' };
+import * as rawDemosDisableDaysDisableDaysTs from './demos/disable-days/disable-days.ts?raw' with { loader: 'text' };
+import * as rawDemosDisableDaysDisableDaysHtml from './demos/disable-days/disable-days.html?raw' with { loader: 'text' };
+import * as rawDemosDisableDatesDisableDatesTs from './demos/disable-dates/disable-dates.ts?raw' with { loader: 'text' };
+import * as rawDemosDisableDatesDisableDatesHtml from './demos/disable-dates/disable-dates.html?raw' with { loader: 'text' };
+import * as rawDemosEnableDatesEnableDatesTs from './demos/enable-dates/enable-dates.ts?raw' with { loader: 'text' };
+import * as rawDemosEnableDatesEnableDatesHtml from './demos/enable-dates/enable-dates.html?raw' with { loader: 'text' };
+import * as rawDemosDaterangepickerDisplayOneMonthDisplayOneMonthTs from './demos/daterangepicker-display-one-month/display-one-month.ts?raw' with { loader: 'text' };
+import * as rawDemosDaterangepickerDisplayOneMonthDisplayOneMonthHtml from './demos/daterangepicker-display-one-month/display-one-month.html?raw' with { loader: 'text' };
+import * as rawDemosMinModeMinModeComponentTs from './demos/min-mode/min-mode.component.ts?raw' with { loader: 'text' };
+import * as rawDemosMinModeMinModeComponentHtml from './demos/min-mode/min-mode.component.html?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledComponentTs from './demos/disabled/disabled.component.ts?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledComponentHtml from './demos/disabled/disabled.component.html?raw' with { loader: 'text' };
+import * as rawDemosCustomTodayClassCustomTodayClassComponentTs from './demos/custom-today-class/custom-today-class.component.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomTodayClassCustomTodayClassComponentHtml from './demos/custom-today-class/custom-today-class.component.html?raw' with { loader: 'text' };
+import * as rawDemosFormsFormsComponentTs from './demos/forms/forms.component.ts?raw' with { loader: 'text' };
+import * as rawDemosFormsFormsComponentHtml from './demos/forms/forms.component.html?raw' with { loader: 'text' };
+import * as rawDemosReactiveFormsReactiveFormsComponentTs from './demos/reactive-forms/reactive-forms.component.ts?raw' with { loader: 'text' };
+import * as rawDemosReactiveFormsReactiveFormsComponentHtml from './demos/reactive-forms/reactive-forms.component.html?raw' with { loader: 'text' };
+import * as rawDemosReturnFocusToInputReturnFocusToInputComponentTs from './demos/return-focus-to-input/return-focus-to-input.component.ts?raw' with { loader: 'text' };
+import * as rawDemosReturnFocusToInputReturnFocusToInputComponentHtml from './demos/return-focus-to-input/return-focus-to-input.component.html?raw' with { loader: 'text' };
+import * as rawDemosTriggersManualTriggersManualTs from './demos/triggers-manual/triggers-manual.ts?raw' with { loader: 'text' };
+import * as rawDemosTriggersManualTriggersManualHtml from './demos/triggers-manual/triggers-manual.html?raw' with { loader: 'text' };
+import * as rawDemosPlacementPlacementTs from './demos/placement/placement.ts?raw' with { loader: 'text' };
+import * as rawDemosPlacementPlacementHtml from './demos/placement/placement.html?raw' with { loader: 'text' };
+import * as rawDemosConfigMethodConfigMethodTs from './demos/config-method/config-method.ts?raw' with { loader: 'text' };
+import * as rawDemosConfigMethodConfigMethodHtml from './demos/config-method/config-method.html?raw' with { loader: 'text' };
+import * as rawDemosVisibilityEventsVisibilityEventsTs from './demos/visibility-events/visibility-events.ts?raw' with { loader: 'text' };
+import * as rawDemosVisibilityEventsVisibilityEventsHtml from './demos/visibility-events/visibility-events.html?raw' with { loader: 'text' };
+import * as rawDemosValueChangeEventValueChangeEventTs from './demos/value-change-event/value-change-event.ts?raw' with { loader: 'text' };
+import * as rawDemosValueChangeEventValueChangeEventHtml from './demos/value-change-event/value-change-event.html?raw' with { loader: 'text' };
+import * as rawDemosConfigObjectConfigObjectTs from './demos/config-object/config-object.ts?raw' with { loader: 'text' };
+import * as rawDemosConfigObjectConfigObjectHtml from './demos/config-object/config-object.html?raw' with { loader: 'text' };
+import * as rawDemosSelectDatesFromOtherMonthsSelectDatesFromOtherMonthsTs from './demos/select-dates-from-other-months/select-dates-from-other-months.ts?raw' with { loader: 'text' };
+import * as rawDemosSelectDatesFromOtherMonthsSelectDatesFromOtherMonthsHtml from './demos/select-dates-from-other-months/select-dates-from-other-months.html?raw' with { loader: 'text' };
+import * as rawDemosSelectWeekSelectWeekTs from './demos/select-week/select-week.ts?raw' with { loader: 'text' };
+import * as rawDemosSelectWeekSelectWeekHtml from './demos/select-week/select-week.html?raw' with { loader: 'text' };
+import * as rawDemosSelectWeekRangeSelectWeekRangeTs from './demos/select-week-range/select-week-range.ts?raw' with { loader: 'text' };
+import * as rawDemosSelectWeekRangeSelectWeekRangeHtml from './demos/select-week-range/select-week-range.html?raw' with { loader: 'text' };
+import * as rawDemosOutsideClickOutsideClickTs from './demos/outside-click/outside-click.ts?raw' with { loader: 'text' };
+import * as rawDemosOutsideClickOutsideClickHtml from './demos/outside-click/outside-click.html?raw' with { loader: 'text' };
+import * as rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyTs from './demos/trigger-by-isopen-property/trigger-by-isopen-property.ts?raw' with { loader: 'text' };
+import * as rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyHtml from './demos/trigger-by-isopen-property/trigger-by-isopen-property.html?raw' with { loader: 'text' };
+import * as rawDemosTriggersCustomTriggersCustomTs from './demos/triggers-custom/triggers-custom.ts?raw' with { loader: 'text' };
+import * as rawDemosTriggersCustomTriggersCustomHtml from './demos/triggers-custom/triggers-custom.html?raw' with { loader: 'text' };
+import * as rawDemosDateCustomClassesDateCustomClassesTs from './demos/date-custom-classes/date-custom-classes.ts?raw' with { loader: 'text' };
+import * as rawDemosDateCustomClassesDateCustomClassesHtml from './demos/date-custom-classes/date-custom-classes.html?raw' with { loader: 'text' };
+import * as rawDemosDateCustomClassesDateCustomClassesScss from './demos/date-custom-classes/date-custom-classes.scss?raw' with { loader: 'text' };
+import * as rawDemosTooltipToSelectedDatesTooltipToSelectedDatesTs from './demos/tooltip-to-selected-dates/tooltip-to-selected-dates.ts?raw' with { loader: 'text' };
+import * as rawDemosTooltipToSelectedDatesTooltipToSelectedDatesHtml from './demos/tooltip-to-selected-dates/tooltip-to-selected-dates.html?raw' with { loader: 'text' };
+import * as rawDemosQuickSelectRangesQuickSelectRangesTs from './demos/quick-select-ranges/quick-select-ranges.ts?raw' with { loader: 'text' };
+import * as rawDemosQuickSelectRangesQuickSelectRangesHtml from './demos/quick-select-ranges/quick-select-ranges.html?raw' with { loader: 'text' };
+import * as rawDemosPreventChangeToNextMonthPreventChangeToNextMonthComponentTs from './demos/prevent-change-to-next-month/prevent-change-to-next-month.component.ts?raw' with { loader: 'text' };
+import * as rawDemosPreventChangeToNextMonthPreventChangeToNextMonthComponentHtml from './demos/prevent-change-to-next-month/prevent-change-to-next-month.component.html?raw' with { loader: 'text' };
+import * as rawDemosDaterangepickerShowPreviousMonthShowPreviousMonthTs from './demos/daterangepicker-show-previous-month/show-previous-month.ts?raw' with { loader: 'text' };
+import * as rawDemosDaterangepickerShowPreviousMonthShowPreviousMonthHtml from './demos/daterangepicker-show-previous-month/show-previous-month.html?raw' with { loader: 'text' };
+import * as rawDemosTodayButtonTodayButtonTs from './demos/today-button/today-button.ts?raw' with { loader: 'text' };
+import * as rawDemosTodayButtonTodayButtonHtml from './demos/today-button/today-button.html?raw' with { loader: 'text' };
+import * as rawDemosClearButtonClearButtonTs from './demos/clear-button/clear-button.ts?raw' with { loader: 'text' };
+import * as rawDemosClearButtonClearButtonHtml from './demos/clear-button/clear-button.html?raw' with { loader: 'text' };
+import * as rawDemosStartViewStartViewTs from './demos/start-view/start-view.ts?raw' with { loader: 'text' };
+import * as rawDemosStartViewStartViewHtml from './demos/start-view/start-view.html?raw' with { loader: 'text' };
+import * as rawDemosMaxDateRangeMaxDateRangeTs from './demos/max-date-range/max-date-range.ts?raw' with { loader: 'text' };
+import * as rawDemosMaxDateRangeMaxDateRangeHtml from './demos/max-date-range/max-date-range.html?raw' with { loader: 'text' };
+import * as rawDemosWithTimepickerWithTimepicker from './demos/with-timepicker/with-timepicker?raw' with { loader: 'text' };
+import * as rawDemosWithTimepickerWithTimepickerHtml from './demos/with-timepicker/with-timepicker.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -62,8 +151,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic.ts'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasicTs,
+        html: rawDemosBasicBasicHtml,
         description: `
           <p>Note: If you installed ngx-bootstrap not via ng add command, you will need to perform a several actions</p>
           <p>Notable change is additional css for it <code> "/datepicker/bs-datepicker.css"</code> <br></p>
@@ -82,39 +171,39 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Inline',
         anchor: 'inline-datepicker',
-        component: require('!!raw-loader!./demos/inline-datepicker/inline-datepicker.component.ts'),
-        html: require('!!raw-loader!./demos/inline-datepicker/inline-datepicker.component.html'),
+        component: rawDemosInlineDatepickerInlineDatepickerComponentTs,
+        html: rawDemosInlineDatepickerInlineDatepickerComponentHtml,
         description: `<p>with initial state set by <code>bsInlineValue</code> property</p>`,
         outlet: DemoDatepickerInlineComponent
       },
       {
         title: 'With animation',
         anchor: 'animated',
-        component: require('!!raw-loader!./demos/animated/animated'),
-        html: require('!!raw-loader!./demos/animated/animated.html'),
+        component: rawDemosAnimatedAnimated,
+        html: rawDemosAnimatedAnimatedHtml,
         description: `You can enable animation via <code>isAnimated</code> config option`,
         outlet: DemoDatePickerAnimatedComponent
       },
       {
         title: 'Adaptive position',
         anchor: 'adaptive-position',
-        component: require('!!raw-loader!./demos/adaptive-position/adaptive-position.ts'),
-        html: require('!!raw-loader!./demos/adaptive-position/adaptive-position.html'),
+        component: rawDemosAdaptivePositionAdaptivePositionTs,
+        html: rawDemosAdaptivePositionAdaptivePositionHtml,
         description: `<p>You can enable adaptive position via <code>adaptivePosition</code> option in <code>bsConfig</code></p>`,
         outlet: DemoDatePickerAdaptivePositionComponent
       },
       {
         title: 'Initial state',
         anchor: 'date-initial-state',
-        component: require('!!raw-loader!./demos/date-initial-state/date-initial-state.ts'),
-        html: require('!!raw-loader!./demos/date-initial-state/date-initial-state.html'),
+        component: rawDemosDateInitialStateDateInitialStateTs,
+        html: rawDemosDateInitialStateDateInitialStateHtml,
         outlet: DemoDatepickerDateInitialStateComponent
       },
       {
         title: 'Custom date format',
         anchor: 'format',
-        component: require('!!raw-loader!./demos/custom-format/custom-format.ts'),
-        html: require('!!raw-loader!./demos/custom-format/custom-format.html'),
+        component: rawDemosCustomFormatCustomFormatTs,
+        html: rawDemosCustomFormatCustomFormatHtml,
         description: `
           <p>You can easily change the date format by specifying the <code>dateInputFormat</code>
             in <code>[bsConfig]</code>
@@ -134,8 +223,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Hide on scroll',
         anchor: 'hide-on-scroll',
-        component: require('!!raw-loader!./demos/hide-on-scroll/hide-on-scroll.ts'),
-        html: require('!!raw-loader!./demos/hide-on-scroll/hide-on-scroll.html'),
+        component: rawDemosHideOnScrollHideOnScrollTs,
+        html: rawDemosHideOnScrollHideOnScrollHtml,
         description: `
           <p>Hide the datepicker on page scroll.</p>
         `,
@@ -144,8 +233,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Themes',
         anchor: 'themes',
-        component: require('!!raw-loader!./demos/color-theming/color-theming.ts'),
-        html: require('!!raw-loader!./demos/color-theming/color-theming.html'),
+        component: rawDemosColorThemingColorThemingTs,
+        html: rawDemosColorThemingColorThemingHtml,
         description: `
         <p>Datepicker comes with some default color schemes.
         You can change it by manipulating <code>containerClass</code> property in <code>bsConfig</code> object</p>
@@ -157,8 +246,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Locales',
         anchor: 'locales',
-        component: require('!!raw-loader!./demos/change-locale/change-locale.ts'),
-        html: require('!!raw-loader!./demos/change-locale/change-locale.html'),
+        component: rawDemosChangeLocaleChangeLocaleTs,
+        html: rawDemosChangeLocaleChangeLocaleHtml,
         description: `
           <p>Datepicker can use different locales. <br>It's possible to change a locale by calling
           <code>use</code>
@@ -177,8 +266,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Min-max',
         anchor: 'min-max',
-        component: require('!!raw-loader!./demos/min-max/min-max.component.ts'),
-        html: require('!!raw-loader!./demos/min-max/min-max.component.html'),
+        component: rawDemosMinMaxMinMaxComponentTs,
+        html: rawDemosMinMaxMinMaxComponentHtml,
         description: `
           <p>You can set min and max date of datepicker/daterangepicker using <code>minDate</code> and
           <code>maxDate</code> properties</p>
@@ -189,8 +278,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Days disabled',
         anchor: 'days-disabled',
-        component: require('!!raw-loader!./demos/disable-days/disable-days.ts'),
-        html: require('!!raw-loader!./demos/disable-days/disable-days.html'),
+        component: rawDemosDisableDaysDisableDaysTs,
+        html: rawDemosDisableDaysDisableDaysHtml,
         description: `
           <p>You can set which days of the week should be disabled with <code>daysDisabled</code>
           <p>In the following example <code>daysDisabled</code> is set with an array which disabled Saturday and Sunday.
@@ -200,8 +289,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Dates disabled',
         anchor: 'dates-disabled',
-        component: require('!!raw-loader!./demos/disable-dates/disable-dates.ts'),
-        html: require('!!raw-loader!./demos/disable-dates/disable-dates.html'),
+        component: rawDemosDisableDatesDisableDatesTs,
+        html: rawDemosDisableDatesDisableDatesHtml,
         description: `
           <p>You can set which dates should be disabled with <code>datesDisabled</code></p>
           <p>In the following example <code>datesDisabled</code> is set with an array to disable 2020-02-05 and 2020-02-09.</p>
@@ -211,8 +300,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Dates enabled',
         anchor: 'dates-enabled',
-        component: require('!!raw-loader!./demos/enable-dates/enable-dates.ts'),
-        html: require('!!raw-loader!./demos/enable-dates/enable-dates.html'),
+        component: rawDemosEnableDatesEnableDatesTs,
+        html: rawDemosEnableDatesEnableDatesHtml,
         description: `
           <p>You can set which dates should be enable with <code>datesEnabled</code></p>
           <p>In the following example <code>datesEnabled</code> is set with an array to enable 2020-02-06, 2020-02-08 and 2020-02-11. All other dates are disabled</p>
@@ -222,8 +311,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Display one month',
         anchor: 'display-one-month',
-        component: require('!!raw-loader!./demos/daterangepicker-display-one-month/display-one-month.ts'),
-        html: require('!!raw-loader!./demos/daterangepicker-display-one-month/display-one-month.html'),
+        component: rawDemosDaterangepickerDisplayOneMonthDisplayOneMonthTs,
+        html: rawDemosDaterangepickerDisplayOneMonthDisplayOneMonthHtml,
         description: `<p>You can configure, how many months  you want to show for daterangepicker via <code>displayMonths</code> in <code>BsDaterangepickerConfig.</code></p>
         <p>With <code>displayOneMonthRange</code> you can show only one month for two cases</p>`,
         outlet: DemoDateRangePickerDisplayOneMonth
@@ -231,8 +320,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Min-mode',
         anchor: 'min-mode',
-        component: require('!!raw-loader!./demos/min-mode/min-mode.component.ts'),
-        html: require('!!raw-loader!./demos/min-mode/min-mode.component.html'),
+        component: rawDemosMinModeMinModeComponentTs,
+        html: rawDemosMinModeMinModeComponentHtml,
         description: `
           <p>You can set min view mode of datepicker using <code>minMode</code> property</p>
           <p>In the following example <code>minMode</code> is set to 'month'</p>`,
@@ -241,24 +330,24 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Disabled',
         anchor: 'disabled-datepicker',
-        component: require('!!raw-loader!./demos/disabled/disabled.component.ts'),
-        html: require('!!raw-loader!./demos/disabled/disabled.component.html'),
+        component: rawDemosDisabledDisabledComponentTs,
+        html: rawDemosDisabledDisabledComponentHtml,
         description: `<p>If you want to disable datepicker's or daterangepicker's content set <code>isDisabled</code> property to true</p>`,
         outlet: DemoDatepickerDisabledComponent
       },
       {
         title: 'Custom today class',
         anchor: 'today-class',
-        component: require('!!raw-loader!./demos/custom-today-class/custom-today-class.component.ts'),
-        html: require('!!raw-loader!./demos/custom-today-class/custom-today-class.component.html'),
+        component: rawDemosCustomTodayClassCustomTodayClassComponentTs,
+        html: rawDemosCustomTodayClassCustomTodayClassComponentHtml,
         description: `<p>If you want to add custom class to current day datepicker's content set value to <code>customTodayClass</code> option in <code>bsConfig</code></p>`,
         outlet: DemoDatepickerCustomTodayClassComponent
       },
       {
         title: 'Forms',
         anchor: 'forms',
-        component: require('!!raw-loader!./demos/forms/forms.component.ts'),
-        html: require('!!raw-loader!./demos/forms/forms.component.html'),
+        component: rawDemosFormsFormsComponentTs,
+        html: rawDemosFormsFormsComponentHtml,
         description: `<p>Datepicker and daterangepicker can be used in forms. Keep in mind that
           value of <code>ngModel</code> is <code>Date</code> object for datepicker and array of 2
           <code>Date</code> objects for daterangepicker</p>`,
@@ -267,23 +356,23 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Reactive forms',
         anchor: 'reactive-forms',
-        component: require('!!raw-loader!./demos/reactive-forms/reactive-forms.component.ts'),
-        html: require('!!raw-loader!./demos/reactive-forms/reactive-forms.component.html'),
+        component: rawDemosReactiveFormsReactiveFormsComponentTs,
+        html: rawDemosReactiveFormsReactiveFormsComponentHtml,
         outlet: DemoDatepickerReactiveFormsComponent
       },
       {
         title: 'Return focus to input',
         anchor: 'return-focus-to-input',
-        component: require('!!raw-loader!./demos/return-focus-to-input/return-focus-to-input.component.ts'),
-        html: require('!!raw-loader!./demos/return-focus-to-input/return-focus-to-input.component.html'),
+        component: rawDemosReturnFocusToInputReturnFocusToInputComponentTs,
+        html: rawDemosReturnFocusToInputReturnFocusToInputComponentHtml,
         description: `<p>Allows to return focus to input of datepicker or daterangepicker after the date or daterange selection</p>`,
         outlet: DemoDatePickerReturnFocusToInputComponent
       },
       {
         title: 'Manual triggering',
         anchor: 'triggers-manual',
-        component: require('!!raw-loader!./demos/triggers-manual/triggers-manual.ts'),
-        html: require('!!raw-loader!./demos/triggers-manual/triggers-manual.html'),
+        component: rawDemosTriggersManualTriggersManualTs,
+        html: rawDemosTriggersManualTriggersManualHtml,
         description: `<p>You can manage datepicker's state by using its <code>show()</code>, <code>hide()</code>
           and <code>toggle()</code> methods</p>`,
         outlet: DemoDatepickerTriggersManualComponent
@@ -291,72 +380,72 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Placement',
         anchor: 'placement',
-        component: require('!!raw-loader!./demos/placement/placement.ts'),
-        html: require('!!raw-loader!./demos/placement/placement.html'),
+        component: rawDemosPlacementPlacementTs,
+        html: rawDemosPlacementPlacementHtml,
         description: `<p>Add <code>placement</code> property if you want to change placement</p>`,
         outlet: DemoDatepickerPlacementComponent
       },
       {
         title: 'Config method',
         anchor: 'config-method',
-        component: require('!!raw-loader!./demos/config-method/config-method.ts'),
-        html: require('!!raw-loader!./demos/config-method/config-method.html'),
+        component: rawDemosConfigMethodConfigMethodTs,
+        html: rawDemosConfigMethodConfigMethodHtml,
         description: `<p>You can manage datepicker's options by using its <code>setConfig()</code> method</p>`,
         outlet: DemoDatepickerConfigMethodComponent
       },
       {
         title: 'Visibility Events',
         anchor: 'visibility-events',
-        component: require('!!raw-loader!./demos/visibility-events/visibility-events.ts'),
-        html: require('!!raw-loader!./demos/visibility-events/visibility-events.html'),
+        component: rawDemosVisibilityEventsVisibilityEventsTs,
+        html: rawDemosVisibilityEventsVisibilityEventsHtml,
         description: `<p>You can subscribe to datepicker's visibility events</p>`,
         outlet: DemoDatePickerVisibilityEventsComponent
       },
       {
         title: 'Value change event',
         anchor: 'value-change-event',
-        component: require('!!raw-loader!./demos/value-change-event/value-change-event.ts'),
-        html: require('!!raw-loader!./demos/value-change-event/value-change-event.html'),
+        component: rawDemosValueChangeEventValueChangeEventTs,
+        html: rawDemosValueChangeEventValueChangeEventHtml,
         description: `<p>You can subscribe to datepicker's value change event (<code>bsValueChange</code>).</p>`,
         outlet: DemoDatepickerValueChangeEventComponent
       },
       {
         title: 'Config properties',
         anchor: 'config-object',
-        component: require('!!raw-loader!./demos/config-object/config-object.ts'),
-        html: require('!!raw-loader!./demos/config-object/config-object.html'),
+        component: rawDemosConfigObjectConfigObjectTs,
+        html: rawDemosConfigObjectConfigObjectHtml,
         description: `<p>You can configure the datepicker via its <code>bsConfig</code> option</p>`,
         outlet: DemoDatePickerConfigObjectComponent
       },
       {
         title: 'Select dates from other month',
         anchor: 'select-dates-from-other-month',
-        component: require('!!raw-loader!./demos/select-dates-from-other-months/select-dates-from-other-months.ts'),
-        html: require('!!raw-loader!./demos/select-dates-from-other-months/select-dates-from-other-months.html'),
+        component: rawDemosSelectDatesFromOtherMonthsSelectDatesFromOtherMonthsTs,
+        html: rawDemosSelectDatesFromOtherMonthsSelectDatesFromOtherMonthsHtml,
         description: `<p>You can enable dates from other months via <code>selectFromOtherMonth</code> option in <code>bsConfig</code></p>`,
         outlet: DemoDatePickerSelectDatesFromOtherMonthsComponent
       },
       {
         title: 'Select week',
         anchor: 'select-week',
-        component: require('!!raw-loader!./demos/select-week/select-week.ts'),
-        html: require('!!raw-loader!./demos/select-week/select-week.html'),
+        component: rawDemosSelectWeekSelectWeekTs,
+        html: rawDemosSelectWeekSelectWeekHtml,
         description: `<p>You can enable ability to select a week number (first day of the week will be selected) via <code>selectWeek</code> option in <code>bsConfig</code></p>`,
         outlet: DemoDatePickerSelectWeekComponent
       },
       {
         title: 'Select week range',
         anchor: 'select-week-range',
-        component: require('!!raw-loader!./demos/select-week-range/select-week-range.ts'),
-        html: require('!!raw-loader!./demos/select-week-range/select-week-range.html'),
+        component: rawDemosSelectWeekRangeSelectWeekRangeTs,
+        html: rawDemosSelectWeekRangeSelectWeekRangeHtml,
         description: `<p>You can enable ability to select a week number (range with first weekday - last weekday will be selected) via <code>selectWeekRange</code> option in <code>bsConfig</code></p>`,
         outlet: DemoDatePickerSelectWeekRangeComponent
       },
       {
         title: 'Outside click',
         anchor: 'outside-click',
-        component: require('!!raw-loader!./demos/outside-click/outside-click.ts'),
-        html: require('!!raw-loader!./demos/outside-click/outside-click.html'),
+        component: rawDemosOutsideClickOutsideClickTs,
+        html: rawDemosOutsideClickOutsideClickHtml,
         description: `<p>Datepicker closes after outside click by default. To change
           this behavior, use <code>outsideClick</code> property.</p>`,
         outlet: DemoDatepickerOutsideClickComponent
@@ -364,16 +453,16 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Trigger by isOpen property',
         anchor: 'trigger-by-isopen-property',
-        component: require('!!raw-loader!./demos/trigger-by-isopen-property/trigger-by-isopen-property.ts'),
-        html: require('!!raw-loader!./demos/trigger-by-isopen-property/trigger-by-isopen-property.html'),
+        component: rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyTs,
+        html: rawDemosTriggerByIsopenPropertyTriggerByIsopenPropertyHtml,
         description: `<p>Datepicker can be shown or hidden by changing <code>isOpen</code> property</p>`,
         outlet: DemoDatepickerByIsOpenPropComponent
       },
       {
         title: 'Custom triggers',
         anchor: 'triggers-custom',
-        component: require('!!raw-loader!./demos/triggers-custom/triggers-custom.ts'),
-        html: require('!!raw-loader!./demos/triggers-custom/triggers-custom.html'),
+        component: rawDemosTriggersCustomTriggersCustomTs,
+        html: rawDemosTriggersCustomTriggersCustomHtml,
         description: `<p>Use different triggers ( for example <code>keydown</code>, <code>mouseenter</code> and
           <code>dblclick</code> ) to interact with datepicker</p>`,
         outlet: DemoDatepickerTriggersCustomComponent
@@ -381,41 +470,41 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Date custom classes',
         anchor: 'date-custom-classes',
-        component: require('!!raw-loader!./demos/date-custom-classes/date-custom-classes.ts'),
-        html: require('!!raw-loader!./demos/date-custom-classes/date-custom-classes.html'),
-        style: require('!!raw-loader!./demos/date-custom-classes/date-custom-classes.scss'),
+        component: rawDemosDateCustomClassesDateCustomClassesTs,
+        html: rawDemosDateCustomClassesDateCustomClassesHtml,
+        style: rawDemosDateCustomClassesDateCustomClassesScss.default,
         description: `<p>Style dates with custom classes</p>`,
         outlet: DemoDatepickerDateCustomClassesComponent
       },
       {
         title: 'Tooltip for selected dates',
         anchor: 'tooltip-for-selected-dates',
-        component: require('!!raw-loader!./demos/tooltip-to-selected-dates/tooltip-to-selected-dates.ts'),
-        html: require('!!raw-loader!./demos/tooltip-to-selected-dates/tooltip-to-selected-dates.html'),
+        component: rawDemosTooltipToSelectedDatesTooltipToSelectedDatesTs,
+        html: rawDemosTooltipToSelectedDatesTooltipToSelectedDatesHtml,
         description: ``,
         outlet: DemoDatePickerTooltipToSelectedDates
       },
       {
         title: 'Quick select ranges',
         anchor: 'quick-select-ranges',
-        component: require('!!raw-loader!./demos/quick-select-ranges/quick-select-ranges.ts'),
-        html: require('!!raw-loader!./demos/quick-select-ranges/quick-select-ranges.html'),
+        component: rawDemosQuickSelectRangesQuickSelectRangesTs,
+        html: rawDemosQuickSelectRangesQuickSelectRangesHtml,
         description: `<p>Quick select ranges can be added to Daterangepicker using <code>ranges</code></p>`,
         outlet: DemoDatePickerQuickSelectRangesComponent
       },
       {
         title: 'Prevent change to next month',
         anchor: 'prevent-change-to-next-month',
-        component: require('!!raw-loader!./demos/prevent-change-to-next-month/prevent-change-to-next-month.component.ts'),
-        html: require('!!raw-loader!./demos/prevent-change-to-next-month/prevent-change-to-next-month.component.html'),
+        component: rawDemosPreventChangeToNextMonthPreventChangeToNextMonthComponentTs,
+        html: rawDemosPreventChangeToNextMonthPreventChangeToNextMonthComponentHtml,
         description: `<p>Pick some date from second month and it wont change to the next month</p>`,
         outlet: DemoDatepickerPreventChangeToNextMonthComponent
       },
       {
         title: 'Previous month in Daterangepicker',
         anchor: 'daterangepicker-previous-month',
-        component: require('!!raw-loader!./demos/daterangepicker-show-previous-month/show-previous-month.ts'),
-        html: require('!!raw-loader!./demos/daterangepicker-show-previous-month/show-previous-month.html'),
+        component: rawDemosDaterangepickerShowPreviousMonthShowPreviousMonthTs,
+        html: rawDemosDaterangepickerShowPreviousMonthShowPreviousMonthHtml,
         description: `<p>Pick previous & current month instead of current & next month.When daterange selected and related to current month,
         daterangepicker will works by default, with current & next month</p>`,
         outlet: DemoDateRangePickerShowPreviousMonth
@@ -423,32 +512,32 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Show Today Button',
         anchor: 'datepicker-show-today-button',
-        component: require('!!raw-loader!./demos/today-button/today-button.ts'),
-        html: require('!!raw-loader!./demos/today-button/today-button.html'),
+        component: rawDemosTodayButtonTodayButtonTs,
+        html: rawDemosTodayButtonTodayButtonHtml,
         description: `<p>Display an optional 'Today' button that will automatically select today's date.</p>`,
         outlet: DemoDatepickerTodayButtonComponent,
       },
       {
         title: 'Show Clear Button',
         anchor: 'datepicker-show-clear-button',
-        component: require('!!raw-loader!./demos/clear-button/clear-button.ts'),
-        html: require('!!raw-loader!./demos/clear-button/clear-button.html'),
+        component: rawDemosClearButtonClearButtonTs,
+        html: rawDemosClearButtonClearButtonHtml,
         description: `<p>Display an optional 'Clear' button that will automatically clear date.</p>`,
         outlet: DemoDatepickerClearButtonComponent
       },
       {
         title: 'Start view',
         anchor: 'start-view',
-        component: require('!!raw-loader!./demos/start-view/start-view.ts'),
-        html: require('!!raw-loader!./demos/start-view/start-view.html'),
+        component: rawDemosStartViewStartViewTs,
+        html: rawDemosStartViewStartViewHtml,
         description: `<p>Add <code>startView</code> property if you want to change start view</p>`,
         outlet: DemoDatepickerStartViewComponent
       },
       {
         title: 'Max Date Range in Daterangepicker',
         anchor: 'daterangepicker-max-date-range',
-        component: require('!!raw-loader!./demos/max-date-range/max-date-range.ts'),
-        html: require('!!raw-loader!./demos/max-date-range/max-date-range.html'),
+        component: rawDemosMaxDateRangeMaxDateRangeTs,
+        html: rawDemosMaxDateRangeMaxDateRangeHtml,
         description: `<p>Max date range after first date selection can be added to Daterangepicker using <code>maxDateRange</code>.</p>
         <p>If you also use <code>maxDate</code> property, you can't select second date, which exceeds value of <code>maxDate</code>.</p>`,
         outlet: DemoDateRangePickerMaxDateRangeComponent
@@ -456,8 +545,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'With timepicker',
         anchor: 'with-timepicker',
-        component: require('!!raw-loader!./demos/with-timepicker/with-timepicker'),
-        html: require('!!raw-loader!./demos/with-timepicker/with-timepicker.html'),
+        component: rawDemosWithTimepickerWithTimepicker,
+        html: rawDemosWithTimepickerWithTimepickerHtml,
         description: `You can enable timepicker via <code>withTimepicker</code> config option`,
         outlet: DemoDatepickerWithTimepickerComponent
       },
@@ -467,7 +556,7 @@ export const demoComponentContent: ContentSection[] = [
     name: 'Installation',
     anchor: 'api-reference',
     tabName: 'api',
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">datepicker</span>',
     outlet: ApiSectionsComponent,
     content: [

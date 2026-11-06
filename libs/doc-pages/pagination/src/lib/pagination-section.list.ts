@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoPaginationBasicComponent } from './demos/basic/basic';
 import { DemoPaginationPagerComponent } from './demos/pager/pager';
 import { DemoPaginationLimitComponent } from './demos/limit/limit';
@@ -22,6 +24,36 @@ import { DemoPaginationDisabledComponent } from './demos/disabled/disabled';
 import { DemoPaginationRotateComponent } from './demos/rotate/rotate';
 import { DemoPaginationCustomTemplateComponent } from './demos/custom-template/custom-template';
 
+import * as rawDemosBasicBasicTs from './demos/basic/basic.ts?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosManualSwitchingManualSwitchingTs from './demos/manual-switching/manual-switching.ts?raw' with { loader: 'text' };
+import * as rawDemosManualSwitchingManualSwitchingHtml from './demos/manual-switching/manual-switching.html?raw' with { loader: 'text' };
+import * as rawDemosPageChangedEventPageChangedEventTs from './demos/page-changed-event/page-changed-event.ts?raw' with { loader: 'text' };
+import * as rawDemosPageChangedEventPageChangedEventHtml from './demos/page-changed-event/page-changed-event.html?raw' with { loader: 'text' };
+import * as rawDemosPagesCountChangedPagesCountChangedTs from './demos/pages-count-changed/pages-count-changed.ts?raw' with { loader: 'text' };
+import * as rawDemosPagesCountChangedPagesCountChangedHtml from './demos/pages-count-changed/pages-count-changed.html?raw' with { loader: 'text' };
+import * as rawDemosBoundaryLinksBoundaryLinksTs from './demos/boundary-links/boundary-links.ts?raw' with { loader: 'text' };
+import * as rawDemosBoundaryLinksBoundaryLinksHtml from './demos/boundary-links/boundary-links.html?raw' with { loader: 'text' };
+import * as rawDemosDirectionLinksDirectionLinksTs from './demos/direction-links/direction-links.ts?raw' with { loader: 'text' };
+import * as rawDemosDirectionLinksDirectionLinksHtml from './demos/direction-links/direction-links.html?raw' with { loader: 'text' };
+import * as rawDemosCustomLinksContentCustomLinksContentTs from './demos/custom-links-content/custom-links-content.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomLinksContentCustomLinksContentHtml from './demos/custom-links-content/custom-links-content.html?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledTs from './demos/disabled/disabled.ts?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledHtml from './demos/disabled/disabled.html?raw' with { loader: 'text' };
+import * as rawDemosLimitLimitTs from './demos/limit/limit.ts?raw' with { loader: 'text' };
+import * as rawDemosLimitLimitHtml from './demos/limit/limit.html?raw' with { loader: 'text' };
+import * as rawDemosRotateRotateTs from './demos/rotate/rotate.ts?raw' with { loader: 'text' };
+import * as rawDemosRotateRotateHtml from './demos/rotate/rotate.html?raw' with { loader: 'text' };
+import * as rawDemosContentSwitchingContentSwitchingTs from './demos/content-switching/content-switching.ts?raw' with { loader: 'text' };
+import * as rawDemosContentSwitchingContentSwitchingHtml from './demos/content-switching/content-switching.html?raw' with { loader: 'text' };
+import * as rawDemosPagerPagerTs from './demos/pager/pager.ts?raw' with { loader: 'text' };
+import * as rawDemosPagerPagerHtml from './demos/pager/pager.html?raw' with { loader: 'text' };
+import * as rawDemosCustomTemplateCustomTemplateTs from './demos/custom-template/custom-template.ts?raw' with { loader: 'text' };
+import * as rawDemosCustomTemplateCustomTemplateHtml from './demos/custom-template/custom-template.html?raw' with { loader: 'text' };
+import * as rawDemosStylingGlobalStylingGlobalTs from './demos/styling-global/styling-global.ts?raw' with { loader: 'text' };
+import * as rawDemosStylingGlobalStylingGlobalHtml from './demos/styling-global/styling-global.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -33,64 +65,64 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic.ts'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasicTs,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoPaginationBasicComponent
       },
       {
         title: 'Manual switching page',
         anchor: 'manual-switching',
-        component: require('!!raw-loader!./demos/manual-switching/manual-switching.ts'),
-        html: require('!!raw-loader!./demos/manual-switching/manual-switching.html'),
+        component: rawDemosManualSwitchingManualSwitchingTs,
+        html: rawDemosManualSwitchingManualSwitchingHtml,
         outlet: DemoPaginationManualSwitchingComponent
       },
       {
         title: 'Page changed event',
         anchor: 'page-changed-event',
-        component: require('!!raw-loader!./demos/page-changed-event/page-changed-event.ts'),
-        html: require('!!raw-loader!./demos/page-changed-event/page-changed-event.html'),
+        component: rawDemosPageChangedEventPageChangedEventTs,
+        html: rawDemosPageChangedEventPageChangedEventHtml,
         outlet: DemoPaginationPageChangedComponent
       },
       {
         title: 'Pages count changed event',
         anchor: 'pages-count-changed',
-        component: require('!!raw-loader!./demos/pages-count-changed/pages-count-changed.ts'),
-        html: require('!!raw-loader!./demos/pages-count-changed/pages-count-changed.html'),
+        component: rawDemosPagesCountChangedPagesCountChangedTs,
+        html: rawDemosPagesCountChangedPagesCountChangedHtml,
         outlet: DemoPaginationPagesCountChangedComponent
       },
       {
         title: 'Boundary links',
         anchor: 'boundary-links',
-        component: require('!!raw-loader!./demos/boundary-links/boundary-links.ts'),
-        html: require('!!raw-loader!./demos/boundary-links/boundary-links.html'),
+        component: rawDemosBoundaryLinksBoundaryLinksTs,
+        html: rawDemosBoundaryLinksBoundaryLinksHtml,
         outlet: DemoPaginationBoundaryLinksComponent
       },
       {
         title: 'Direction links',
         anchor: 'direction-links',
-        component: require('!!raw-loader!./demos/direction-links/direction-links.ts'),
-        html: require('!!raw-loader!./demos/direction-links/direction-links.html'),
+        component: rawDemosDirectionLinksDirectionLinksTs,
+        html: rawDemosDirectionLinksDirectionLinksHtml,
         outlet: DemoPaginationDirectionLinksComponent
       },
       {
         title: 'Custom links content',
         anchor: 'custom-links-content',
-        component: require('!!raw-loader!./demos/custom-links-content/custom-links-content.ts'),
-        html: require('!!raw-loader!./demos/custom-links-content/custom-links-content.html'),
+        component: rawDemosCustomLinksContentCustomLinksContentTs,
+        html: rawDemosCustomLinksContentCustomLinksContentHtml,
         outlet: DemoPaginationCustomLinksContentComponent
       },
       {
         title: 'Disabled',
         anchor: 'pagination-disabled',
-        component: require('!!raw-loader!./demos/disabled/disabled.ts'),
-        html: require('!!raw-loader!./demos/disabled/disabled.html'),
+        component: rawDemosDisabledDisabledTs,
+        html: rawDemosDisabledDisabledHtml,
         outlet: DemoPaginationDisabledComponent
       },
       {
         title: 'Limits',
         anchor: 'pagination-limit',
-        component: require('!!raw-loader!./demos/limit/limit.ts'),
-        html: require('!!raw-loader!./demos/limit/limit.html'),
+        component: rawDemosLimitLimitTs,
+        html: rawDemosLimitLimitHtml,
         description: `<p>Limit the maximum visible page numbers</p>`,
         outlet: DemoPaginationLimitComponent
       },
@@ -98,23 +130,23 @@ export const demoComponentContent: ContentSection[] = [
 
         title: 'Centering the active page link',
         anchor: 'pagination-rotate',
-        component: require('!!raw-loader!./demos/rotate/rotate.ts'),
-        html: require('!!raw-loader!./demos/rotate/rotate.html'),
+        component: rawDemosRotateRotateTs,
+        html: rawDemosRotateRotateHtml,
         description: `<p>Set current page link to center</p>`,
         outlet: DemoPaginationRotateComponent
       },
       {
         title: 'Content switching',
         anchor: 'content-switching',
-        component: require('!!raw-loader!./demos/content-switching/content-switching.ts'),
-        html: require('!!raw-loader!./demos/content-switching/content-switching.html'),
+        component: rawDemosContentSwitchingContentSwitchingTs,
+        html: rawDemosContentSwitchingContentSwitchingHtml,
         outlet: DemoPaginationContentSwitchingComponent
       },
       {
         title: 'Pager',
         anchor: 'pagination-pager',
-        component: require('!!raw-loader!./demos/pager/pager.ts'),
-        html: require('!!raw-loader!./demos/pager/pager.html'),
+        component: rawDemosPagerPagerTs,
+        html: rawDemosPagerPagerHtml,
         outlet: DemoPaginationPagerComponent
       },
       {
@@ -136,16 +168,16 @@ export const demoComponentContent: ContentSection[] = [
             contains the page number.
           </p>
         `,
-        component: require('!!raw-loader!./demos/custom-template/custom-template.ts'),
-        html: require('!!raw-loader!./demos/custom-template/custom-template.html'),
+        component: rawDemosCustomTemplateCustomTemplateTs,
+        html: rawDemosCustomTemplateCustomTemplateHtml,
         outlet: DemoPaginationCustomTemplateComponent
       }
       /* TODO: temporary disabled pageBtnClass option
       {
         title: 'Styling',
         anchor: 'pagination-styling',
-        component: require('!!raw-loader!./demos/styling-global/styling-global.ts'),
-        html: require('!!raw-loader!./demos/styling-global/styling-global.html'),
+        component: rawDemosStylingGlobalStylingGlobalTs,
+        html: rawDemosStylingGlobalStylingGlobalHtml,
         outlet: DemoPaginationStylingComponent
       }*/
     ]
@@ -155,7 +187,7 @@ export const demoComponentContent: ContentSection[] = [
     anchor: 'api-reference',
     tabName: 'api',
     outlet: ApiSectionsComponent,
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">pagination</span>',
     content: [
       {

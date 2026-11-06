@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoTabsBasicComponent } from './demos/basic/basic';
 import { DemoTabsManualSelectionComponent } from './demos/manual-selection/manual-selection';
 import { DemoTabsDynamicComponent } from './demos/dynamic/dynamic';
@@ -21,6 +23,34 @@ import {
   NgApiDocConfigComponent
 } from '@ngx-bootstrap-doc/docs';
 
+import * as rawDemosBasicBasic from './demos/basic/basic?raw' with { loader: 'text' };
+import * as rawDemosBasicBasicHtml from './demos/basic/basic.html?raw' with { loader: 'text' };
+import * as rawDemosManualSelectionManualSelection from './demos/manual-selection/manual-selection?raw' with { loader: 'text' };
+import * as rawDemosManualSelectionManualSelectionHtml from './demos/manual-selection/manual-selection.html?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabled from './demos/disabled/disabled?raw' with { loader: 'text' };
+import * as rawDemosDisabledDisabledHtml from './demos/disabled/disabled.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamic from './demos/dynamic/dynamic?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicHtml from './demos/dynamic/dynamic.html?raw' with { loader: 'text' };
+import * as rawDemosPillsPills from './demos/pills/pills?raw' with { loader: 'text' };
+import * as rawDemosPillsPillsHtml from './demos/pills/pills.html?raw' with { loader: 'text' };
+import * as rawDemosVerticalPillsVerticalPills from './demos/vertical-pills/vertical-pills?raw' with { loader: 'text' };
+import * as rawDemosVerticalPillsVerticalPillsHtml from './demos/vertical-pills/vertical-pills.html?raw' with { loader: 'text' };
+import * as rawDemosJustifiedJustified from './demos/justified/justified?raw' with { loader: 'text' };
+import * as rawDemosJustifiedJustifiedHtml from './demos/justified/justified.html?raw' with { loader: 'text' };
+import * as rawDemosCustomClassCustomClass from './demos/custom-class/custom-class?raw' with { loader: 'text' };
+import * as rawDemosCustomClassCustomClassHtml from './demos/custom-class/custom-class.html?raw' with { loader: 'text' };
+import * as rawDemosSelectEventSelectEvent from './demos/select-event/select-event?raw' with { loader: 'text' };
+import * as rawDemosSelectEventSelectEventHtml from './demos/select-event/select-event.html?raw' with { loader: 'text' };
+import * as rawDemosConfigConfig from './demos/config/config?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigHtml from './demos/config/config.html?raw' with { loader: 'text' };
+import * as rawDemosCustomTemplateCustomTemplate from './demos/custom-template/custom-template?raw' with { loader: 'text' };
+import * as rawDemosCustomTemplateCustomTemplateHtml from './demos/custom-template/custom-template.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicContentRenderingDynamicContentRendering from './demos/dynamic-content-rendering/dynamic-content-rendering?raw' with { loader: 'text' };
+import * as rawDemosDynamicContentRenderingDynamicContentRenderingHtml from './demos/dynamic-content-rendering/dynamic-content-rendering.html?raw' with { loader: 'text' };
+import * as rawDemosDisabledKeyNavigationsDisabledKeyNavigations from './demos/disabled-key-navigations/disabled-key-navigations?raw' with { loader: 'text' };
+import * as rawDemosDisabledKeyNavigationsDisabledKeyNavigationsHtml from './demos/disabled-key-navigations/disabled-key-navigations.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -31,87 +61,87 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Basic',
         anchor: 'basic',
-        component: require('!!raw-loader!./demos/basic/basic'),
-        html: require('!!raw-loader!./demos/basic/basic.html'),
+        component: rawDemosBasicBasic,
+        html: rawDemosBasicBasicHtml,
         outlet: DemoTabsBasicComponent
       },
       {
         title: 'Manual selection',
         anchor: 'tabs-manual-select',
-        component: require('!!raw-loader!./demos/manual-selection/manual-selection'),
-        html: require('!!raw-loader!./demos/manual-selection/manual-selection.html'),
+        component: rawDemosManualSelectionManualSelection,
+        html: rawDemosManualSelectionManualSelectionHtml,
         outlet: DemoTabsManualSelectionComponent
       },
       {
         title: 'Disabled tabs',
         anchor: 'disabled',
-        component: require('!!raw-loader!./demos/disabled/disabled'),
-        html: require('!!raw-loader!./demos/disabled/disabled.html'),
+        component: rawDemosDisabledDisabled,
+        html: rawDemosDisabledDisabledHtml,
         outlet: DemoTabsDisabledComponent
       },
       {
         title: 'Dynamic tabs',
         anchor: 'tabs-dynamic',
-        component: require('!!raw-loader!./demos/dynamic/dynamic'),
-        html: require('!!raw-loader!./demos/dynamic/dynamic.html'),
+        component: rawDemosDynamicDynamic,
+        html: rawDemosDynamicDynamicHtml,
         outlet: DemoTabsDynamicComponent
       },
       {
         title: 'Pills',
         anchor: 'tabs-Pills',
-        component: require('!!raw-loader!./demos/pills/pills'),
-        html: require('!!raw-loader!./demos/pills/pills.html'),
+        component: rawDemosPillsPills,
+        html: rawDemosPillsPillsHtml,
         outlet: DemoTabsPillsComponent
       },
       {
         title: 'Vertical Pills',
         anchor: 'tabs-vertical-pills',
-        component: require('!!raw-loader!./demos/vertical-pills/vertical-pills'),
-        html: require('!!raw-loader!./demos/vertical-pills/vertical-pills.html'),
+        component: rawDemosVerticalPillsVerticalPills,
+        html: rawDemosVerticalPillsVerticalPillsHtml,
         outlet: DemoTabsVerticalPillsComponent
       },
       {
         title: 'Justified',
         anchor: 'tabs-justified',
-        component: require('!!raw-loader!./demos/justified/justified'),
-        html: require('!!raw-loader!./demos/justified/justified.html'),
+        component: rawDemosJustifiedJustified,
+        html: rawDemosJustifiedJustifiedHtml,
         description: '<p><i>Bootstrap 4 doesn\'t have justified classes</i></p>',
         outlet: DemoTabsJustifiedComponent
       },
       {
         title: 'Custom class',
         anchor: 'tabs-custom-class',
-        component: require('!!raw-loader!./demos/custom-class/custom-class'),
-        html: require('!!raw-loader!./demos/custom-class/custom-class.html'),
+        component: rawDemosCustomClassCustomClass,
+        html: rawDemosCustomClassCustomClassHtml,
         outlet: DemoTabsCustomClassComponent
       },
       {
         title: 'Select event',
         anchor: 'select-event',
-        component: require('!!raw-loader!./demos/select-event/select-event'),
-        html: require('!!raw-loader!./demos/select-event/select-event.html'),
+        component: rawDemosSelectEventSelectEvent,
+        html: rawDemosSelectEventSelectEventHtml,
         description: '<p>You can subscribe to tab\'s <code>select</code> event</p>',
         outlet: DemoTabsSelectEventComponent
       },
       {
         title: 'Configuring defaults',
         anchor: 'tabs-config-defaults',
-        component: require('!!raw-loader!./demos/config/config'),
-        html: require('!!raw-loader!./demos/config/config.html'),
+        component: rawDemosConfigConfig,
+        html: rawDemosConfigConfigHtml,
         outlet: DemoTabsConfigComponent
       },
       {
         title: 'Custom template',
         anchor: 'tabs-custom-template',
-        component: require('!!raw-loader!./demos/custom-template/custom-template'),
-        html: require('!!raw-loader!./demos/custom-template/custom-template.html'),
+        component: rawDemosCustomTemplateCustomTemplate,
+        html: rawDemosCustomTemplateCustomTemplateHtml,
         outlet: DemoTabsCustomComponent
       },
       {
         title: 'Dynamic content rendering',
         anchor: 'dynamic-content-rendering',
-        component: require('!!raw-loader!./demos/dynamic-content-rendering/dynamic-content-rendering'),
-        html: require('!!raw-loader!./demos/dynamic-content-rendering/dynamic-content-rendering.html'),
+        component: rawDemosDynamicContentRenderingDynamicContentRendering,
+        html: rawDemosDynamicContentRenderingDynamicContentRenderingHtml,
         outlet: DynamicContentRenderingComponent
       },
       {
@@ -122,8 +152,8 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Disable key navigations',
         anchor: 'disable-key-navigations',
-        component: require('!!raw-loader!./demos/disabled-key-navigations/disabled-key-navigations'),
-        html: require('!!raw-loader!./demos/disabled-key-navigations/disabled-key-navigations.html'),
+        component: rawDemosDisabledKeyNavigationsDisabledKeyNavigations,
+        html: rawDemosDisabledKeyNavigationsDisabledKeyNavigationsHtml,
         outlet: DemoDisabledKeyNavigationsComponent
       }
     ]
@@ -133,7 +163,7 @@ export const demoComponentContent: ContentSection[] = [
     anchor: 'api-reference',
     tabName: 'api',
     outlet: ApiSectionsComponent,
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">tabs</span>',
     content: [
       {

@@ -96,7 +96,7 @@ export const ngdoc: any = {
       },
       {
         "name": "field",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>field for sorting</p>\n"
       }
     ]
@@ -172,7 +172,7 @@ export const ngdoc: any = {
           },
           {
             "name": "e",
-            "type": "Event"
+            "type": "Event | undefined"
           }
         ],
         "returnType": "void"
@@ -216,7 +216,7 @@ export const ngdoc: any = {
       },
       {
         "name": "container",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>a selector specifying the element the tooltip should be appended to.</p>\n"
       },
       {
@@ -323,7 +323,7 @@ export const ngdoc: any = {
       },
       {
         "name": "max",
-        "type": "Date",
+        "type": "Date | undefined",
         "description": "<p>maximum time user can select</p>\n"
       },
       {
@@ -333,7 +333,7 @@ export const ngdoc: any = {
       },
       {
         "name": "min",
-        "type": "Date",
+        "type": "Date | undefined",
         "description": "<p>minimum time user can select</p>\n"
       },
       {
@@ -483,37 +483,37 @@ export const ngdoc: any = {
     "properties": [
       {
         "name": "appendToBody",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>If true component will be attached to body</p>\n"
       },
       {
         "name": "attachment",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>A string of the form &#39;vert-attachment horiz-attachment&#39; or &#39;placement&#39;</p>\n<ul>\n<li>placement can be &quot;top&quot;, &quot;bottom&quot;, &quot;left&quot;, &quot;right&quot;\nnot yet supported:</li>\n<li>vert-attachment can be any of &#39;top&#39;, &#39;middle&#39;, &#39;bottom&#39;</li>\n<li>horiz-attachment can be any of &#39;left&#39;, &#39;center&#39;, &#39;right&#39;</li>\n</ul>\n"
       },
       {
         "name": "element",
-        "type": "string | HTMLElement | ElementRef<any>",
+        "type": "string | HTMLElement | ElementRef<any> | undefined",
         "description": "<p>The DOM element, ElementRef, or a selector string of an element which will be moved</p>\n"
       },
       {
         "name": "offset",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>A string of the form &#39;vert-offset horiz-offset&#39;</p>\n<ul>\n<li>vert-offset and horiz-offset can be of the form &quot;20px&quot; or &quot;55%&quot;</li>\n</ul>\n"
       },
       {
         "name": "target",
-        "type": "string | HTMLElement | ElementRef<any>",
+        "type": "string | HTMLElement | ElementRef<any> | undefined",
         "description": "<p>The DOM element, ElementRef, or a selector string of an element which the element will be attached to</p>\n"
       },
       {
         "name": "targetAttachment",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>A string similar to <code>attachment</code>. The one difference is that, if it&#39;s not provided,\n<code>targetAttachment</code> will assume the mirror image of <code>attachment</code>.</p>\n"
       },
       {
         "name": "targetOffset",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>A string similar to <code>offset</code>, but referring to the offset of the target</p>\n"
       }
     ]
@@ -578,7 +578,7 @@ export const ngdoc: any = {
       },
       {
         "name": "container",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>A selector specifying the element the popover should be appended to.</p>\n"
       },
       {
@@ -621,7 +621,7 @@ export const ngdoc: any = {
       },
       {
         "name": "popover",
-        "type": "string | TemplateRef<any>",
+        "type": "string | TemplateRef<any> | undefined",
         "description": "<p>Content to be displayed as popover.</p>\n"
       },
       {
@@ -636,7 +636,7 @@ export const ngdoc: any = {
       },
       {
         "name": "popoverTitle",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>Title of a popover.</p>\n"
       },
       {
@@ -661,7 +661,7 @@ export const ngdoc: any = {
       },
       {
         "name": "container",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>A selector specifying the element the popover should be appended to.</p>\n"
       },
       {
@@ -789,7 +789,7 @@ export const ngdoc: any = {
         "args": [
           {
             "name": "event",
-            "type": "Event"
+            "type": "Event | undefined"
           }
         ],
         "returnType": "void"
@@ -816,7 +816,7 @@ export const ngdoc: any = {
     "properties": [
       {
         "name": "closeInterceptor",
-        "type": "CloseInterceptorFn",
+        "type": "CloseInterceptorFn | undefined",
         "description": "<p>allows to provide a callback to intercept the closure of the modal</p>\n"
       },
       {
@@ -826,7 +826,7 @@ export const ngdoc: any = {
       },
       {
         "name": "dismissReason",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>This field contains last dismiss reason.\nPossible values: <code>backdrop-click</code>, <code>esc</code> and <code>id: number</code>\n(if modal was closed by direct call of <code>.hide()</code>).</p>\n"
       },
       {
@@ -1008,7 +1008,7 @@ export const ngdoc: any = {
           },
           {
             "name": "config",
-            "type": "IsFocusableConfig"
+            "type": "IsFocusableConfig | undefined"
           }
         ],
         "returnType": "boolean"
@@ -1060,7 +1060,7 @@ export const ngdoc: any = {
             "type": "\"start\" | \"end\""
           }
         ],
-        "returnType": "HTMLElement"
+        "returnType": "HTMLElement | null"
       },
       {
         "name": "focusInitialElement",
@@ -1095,7 +1095,7 @@ export const ngdoc: any = {
             "type": "HTMLElement"
           }
         ],
-        "returnType": "HTMLElement"
+        "returnType": "HTMLElement | null"
       },
       {
         "name": "_getLastTabbableElement",
@@ -1106,7 +1106,7 @@ export const ngdoc: any = {
             "type": "HTMLElement"
           }
         ],
-        "returnType": "HTMLElement"
+        "returnType": "HTMLElement | null"
       },
       {
         "name": "_createAnchor",
@@ -1191,7 +1191,7 @@ export const ngdoc: any = {
     "properties": [
       {
         "name": "_previouslyFocusedElement",
-        "type": "HTMLElement",
+        "type": "HTMLElement | null",
         "description": "<p>Previously focused element to restore focus to upon destroy when using autoCapture.</p>\n"
       },
       {
@@ -1324,7 +1324,7 @@ export const ngdoc: any = {
     "properties": [
       {
         "name": "_listener",
-        "type": "(e: FocusEvent) => void",
+        "type": "((e: FocusEvent) => void) | null",
         "description": "<p>Focus event handler.</p>\n"
       }
     ]
@@ -1364,7 +1364,7 @@ export const ngdoc: any = {
           },
           {
             "name": "config",
-            "type": "ConfigurableFocusTrapConfig"
+            "type": "ConfigurableFocusTrapConfig | undefined"
           }
         ],
         "returnType": "ConfigurableFocusTrap"
@@ -1491,42 +1491,42 @@ export const ngdoc: any = {
       },
       {
         "name": "customTodayClass",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>Add class to current day</p>\n"
       },
       {
         "name": "dateCustomClasses",
-        "type": "DatepickerDateCustomClasses[]",
+        "type": "DatepickerDateCustomClasses[] | undefined",
         "description": "<p>Default date custom classes for all date/range pickers</p>\n"
       },
       {
         "name": "datesDisabled",
-        "type": "Date[]",
+        "type": "Date[] | undefined",
         "description": "<p>Disable specific dates</p>\n"
       },
       {
         "name": "datesEnabled",
-        "type": "Date[]",
+        "type": "Date[] | undefined",
         "description": "<p>Enable specific dates</p>\n"
       },
       {
         "name": "dateTooltipTexts",
-        "type": "DatepickerDateTooltipText[]",
+        "type": "DatepickerDateTooltipText[] | undefined",
         "description": "<p>Default tooltip text for all date/range pickers</p>\n"
       },
       {
         "name": "daysDisabled",
-        "type": "number[]",
+        "type": "number[] | undefined",
         "description": "<p>Disable specific days, e.g. [0,6] will disable all Saturdays and Sundays</p>\n"
       },
       {
         "name": "displayOneMonthRange",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>Show one months for special cases (only for dateRangePicker)</p>\n<ol>\n<li>maxDate is equal to today&#39;s date</li>\n<li>minDate&#39;s month is equal to maxDate&#39;s month</li>\n</ol>\n"
       },
       {
         "name": "initCurrentTime",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>Set current hours, minutes, seconds and milliseconds for bsValue</p>\n"
       },
       {
@@ -1537,27 +1537,27 @@ export const ngdoc: any = {
       },
       {
         "name": "maxDate",
-        "type": "Date",
+        "type": "Date | undefined",
         "description": "<p>Default max date for all date/range pickers</p>\n"
       },
       {
         "name": "maxDateRange",
-        "type": "number",
+        "type": "number | undefined",
         "description": "<p>Max Date Range in days</p>\n"
       },
       {
         "name": "minDate",
-        "type": "Date",
+        "type": "Date | undefined",
         "description": "<p>Default min date for all date/range pickers</p>\n"
       },
       {
         "name": "minMode",
-        "type": "BsDatepickerViewMode",
+        "type": "BsDatepickerViewMode | undefined",
         "description": "<p>Default mode for all date pickers</p>\n"
       },
       {
         "name": "preventChangeToNextMonth",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>Prevents change to next month for right calendar in two calendars view (dateRangePicker only)</p>\n"
       },
       {
@@ -1568,7 +1568,7 @@ export const ngdoc: any = {
       },
       {
         "name": "ranges",
-        "type": "BsCustomDates[]",
+        "type": "BsCustomDates[] | undefined",
         "description": "<p>Predefined ranges</p>\n"
       },
       {
@@ -1579,17 +1579,17 @@ export const ngdoc: any = {
       },
       {
         "name": "selectFromOtherMonth",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>Makes dates from other months active</p>\n"
       },
       {
         "name": "selectWeek",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>Allows select first date of the week by click on week number</p>\n"
       },
       {
         "name": "selectWeekDateRange",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>Allows select daterange as first and last day of week by click on week number (dateRangePicker only)</p>\n"
       },
       {
@@ -1600,7 +1600,7 @@ export const ngdoc: any = {
       },
       {
         "name": "showPreviousMonth",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>Shows previous and current month, instead of current and next (dateRangePicker only)</p>\n"
       },
       {
@@ -1872,82 +1872,82 @@ export const ngdoc: any = {
     "properties": [
       {
         "name": "_a",
-        "type": "DateArray",
+        "type": "DateArray | undefined",
         "description": "<p>DateArray [year, month, date, .....]</p>\n"
       },
       {
         "name": "_changeInProgress",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>used in set offset</p>\n"
       },
       {
         "name": "_d",
-        "type": "Date",
+        "type": "Date | undefined",
         "description": "<p>date value</p>\n"
       },
       {
         "name": "_f",
-        "type": "string | string[]",
+        "type": "string | string[] | undefined",
         "description": "<p>date format</p>\n"
       },
       {
         "name": "_i",
-        "type": "DateInput",
+        "type": "DateInput | undefined",
         "description": "<p>input to parse: could be string, number[], number, Date, object</p>\n"
       },
       {
         "name": "_isPm",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>is PM</p>\n"
       },
       {
         "name": "_isValid",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>is valid</p>\n"
       },
       {
         "name": "_l",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>locale key, &#39;en&#39; by default</p>\n"
       },
       {
         "name": "_locale",
-        "type": "Locale",
+        "type": "Locale | undefined",
         "description": "<p>date locale obj</p>\n"
       },
       {
         "name": "_meridiem",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>date meridiem</p>\n"
       },
       {
         "name": "_nextDay",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>add one day to result at the end of parsing</p>\n"
       },
       {
         "name": "_offset",
-        "type": "number",
+        "type": "number | undefined",
         "description": "<p>utc time offset</p>\n"
       },
       {
         "name": "_pf",
-        "type": "DateParsingFlags",
+        "type": "DateParsingFlags | undefined",
         "description": "<p>date parsing flags</p>\n"
       },
       {
         "name": "_strict",
-        "type": "boolean",
+        "type": "boolean | undefined",
         "description": "<p>use strict parse format</p>\n"
       },
       {
         "name": "_tzm",
-        "type": "number",
+        "type": "number | undefined",
         "description": "<p>time zone</p>\n"
       },
       {
         "name": "_w",
-        "type": "WeekParsing",
+        "type": "WeekParsing | undefined",
         "description": "<p>week</p>\n"
       }
     ]
@@ -2184,7 +2184,7 @@ export const ngdoc: any = {
     "properties": [
       {
         "name": "btnRadio",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>Radio button value, will be set to <code>ngModel</code></p>\n"
       },
       {
@@ -2200,7 +2200,7 @@ export const ngdoc: any = {
       },
       {
         "name": "value",
-        "type": "string",
+        "type": "string | undefined",
         "description": "<p>Current value of radio component or group</p>\n"
       }
     ]

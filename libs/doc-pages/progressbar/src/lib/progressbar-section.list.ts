@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference -- ambient types for `?raw` source imports
+/// <reference path="../../../../../types/raw-imports.d.ts" />
 import { DemoProgressbarStaticComponent } from './demos/static/static';
 import { DemoProgressbarDynamicComponent } from './demos/dynamic/dynamic';
 import { DemoProgressbarStackedComponent } from './demos/stacked/stacked';
@@ -12,6 +14,16 @@ import {
   NgApiDocConfigComponent
 } from '@ngx-bootstrap-doc/docs';
 
+import * as rawDemosStaticStatic from './demos/static/static?raw' with { loader: 'text' };
+import * as rawDemosStaticStaticHtml from './demos/static/static.html?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamic from './demos/dynamic/dynamic?raw' with { loader: 'text' };
+import * as rawDemosDynamicDynamicHtml from './demos/dynamic/dynamic.html?raw' with { loader: 'text' };
+import * as rawDemosStackedStacked from './demos/stacked/stacked?raw' with { loader: 'text' };
+import * as rawDemosStackedStackedHtml from './demos/stacked/stacked.html?raw' with { loader: 'text' };
+import * as rawDemosConfigConfig from './demos/config/config?raw' with { loader: 'text' };
+import * as rawDemosConfigConfigHtml from './demos/config/config.html?raw' with { loader: 'text' };
+import * as rawDocsUsageMd from './docs/usage.md?raw' with { loader: 'text' };
+
 export const demoComponentContent: ContentSection[] = [
   {
     name: 'Overview',
@@ -22,29 +34,29 @@ export const demoComponentContent: ContentSection[] = [
       {
         title: 'Static',
         anchor: 'bs3-static',
-        component: require('!!raw-loader!./demos/static/static'),
-        html: require('!!raw-loader!./demos/static/static.html'),
+        component: rawDemosStaticStatic,
+        html: rawDemosStaticStaticHtml,
         outlet: DemoProgressbarStaticComponent
       },
       {
         title: 'Dynamic',
         anchor: 'bs3-dynamic',
-        component: require('!!raw-loader!./demos/dynamic/dynamic'),
-        html: require('!!raw-loader!./demos/dynamic/dynamic.html'),
+        component: rawDemosDynamicDynamic,
+        html: rawDemosDynamicDynamicHtml,
         outlet: DemoProgressbarDynamicComponent
       },
       {
         title: 'Stacked',
         anchor: 'bs3-stacked',
-        component: require('!!raw-loader!./demos/stacked/stacked'),
-        html: require('!!raw-loader!./demos/stacked/stacked.html'),
+        component: rawDemosStackedStacked,
+        html: rawDemosStackedStackedHtml,
         outlet: DemoProgressbarStackedComponent
       },
       {
         title: 'Configuring defaults',
         anchor: 'bs3-config',
-        component: require('!!raw-loader!./demos/config/config'),
-        html: require('!!raw-loader!./demos/config/config.html'),
+        component: rawDemosConfigConfig,
+        html: rawDemosConfigConfigHtml,
         outlet: DemoProgressbarConfigComponent
       }
     ]
@@ -54,7 +66,7 @@ export const demoComponentContent: ContentSection[] = [
     anchor: 'api-reference',
     tabName: 'api',
     outlet: ApiSectionsComponent,
-    usage: require('!!raw-loader!./docs/usage.md'),
+    usage: rawDocsUsageMd,
     importInfo: '<span class="pln">ng add ngx</span><span class="pun">-</span><span class="pln">bootstrap </span> --component <span class="pln">progressbar</span>',
     content: [
       {

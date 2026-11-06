@@ -3,9 +3,8 @@
 // todo: add global positioning configuration?
 import {
   ApplicationRef,
-  ComponentFactory,
-  ComponentFactoryResolver,
   ComponentRef,
+  createComponent,
   ElementRef,
   EmbeddedViewRef,
   EventEmitter,
@@ -37,7 +36,7 @@ export class ComponentLoader<T extends object> {
   _inlineViewRef?: EmbeddedViewRef<T>;
 
   private _providers: StaticProvider[] = [];
-  private _componentFactory?: ComponentFactory<T>;
+  private _componentType?: Type<T>;
   private _zoneSubscription?: Subscription;
   private _contentRef?: ContentRef;
   private _innerComponent?: ComponentRef<T>;
@@ -75,7 +74,6 @@ export class ComponentLoader<T extends object> {
     private _renderer: Renderer2 | undefined,
     private _elementRef: ElementRef | undefined,
     private _injector: Injector,
-    private _componentFactoryResolver: ComponentFactoryResolver,
     private _ngZone: NgZone,
     private _applicationRef: ApplicationRef,
     private _posService: PositioningService,
@@ -92,8 +90,7 @@ export class ComponentLoader<T extends object> {
   }
 
   attach(compType: Type<T>): ComponentLoader<T> {
-    this._componentFactory = this._componentFactoryResolver
-      .resolveComponentFactory<T>(compType);
+    this._componentType = compType;
 
     return this;
   }
@@ -145,11 +142,15 @@ export class ComponentLoader<T extends object> {
         parent: this._injector
       });
 
-      if (!this._componentFactory) {
+      if (!this._componentType) {
         return;
       }
 
-      this._componentRef = this._componentFactory.create(injector, this._contentRef.nodes);
+      this._componentRef = createComponent(this._componentType, {
+        environmentInjector: this._applicationRef.injector,
+        elementInjector: injector,
+        projectableNodes: this._contentRef.nodes
+      });
 
       this._applicationRef.attachView(this._componentRef.hostView);
       // this._componentRef = this._viewContainerRef
@@ -398,16 +399,15 @@ export class ComponentLoader<T extends object> {
     }
 
     if (typeof content === 'function') {
-      const contentCmptFactory = this._componentFactoryResolver.resolveComponentFactory(
-        content
-      );
-
       const modalContentInjector = Injector.create({
         providers: this._providers,
         parent: this._injector
       });
 
-      const componentRef = contentCmptFactory.create(modalContentInjector);
+      const componentRef = createComponent(content, {
+        environmentInjector: this._applicationRef.injector,
+        elementInjector: modalContentInjector
+      });
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       Object.assign(componentRef.instance, initialState);
