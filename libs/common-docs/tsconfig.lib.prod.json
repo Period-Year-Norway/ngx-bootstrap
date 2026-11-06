@@ -5,5 +5,13 @@
     "target": "ES2022",
     "useDefineForClassFields": false,
     "moduleResolution": "bundler"
+  },
+  "angularCompilerOptions": {
+    "extendedDiagnostics": {
+      "checks": {
+        "nullishCoalescingNotNullable": "suppress",
+        "optionalChainNotNullable": "suppress"
+      }
+    }
   }
 }
