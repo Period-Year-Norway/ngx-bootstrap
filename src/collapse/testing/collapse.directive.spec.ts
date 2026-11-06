@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import '../../../scripts/jest/toHaveCssClass';
@@ -14,6 +14,7 @@ const template = `
 
 @Component({
   selector: 'collapse-test',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template
 })
 class TestCollapseComponent {}

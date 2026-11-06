@@ -16,7 +16,8 @@
  */
 
 import {
-  Component, EventEmitter, Input, NgZone, OnDestroy, Output, AfterViewInit, Inject, PLATFORM_ID
+  Component, EventEmitter, Input, NgZone, OnDestroy, Output, AfterViewInit, Inject, PLATFORM_ID,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -40,6 +41,7 @@ let _currentId = 1;
 @Component({
     selector: 'carousel',
     templateUrl: './carousel.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class CarouselComponent implements AfterViewInit, OnDestroy {

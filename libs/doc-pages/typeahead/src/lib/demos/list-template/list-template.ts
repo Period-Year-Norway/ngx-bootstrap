@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 
@@ -30,6 +30,7 @@ import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
       border-color: #FF4461;
     }
   `],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoTypeaheadListTemplateComponent {

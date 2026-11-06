@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, Renderer2, ChangeDetectionStrategy } from '@angular/core';
 import { BsDatepickerContainerComponent } from './bs-datepicker-container.component';
 
 import { BsDatepickerActions } from '../../reducer/bs-datepicker.actions';
@@ -17,6 +17,7 @@ import { datepickerAnimation } from '../../datepicker-animations';
         '(click)': '_stopPropagation($event)'
     },
     animations: [datepickerAnimation],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BsDatepickerInlineContainerComponent extends BsDatepickerContainerComponent

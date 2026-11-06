@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { BsDaterangepickerDirective } from '../bs-daterangepicker.component';
 import { BsDatepickerModule } from '../bs-datepicker.module';
 import { BsDaterangepickerConfig } from '../bs-daterangepicker.config';
@@ -13,6 +13,7 @@ import { BsCustomDates } from '../themes/bs/bs-custom-dates-view.component';
     template: `<input type="text"
     bsDaterangepicker
     [bsConfig]="bsConfig">`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestComponent {

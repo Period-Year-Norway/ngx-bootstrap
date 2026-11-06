@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'bs-calendar-layout',
@@ -18,6 +18,7 @@ import { Component } from '@angular/core';
     <!--timepicker-->
     <bs-timepicker *ngIf="false"></bs-timepicker>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BsCalendarLayoutComponent {}

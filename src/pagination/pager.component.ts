@@ -7,7 +7,8 @@ import {
   Input,
   OnInit,
   Output,
-  Provider
+  Provider,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -26,6 +27,7 @@ export const PAGER_CONTROL_VALUE_ACCESSOR: Provider = {
     selector: 'pager',
     templateUrl: './pager.component.html',
     providers: [PAGER_CONTROL_VALUE_ACCESSOR],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PagerComponent implements ControlValueAccessor, OnInit {

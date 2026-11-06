@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnDestroy, Renderer2, ElementRef } from '@angular/core';
+import { Component, HostBinding, Input, OnDestroy, Renderer2, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 
 import { TabDirective } from './tab.directive';
 import { TabsetConfig } from './tabset.config';
@@ -8,6 +8,7 @@ import { TabsetConfig } from './tabset.config';
     selector: 'tabset',
     templateUrl: './tabset.component.html',
     styleUrls: ['./tabs.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class TabsetComponent implements OnDestroy {

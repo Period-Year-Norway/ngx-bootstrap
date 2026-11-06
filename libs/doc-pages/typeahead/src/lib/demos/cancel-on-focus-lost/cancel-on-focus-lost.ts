@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { TypeaheadMatch } from '@period-year-norway/ngx-bootstrap/typeahead';
 import { mergeMap, delay } from 'rxjs/operators';
@@ -14,6 +14,7 @@ export function getTypeaheadConfig(): TypeaheadConfig {
     selector: 'demo-typeahead-cancel-on-focus-lost',
     templateUrl: './cancel-on-focus-lost.html',
     providers: [{ provide: TypeaheadConfig, useFactory: getTypeaheadConfig }],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoTypeaheadCancelRequestOnFocusLostComponent {

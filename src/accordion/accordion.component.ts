@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { AccordionPanelComponent } from './accordion-group.component';
 import { AccordionConfig } from './accordion.config';
 
@@ -12,6 +12,7 @@ import { AccordionConfig } from './accordion.config';
     class: 'panel-group',
     style: 'display: block'
   },
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class AccordionComponent {

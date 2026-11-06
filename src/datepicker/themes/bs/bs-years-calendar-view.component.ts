@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { yearsPerCalendar } from '../../engine/format-years-calendar';
 import {
   BsDatepickerViewMode,
@@ -35,6 +35,7 @@ import {
       </table>
     </bs-calendar-layout>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BsYearsCalendarViewComponent {

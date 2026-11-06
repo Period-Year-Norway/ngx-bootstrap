@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from '../bs-datepicker.module';
@@ -14,6 +14,7 @@ import { initialYearShift } from '../engine/format-years-calendar';
     selector: 'test-cmp',
     template: `
     <bs-daterangepicker-inline [bsConfig]="bsConfig"></bs-daterangepicker-inline>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestComponent {

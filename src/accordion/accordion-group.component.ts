@@ -1,4 +1,4 @@
-import { Component, HostBinding, Inject, Input, OnDestroy, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, HostBinding, Inject, Input, OnDestroy, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
 import { AccordionComponent } from './accordion.component';
 
@@ -16,6 +16,7 @@ import { AccordionComponent } from './accordion.component';
     style: 'display: block'
   },
   styleUrls: ['./accordion.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class AccordionPanelComponent implements OnInit, OnDestroy {

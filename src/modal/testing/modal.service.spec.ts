@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, ChangeDetectionStrategy } from '@angular/core';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { pairwise, tap } from 'rxjs/operators';
 
@@ -6,6 +6,7 @@ import { BsModalService, ModalModule } from '../index';
 
 @Component({
     template: '<div>Dummy Component</div>',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class DummyComponent {
@@ -15,6 +16,7 @@ class DummyComponent {
 
 @Component({
     template: '<div>Test Component</div>',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestModalComponent { }

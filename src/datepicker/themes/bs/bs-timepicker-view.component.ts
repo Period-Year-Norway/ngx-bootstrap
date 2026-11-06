@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'bs-timepicker',
@@ -21,6 +21,7 @@ import { Component } from '@angular/core';
       </button>
     </div>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BsTimepickerViewComponent {

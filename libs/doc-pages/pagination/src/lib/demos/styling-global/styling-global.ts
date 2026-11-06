@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { PageChangedEvent } from '@period-year-norway/ngx-bootstrap/pagination';
 
 @Component({
@@ -12,6 +12,7 @@ import { PageChangedEvent } from '@period-year-norway/ngx-bootstrap/pagination';
     }
   `
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoPaginationStylingComponent {

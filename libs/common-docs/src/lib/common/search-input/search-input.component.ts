@@ -1,11 +1,12 @@
 import { Route, Routes } from "@angular/router";
-import { Component, Input, inject } from "@angular/core";
+import { Component, Input, inject, ChangeDetectionStrategy } from "@angular/core";
 import { DOCS_TOKENS } from '../../tokens/docs-routes-token';
 
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: 'search-input',
     templateUrl: './search-input.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class SearchInputComponent {

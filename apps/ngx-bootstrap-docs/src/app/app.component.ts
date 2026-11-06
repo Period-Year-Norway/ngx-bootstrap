@@ -1,5 +1,5 @@
 
-import { AfterContentInit, Component, Inject, DOCUMENT } from '@angular/core';
+import { AfterContentInit, Component, Inject, DOCUMENT, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, UrlSerializer } from '@angular/router';
 import { Analytics } from '@ngx-bootstrap-doc/docs';
 import { filter } from 'rxjs/operators';
@@ -8,6 +8,7 @@ import { filter } from 'rxjs/operators';
 @Component({
     selector: 'bs-demo',
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AppComponent implements AfterContentInit {

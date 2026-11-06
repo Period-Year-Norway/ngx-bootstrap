@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, DestroyRef, Inject, PLATFORM_ID, inject } from "@angular/core";
+import { AfterViewInit, Component, DestroyRef, Inject, PLATFORM_ID, inject, ChangeDetectionStrategy } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
@@ -8,6 +8,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: 'top-menu',
     templateUrl: './top-menu.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class TopMenuComponent implements AfterViewInit {

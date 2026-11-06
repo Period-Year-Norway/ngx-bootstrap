@@ -6,7 +6,8 @@ import {
   OnDestroy,
   OnInit,
   Renderer2,
-  ViewChild
+  ViewChild,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { take } from 'rxjs/operators';
@@ -37,6 +38,7 @@ import { dayInMilliseconds } from '../../reducer/_defaults';
         'aria-label': 'calendar'
     },
     animations: [datepickerAnimation],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class BsDaterangepickerContainerComponent extends BsDatepickerAbstractComponent

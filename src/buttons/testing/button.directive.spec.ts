@@ -5,6 +5,7 @@ import { ButtonsModule } from '../index';
 
 @Component({
     selector: 'buttons-test', template: '',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestButtonsComponent implements OnInit {

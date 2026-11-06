@@ -4,7 +4,8 @@ import {
   Component,
   Injector,
   Input,
-  OnDestroy
+  OnDestroy,
+  ChangeDetectionStrategy
 } from "@angular/core";
 import { ActivatedRoute, NavigationEnd, Router, NavigationExtras } from "@angular/router";
 import { Subscription } from "rxjs";
@@ -31,6 +32,7 @@ type AvailableTabsPathsType = (typeof availableTabsPaths)[number];
       <add-nav class="add-nav" [componentContent]="overview ? content[0] : api ? content[1] : content[2]"></add-nav>
     </ng-container>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DocsSectionComponent implements OnDestroy {

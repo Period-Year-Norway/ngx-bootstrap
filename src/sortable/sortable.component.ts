@@ -4,7 +4,8 @@ import {
   Output,
   EventEmitter,
   forwardRef,
-  TemplateRef
+  TemplateRef,
+  ChangeDetectionStrategy
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { DraggableItem } from './draggable-item';
@@ -52,6 +53,7 @@ import { DraggableItemService } from './draggable-item.service';
             multi: true
         }
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class SortableComponent implements ControlValueAccessor {

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ChangeDetectionStrategy } from '@angular/core';
 import { setTheme } from '@period-year-norway/ngx-bootstrap/utils';
 
 import { StyleManager } from '../../theme/style-manager';
@@ -12,6 +12,7 @@ const _bs4Css = 'assets/css/bootstrap-4.5.3/css/bootstrap.min.css';
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: 'landing',
     templateUrl: './landing.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class LandingComponent implements AfterViewInit {

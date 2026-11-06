@@ -1,4 +1,4 @@
-import { Component, Renderer2, ViewChild } from '@angular/core';
+import { Component, Renderer2, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick, waitForAsync } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { dispatchKeyboardEvent } from '@ngneat/spectator';
@@ -15,6 +15,7 @@ import { BsDatepickerContainerComponent } from '../themes/bs/bs-datepicker-conta
     template: `<input type='text'
                     bsDatepicker
                     [bsConfig]='bsConfig'>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestComponent {

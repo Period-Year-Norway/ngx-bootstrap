@@ -1,4 +1,4 @@
-import { Component, DebugElement } from '@angular/core';
+import { Component, DebugElement, ChangeDetectionStrategy } from '@angular/core';
 import { ComponentFixture, ComponentFixtureAutoDetect, inject, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
@@ -26,6 +26,7 @@ const HEROES_OBJ: any[] = [
                  [itemActiveStyle]="{ 'background-color': 'lightgray' }"></bs-sortable>
     <bs-sortable id="sort2" [(ngModel)]="heroesObj" [fieldName]="'name'" [placeholderItem]="'empty'"></bs-sortable>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 class TestSortableComponent {

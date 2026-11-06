@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, TemplateRef } from '@angular/core';
+import { ChangeDetectorRef, Component, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 import { BsModalRef, BsModalService } from '@period-year-norway/ngx-bootstrap/modal';
 import { combineLatest, Subscription } from 'rxjs';
 
@@ -12,6 +12,7 @@ import { combineLatest, Subscription } from 'rxjs';
       padding: 8px;
     }
   `],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class DemoModalRefEventsComponent {

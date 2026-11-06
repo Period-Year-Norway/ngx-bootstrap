@@ -1,5 +1,5 @@
 import { ActivatedRoute, NavigationEnd, Router, Routes, UrlSegment } from "@angular/router";
-import { Component, Inject, HostBinding, Renderer2, inject, OnDestroy } from "@angular/core";
+import { Component, Inject, HostBinding, Renderer2, inject, OnDestroy, ChangeDetectionStrategy } from "@angular/core";
 
 import { setTheme, getBsVer, currentBsVersion, IBsVersion, AvailableBsVersions } from '@period-year-norway/ngx-bootstrap/utils';
 import { StyleManager } from '../../theme/style-manager';
@@ -21,6 +21,7 @@ const _bs5Css = 'assets/css/bootstrap-5.1.0/css/bootstrap.min.css';
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: 'sidebar',
     templateUrl: './sidebar.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class SidebarComponent implements OnDestroy {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ChangeDetectionStrategy } from '@angular/core';
 
 import { CLASS_NAME } from './modal-options.class';
 import { isBs3, Utils } from '@period-year-norway/ngx-bootstrap/utils';
@@ -8,6 +8,7 @@ import { isBs3, Utils } from '@period-year-norway/ngx-bootstrap/utils';
   selector: 'bs-modal-backdrop',
   template: ' ',
   host: { class: CLASS_NAME.BACKDROP },
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class ModalBackdropComponent implements OnInit {

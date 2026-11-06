@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2, ChangeDetectionStrategy } from '@angular/core';
 import { CLASS_NAME, DISMISS_REASONS, ModalOptions, TRANSITION_DURATIONS } from './modal-options.class';
 import { BsModalService } from './bs-modal.service';
 import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
@@ -20,6 +20,7 @@ import { isBs3 } from '@period-year-norway/ngx-bootstrap/utils';
     '[attr.aria-labelledby]': 'config.ariaLabelledBy',
     '[attr.aria-describedby]': 'config.ariaDescribedby'
   },
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class ModalContainerComponent implements OnInit, OnDestroy {

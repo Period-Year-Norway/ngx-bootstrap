@@ -10,7 +10,8 @@ import {
   ViewChild,
   ViewChildren,
   Output,
-  EventEmitter
+  EventEmitter,
+  ChangeDetectionStrategy
 } from '@angular/core';
 
 import { isBs3, Utils } from '@period-year-norway/ngx-bootstrap/utils';
@@ -51,6 +52,7 @@ let nextWindowId = 0;
     `
   ],
   animations: [typeaheadAnimation],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class TypeaheadContainerComponent implements OnDestroy {

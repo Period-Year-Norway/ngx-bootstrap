@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnDestroy, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, OnDestroy, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselComponent } from './carousel.component';
 
@@ -39,6 +39,7 @@ import { CarouselComponent } from './carousel.component';
       }
     `
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   standalone: false
 })
 export class SlideComponent implements OnInit, OnDestroy {
