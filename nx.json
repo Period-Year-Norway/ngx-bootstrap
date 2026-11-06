@@ -123,5 +123,8 @@
   },
   "useInferencePlugins": false,
   "defaultBase": "development",
-  "analytics": false
+  "analytics": false,
+  "affected": {
+    "legacy": true
+  }
 }
