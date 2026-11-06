@@ -4,9 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/ngx-bootstrap-docs/src",
   "prefix": "ngx-bootstrap-base",
-  "implicitDependencies": [
-    "ngx-bootstrap"
-  ],
+  "implicitDependencies": ["ngx-bootstrap"],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
@@ -16,23 +14,16 @@
           "base": "dist/apps/ngx-bootstrap"
         },
         "index": "apps/ngx-bootstrap-docs/src/index.html",
-        "polyfills": [
-          "apps/ngx-bootstrap-docs/src/polyfills.ts"
-        ],
+        "polyfills": ["apps/ngx-bootstrap-docs/src/polyfills.ts"],
         "tsConfig": "apps/ngx-bootstrap-docs/tsconfig.app.json",
         "aot": true,
-        "assets": [
-          "apps/ngx-bootstrap-docs/src/assets",
-          "apps/ngx-bootstrap-docs/src/404.html"
-        ],
+        "assets": ["apps/ngx-bootstrap-docs/src/assets", "apps/ngx-bootstrap-docs/src/404.html"],
         "styles": [
           "apps/ngx-bootstrap-docs/src/assets/css/style.scss",
           "apps/ngx-bootstrap-docs/src/assets/css/prettify-angulario.css"
         ],
         "stylePreprocessorOptions": {
-          "includePaths": [
-            "src/datepicker"
-          ]
+          "includePaths": ["src/datepicker"]
         },
         "browser": "apps/ngx-bootstrap-docs/src/main.ts"
       },
@@ -78,6 +69,7 @@
     },
     "serve": {
       "executor": "@angular/build:dev-server",
+      "continuous": true,
       "options": {
         "buildTarget": "ngx-bootstrap-docs:build"
       },
@@ -88,8 +80,7 @@
         "development": {
           "buildTarget": "ngx-bootstrap-docs:build:development"
         }
-      },
-      "continuous": true
+      }
     },
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",

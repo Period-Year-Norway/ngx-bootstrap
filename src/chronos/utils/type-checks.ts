@@ -16,12 +16,9 @@ export function isDateValid(date: Date): boolean {
   return date && date.getTime && !isNaN(date.getTime());
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function isFunction(fn: any): fn is Function {
-  return (
-    fn instanceof Function ||
-    Object.prototype.toString.call(fn) === '[object Function]'
-  );
+  return fn instanceof Function || Object.prototype.toString.call(fn) === '[object Function]';
 }
 
 export function isNumber(value?: any): value is number {
@@ -29,10 +26,7 @@ export function isNumber(value?: any): value is number {
 }
 
 export function isArray<T>(input?: any): input is T[] {
-  return (
-    input instanceof Array ||
-    Object.prototype.toString.call(input) === '[object Array]'
-  );
+  return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
 }
 
 export function hasOwnProp<T>(a: T /*object*/, b: string): b is Extract<keyof T, string> {
@@ -42,14 +36,12 @@ export function hasOwnProp<T>(a: T /*object*/, b: string): b is Extract<keyof T,
 export function isObject<T>(input: any /*object*/): input is T {
   // IE8 will treat undefined and null as object if it wasn't for
   // input != null
-  return (
-    input != null && Object.prototype.toString.call(input) === '[object Object]'
-  );
+  return input != null && Object.prototype.toString.call(input) === '[object Object]';
 }
 
 export function isObjectEmpty(obj: any): boolean {
   if (Object.getOwnPropertyNames) {
-    return (Object.getOwnPropertyNames(obj).length === 0);
+    return Object.getOwnPropertyNames(obj).length === 0;
   }
   let k;
   for (k in obj) {
@@ -61,7 +53,6 @@ export function isObjectEmpty(obj: any): boolean {
 
   return true;
 }
-
 
 export function isUndefined(input: any): boolean {
   return input === void 0;
