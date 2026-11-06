@@ -1,6 +1,6 @@
 {
   "name": "@period-year-norway/ngx-bootstrap-base",
-  "version": "12.0.11",
+  "version": "12.0.12",
   "license": "MIT",
   "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
   "schematics": "./schematics/src/collection.json",
@@ -44,14 +44,7 @@
     "prepare": "husky install"
   },
   "private": true,
-  "keywords": [
-    "angular",
-    "bootstrap",
-    "ng",
-    "ng2",
-    "angular2",
-    "twitter-bootstrap"
-  ],
+  "keywords": ["angular", "bootstrap", "ng", "ng2", "angular2", "twitter-bootstrap"],
   "dependencies": {
     "@angular-devkit/core": "~22.2.0",
     "@angular-devkit/schematics": "~22.2.0",
